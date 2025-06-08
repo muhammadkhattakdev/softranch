@@ -1,0 +1,57 @@
+/* Dashboard Home Styles */
+.dash-home {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  
+  .dash-home-header {
+    margin-bottom: 2rem;
+  }
+  
+  .dash-home-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 0.5rem;
+  }
+  
+  .dash-home-subtitle {
+    color: var(--text-secondary);
+    font-size: 1.125rem;
+  }
+  
+  /* Placeholder Content */
+  .dash-home-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+  }
+  
+  .dash-placeholder-card {
+    text-align: center;
+    padding: 3rem;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 1rem;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .dash-placeholder-icon {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+    filter: grayscale(0.5);
+    opacity: 0.8;
+  }
+  
+  .dash-placeholder-card h2 {
+    font-size: 1.5rem;
+    color: var(--white);
+    margin-bottom: 1rem;
+  }
+  
+  .dash-placeholder-card p {
+    color: var(--text-secondary);
+    font-size: 1rem;
+  }

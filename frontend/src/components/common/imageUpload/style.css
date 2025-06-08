@@ -1,0 +1,113 @@
+/* Image Upload Styles */
+.dash-image-upload {
+  width: 100%;
+}
+
+.dash-image-upload.error .dash-upload-area {
+  border-color: #ef4444;
+}
+
+/* Upload Area */
+.dash-upload-area {
+  border: 2px dashed rgba(255, 255, 255, 0.2);
+  border-radius: 0.75rem;
+  padding: 2rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.dash-upload-area:hover {
+  border-color: rgba(138, 63, 252, 0.5);
+  background: rgba(138, 63, 252, 0.05);
+}
+
+.dash-upload-area.dragging {
+  border-color: var(--primary-color);
+  background: rgba(138, 63, 252, 0.1);
+}
+
+.dash-upload-content {
+  pointer-events: none;
+}
+
+.dash-upload-icon {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+  color: var(--primary-light);
+}
+
+.dash-upload-text {
+  color: var(--white);
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.dash-upload-hint {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+/* Image Preview */
+.dash-image-preview {
+  position: relative;
+  width: 100%;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.dash-image-preview img {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-height: 300px;
+  object-fit: cover;
+}
+
+.dash-image-remove {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  background: rgba(0, 0, 0, 0.8);
+  border: none;
+  color: white;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  backdrop-filter: blur(10px);
+}
+
+.dash-image-remove:hover {
+  background: rgba(239, 68, 68, 0.9);
+  transform: scale(1.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .dash-upload-area {
+    padding: 1.5rem;
+  }
+
+  .dash-upload-icon svg {
+    width: 32px;
+    height: 32px;
+  }
+
+  .dash-upload-text {
+    font-size: 0.875rem;
+  }
+
+  .dash-upload-hint {
+    font-size: 0.75rem;
+  }
+}

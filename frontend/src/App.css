@@ -1,0 +1,325 @@
+/* App.css - Global styles and variables */
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
+:root {
+  --primary-color: #8a3ffc;
+  --primary-light: #a56eff;
+  --white: #ffffff;
+  --black: #000000;
+  --gray-dark: #121212;
+  --gray-light: #333333;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: var(--black);
+  color: var(--white);
+  line-height: 1.5;
+  width: 100%;
+}
+
+body::-webkit-scrollbar {
+    background-color: var(--black);
+    width: 8px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color);
+    width: 8px;
+    border-radius: 8px;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.app {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--black);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+}
+
+/* Enhanced Gradient Button Styles */
+
+/* Hero Buttons */
+.hero-button.primary {
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--primary-light),
+    #ec4899
+  );
+  background-size: 200% 200%;
+  color: var(--white);
+  box-shadow: 0 10px 30px rgba(138, 63, 252, 0.4);
+  animation: gradientShift 4s ease infinite;
+  transition: all 0.3s ease;
+}
+
+.hero-button.primary:hover {
+  background: linear-gradient(135deg, var(--primary-light), #ec4899, #3b82f6);
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(138, 63, 252, 0.6);
+}
+
+/* Features Button */
+.features-button {
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--primary-light),
+    #8b5cf6
+  );
+  background-size: 200% 200%;
+  color: var(--white);
+  font-weight: 700;
+  padding: 1.5rem 2rem;
+  border: none;
+  border-radius: 2rem;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 25px rgba(138, 63, 252, 0.3);
+  animation: gradientShift 5s ease infinite;
+}
+
+.features-button:hover {
+  background: linear-gradient(135deg, var(--primary-light), #8b5cf6, #ec4899);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 35px rgba(138, 63, 252, 0.5);
+}
+
+/* Featured Button */
+.featured-button {
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    #8b5cf6,
+    var(--primary-light)
+  );
+  background-size: 200% 200%;
+  color: var(--white);
+  font-weight: 700;
+  padding: 1.5rem 1.8rem;
+  border: none;
+  border-radius: 2rem;
+  font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 25px rgba(138, 63, 252, 0.3);
+  animation: gradientShift 6s ease infinite;
+}
+
+.featured-button:hover {
+  background: linear-gradient(135deg, #8b5cf6, var(--primary-light), #ec4899);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 35px rgba(138, 63, 252, 0.5);
+}
+
+/* Portfolio Button */
+.portfolio-button {
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--primary-light),
+    #3b82f6
+  );
+  background-size: 200% 200%;
+  color: var(--white);
+  font-weight: 700;
+  padding: 1.5rem 2rem;
+  border: none;
+  border-radius: 2rem;
+  font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(138, 63, 252, 0.4);
+  animation: gradientShift 4.5s ease infinite;
+}
+
+.portfolio-button:hover {
+  background: linear-gradient(135deg, var(--primary-light), #3b82f6, #8b5cf6);
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(138, 63, 252, 0.6);
+}
+
+/* Services Button */
+.services-button {
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--primary-light),
+    #ec4899,
+    #3b82f6
+  );
+  background-size: 300% 300%;
+  color: var(--white);
+  font-weight: 700;
+  padding: 1.5rem 2.5rem;
+  border: none;
+  border-radius: 2rem;
+  font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 12px 35px rgba(138, 63, 252, 0.4);
+  animation: gradientShift 5s ease infinite;
+}
+
+.services-button:hover {
+  background: linear-gradient(
+    135deg,
+    var(--primary-light),
+    #ec4899,
+    #3b82f6,
+    var(--primary-color)
+  );
+  transform: translateY(-4px);
+  box-shadow: 0 18px 45px rgba(138, 63, 252, 0.6);
+}
+
+/* Navbar Signup Button */
+.signup-button {
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--primary-light),
+    #8b5cf6
+  );
+  background-size: 200% 200%;
+  color: var(--white);
+  font-weight: 600;
+  padding: 1.5rem 1.5rem;
+  border: none;
+  border-radius: 2rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 20px rgba(138, 63, 252, 0.3);
+  animation: gradientShift 6s ease infinite;
+}
+
+.signup-button:hover {
+  background: linear-gradient(135deg, var(--primary-light), #8b5cf6, #ec4899);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(138, 63, 252, 0.5);
+}
+
+/* Universal Primary Button Class */
+.btn-primary {
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--primary-light),
+    #8b5cf6
+  );
+  background-size: 200% 200%;
+  color: var(--white);
+  border: none;
+  border-radius: 2rem;
+  font-weight: 700;
+  padding: 1.5rem 2rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 8px 25px rgba(138, 63, 252, 0.3);
+  animation: gradientShift 5s ease infinite;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, var(--primary-light), #8b5cf6, #ec4899);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 35px rgba(138, 63, 252, 0.5);
+}
+
+/* Gradient Animation */
+@keyframes gradientShift {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 100% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  75% {
+    background-position: 0% 100%;
+  }
+}
+
+/* Alternative Gradient Combinations */
+.btn-gradient-blue {
+  background: linear-gradient(135deg, var(--primary-color), #3b82f6, #06b6d4);
+}
+
+.btn-gradient-pink {
+  background: linear-gradient(135deg, var(--primary-color), #ec4899, #f97316);
+}
+
+.btn-gradient-cosmic {
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    #8b5cf6,
+    #ec4899,
+    #3b82f6
+  );
+  background-size: 300% 300%;
+}
+
+/* Hover states for alternatives */
+.btn-gradient-blue:hover {
+  background: linear-gradient(135deg, #3b82f6, #06b6d4, var(--primary-color));
+}
+
+.btn-gradient-pink:hover {
+  background: linear-gradient(135deg, #ec4899, #f97316, var(--primary-color));
+}
+
+.btn-gradient-cosmic:hover {
+  background: linear-gradient(
+    135deg,
+    #8b5cf6,
+    #ec4899,
+    #3b82f6,
+    var(--primary-color)
+  );
+}
+
