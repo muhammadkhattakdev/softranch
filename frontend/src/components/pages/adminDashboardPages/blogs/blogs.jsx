@@ -1,250 +1,303 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Calendar, Clock, ArrowRight, Tag } from 'lucide-react';
+import { 
+  Plus, 
+  Search, 
+  Filter, 
+  Edit, 
+  Trash2, 
+  Eye, 
+  MoreVertical,
+  Calendar,
+  Clock,
+  Tag
+} from 'lucide-react';
 import api from '../../../../utils/request';
-
+import { useAuth } from '../../../../context/authContext';
 import './style.css';
 
-const BlogPage = () => {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [blogPosts, setBlogPosts] = useState([]);
+const BlogList = () => {
+  const [blogs, setBlogs] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [searchTerm, setSearchTerm] = useState('');
+  const [filterStatus, setFilterStatus] = useState('all');
+  const [filterCategory, setFilterCategory] = useState('all');
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
-  const [loadingMore, setLoadingMore] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState(null);
+  const { user, isAdmin, isEditor } = useAuth();
 
-  const categories = [
-    { id: 'all', name: 'All Posts' },
-    { id: 'development', name: 'Development' },
-    { id: 'design', name: 'Design' },
-    { id: 'business', name: 'Business' },
-    { id: 'technology', name: 'Technology' },
-    { id: 'general', name: 'General' }
-  ];
+  const categories = ['all', 'development', 'design', 'business', 'technology', 'general'];
+  const statuses = ['all', 'draft', 'published', 'archived'];
 
   useEffect(() => {
-    fetchBlogs(1, true);
-  }, [selectedCategory]);
+    fetchBlogs();
+  }, [currentPage, filterStatus, filterCategory]);
 
-  const fetchBlogs = async (page = 1, reset = false) => {
+  const fetchBlogs = async () => {
     try {
-      if (page === 1) {
-        setLoading(true);
-      } else {
-        setLoadingMore(true);
-      }
-
+      setLoading(true);
       const params = {
-        page: page,
-        limit: 6,
-        status: 'published',
-        sort: '-publishedAt'
+        page: currentPage,
+        limit: 10,
+        sort: '-createdAt',
       };
 
-      if (selectedCategory !== 'all') {
-        params.category = selectedCategory;
+      if (filterStatus !== 'all') {
+        params.status = filterStatus;
+      }
+      if (filterCategory !== 'all') {
+        params.category = filterCategory;
       }
 
       const response = await api.blogs.getAll(params);
-      const data = response.data;
-      
-      const newBlogs = data.data || data;
-      const totalCount = data.totalCount || data.results || newBlogs.length;
-      const totalPagesCount = Math.ceil(totalCount / 6);
-
-      if (reset) {
-        setBlogPosts(newBlogs);
-      } else {
-        setBlogPosts(prev => [...prev, ...newBlogs]);
-      }
-      
-      setCurrentPage(page);
-      setTotalPages(totalPagesCount);
+      setBlogs(response.data.data || response.data);
+      const totalCount = response.data.totalCount || response.data.results;
+      setTotalPages(Math.ceil(totalCount / 10));
     } catch (error) {
       console.error('Error fetching blogs:', error);
     } finally {
       setLoading(false);
-      setLoadingMore(false);
     }
   };
 
-  const handleLoadMore = () => {
-    if (currentPage < totalPages && !loadingMore) {
-      fetchBlogs(currentPage + 1, false);
+  const handleDelete = async (id) => {
+    if (window.confirm('Are you sure you want to delete this blog?')) {
+      try {
+        await api.blogs.delete(id);
+        fetchBlogs();
+      } catch (error) {
+        console.error('Error deleting blog:', error);
+        alert('Failed to delete blog');
+      }
     }
   };
 
-  const handleCategoryChange = (category) => {
-    setSelectedCategory(category);
-    setCurrentPage(1);
-  };
-
-  const formatDate = (dateString) => {
-    const date = new Date(dateString);
-    return date.toLocaleDateString('en-US', { 
-      year: 'numeric', 
-      month: 'long', 
-      day: 'numeric' 
+  const formatDate = (date) => {
+    return new Date(date).toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'short',
+      day: 'numeric',
     });
   };
 
-  const getImageUrl = (blog) => {
-    // Handle different image URL formats from backend
-    if (blog.featuredImageUrl) {
-      return blog.featuredImageUrl;
+  const getStatusBadgeClass = (status) => {
+    switch (status) {
+      case 'published':
+        return 'dash-badge-success';
+      case 'draft':
+        return 'dash-badge-warning';
+      case 'archived':
+        return 'dash-badge-secondary';
+      default:
+        return '';
     }
-    if (blog.featuredImage) {
-      if (blog.featuredImage.startsWith('http')) {
-        return blog.featuredImage;
-      }
-      // If it's a relative path, prepend the server URL
-      return `${process.env.REACT_APP_SERVER_URL || 'http://localhost:5000'}/uploads/${blog.featuredImage}`;
-    }
-    return '/blog/placeholder.jpg';
   };
 
-  const getBlogUrl = (blog) => {
-    // Use slug if available, otherwise use ID
-    return `/blog/${blog.slug || blog._id}`;
+  const filteredBlogs = blogs.filter(blog => 
+    blog.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    blog.excerpt.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
+  const canEdit = (blog) => {
+    return isAdmin() || isEditor() || blog.author._id === user?.id;
   };
 
   return (
-    <div className="blog-page-wrapper">
-      {/* Hero Section */}
-      <section className="blog-hero">
-        <div className="blog-hero-background"></div>
-        <div className="blog-glow-orb blog-glow-orb-1"></div>
-        <div className="blog-glow-orb blog-glow-orb-2"></div>
-        <div className="blog-glow-orb blog-glow-orb-3"></div>
-        
-        <div className="blog-hero-content">
-          <div className="blog-badge">
-            <span>Insights & Ideas</span>
-          </div>
-          <h1 className="blog-hero-title">
-            Our Blog
-          </h1>
-          <p className="blog-hero-description">
-            Stay updated with the latest trends in web development, design insights, 
-            and business strategies from our expert team.
-          </p>
+    <div className="dash-blogs">
+      {/* Page Header */}
+      <div className="dash-blogs-header">
+        <div>
+          <h1 className="dash-blogs-title">Blog Management</h1>
+          <p className="dash-blogs-subtitle">Create and manage your blog posts</p>
         </div>
-      </section>
+        <Link to="/admin/blogs/create" className="dash-btn-primary">
+          <Plus size={20} />
+          <span>New Blog Post</span>
+        </Link>
+      </div>
 
-      {/* Categories Section */}
-      <section className="blog-categories-section">
-        <div className="blog-container">
-          <div className="blog-categories">
-            {categories.map((category) => (
-              <button
-                key={category.id}
-                className={`blog-category-btn ${selectedCategory === category.id ? 'active' : ''}`}
-                onClick={() => handleCategoryChange(category.id)}
-              >
-                {category.name}
-              </button>
+      {/* Filters and Search */}
+      <div className="dash-blogs-controls">
+        <div className="dash-blogs-search">
+          <Search size={20} />
+          <input
+            type="text"
+            placeholder="Search blogs..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            className="dash-search-input"
+          />
+        </div>
+
+        <div className="dash-blogs-filters">
+          <select
+            value={filterStatus}
+            onChange={(e) => setFilterStatus(e.target.value)}
+            className="dash-select"
+          >
+            {statuses.map(status => (
+              <option key={status} value={status}>
+                {status.charAt(0).toUpperCase() + status.slice(1)}
+              </option>
             ))}
-          </div>
-        </div>
-      </section>
+          </select>
 
-      {/* Blog Posts Grid */}
-      <section className="blog-posts-section">
-        <div className="blog-grid-glow-left"></div>
-        <div className="blog-grid-glow-right"></div>
-        <div className="blog-floating-glow blog-floating-glow-1"></div>
-        <div className="blog-floating-glow blog-floating-glow-2"></div>
-        
-        <div className="blog-container">
-          {loading ? (
-            <div className="blog-loading">
-              <div className="blog-spinner"></div>
-              <p>Loading amazing content...</p>
-            </div>
-          ) : blogPosts.length === 0 ? (
-            <div className="blog-empty">
-              <p>No blog posts found in this category.</p>
-            </div>
-          ) : (
-            <>
-              <div className="blog-posts-grid">
-                {blogPosts.map((post) => (
-                  <article key={post._id} className="blog-card">
-                    <Link to={getBlogUrl(post)} className="blog-card-link">
-                      <div className="blog-card-image">
-                        <img 
-                          src={getImageUrl(post)} 
-                          alt={post.title}
-                          onError={(e) => {
-                            e.target.src = '/blog/placeholder.jpg';
-                          }}
-                        />
-                        <div className="blog-card-overlay"></div>
-                      </div>
-                      
-                      <div className="blog-card-content">
-                        <div className="blog-card-meta">
-                          <span className="blog-card-category">
-                            <Tag size={14} />
-                            {post.category}
-                          </span>
-                          <span className="blog-card-date">
-                            <Calendar size={14} />
-                            {formatDate(post.publishedAt || post.createdAt)}
-                          </span>
-                        </div>
-                        
-                        <h2 className="blog-card-title">{post.title}</h2>
-                        <p className="blog-card-excerpt">{post.excerpt}</p>
-                        
-                        <div className="blog-card-footer">
-                          <div className="blog-card-author">
-                            <span className="author-name">
-                              {post.author?.name || 'Anonymous'}
-                            </span>
-                            <span className="read-time">
-                              <Clock size={14} />
-                              {post.readTime || 5} min read
-                            </span>
-                          </div>
-                          <span className="blog-card-arrow">
-                            <ArrowRight size={20} />
-                          </span>
-                        </div>
-                      </div>
-                    </Link>
-                  </article>
-                ))}
+          <select
+            value={filterCategory}
+            onChange={(e) => setFilterCategory(e.target.value)}
+            className="dash-select"
+          >
+            {categories.map(category => (
+              <option key={category} value={category}>
+                {category.charAt(0).toUpperCase() + category.slice(1)}
+              </option>
+            ))}
+          </select>
+        </div>
+      </div>
+
+      {/* Blog List */}
+      {loading ? (
+        <div className="dash-blogs-loading">
+          <div className="dash-spinner"></div>
+          <p>Loading blogs...</p>
+        </div>
+      ) : filteredBlogs.length === 0 ? (
+        <div className="dash-blogs-empty">
+          <p>No blogs found</p>
+        </div>
+      ) : (
+        <div className="dash-blogs-list">
+          {filteredBlogs.map((blog) => (
+            <div key={blog._id} className="dash-blog-card">
+              <div className="dash-blog-image">
+                <img 
+                  src={blog.featuredImageUrl || blog.featuredImage} 
+                  alt={blog.title}
+                  onError={(e) => {
+                    e.target.src = '/placeholder-blog.jpg';
+                  }}
+                />
               </div>
-              
-              {/* Load More Button */}
-              {currentPage < totalPages && (
-                <div className="blog-load-more">
-                  <button 
-                    className="blog-load-more-btn"
-                    onClick={handleLoadMore}
-                    disabled={loadingMore}
-                  >
-                    {loadingMore ? (
+
+              <div className="dash-blog-content">
+                <div className="dash-blog-meta">
+                  <span className={`dash-badge ${getStatusBadgeClass(blog.status)}`}>
+                    {blog.status}
+                  </span>
+                  <span className="dash-blog-category">
+                    <Tag size={14} />
+                    {blog.category}
+                  </span>
+                  <span className="dash-blog-date">
+                    <Calendar size={14} />
+                    {formatDate(blog.createdAt)}
+                  </span>
+                  <span className="dash-blog-read-time">
+                    <Clock size={14} />
+                    {blog.readTime} min read
+                  </span>
+                </div>
+
+                <h3 className="dash-blog-title">{blog.title}</h3>
+                <p className="dash-blog-excerpt">{blog.excerpt}</p>
+
+                <div className="dash-blog-footer">
+                  <div className="dash-blog-author">
+                    <div className="dash-author-avatar">
+                      {blog.author.avatar ? (
+                        <img src={blog.author.avatarUrl || blog.author.avatar} alt={blog.author.name} />
+                      ) : (
+                        <span>{blog.author.name.charAt(0)}</span>
+                      )}
+                    </div>
+                    <span className="dash-author-name">{blog.author.name}</span>
+                  </div>
+
+                  <div className="dash-blog-stats">
+                    <span className="dash-stat">
+                      <Eye size={16} />
+                      {blog.views || 0}
+                    </span>
+                    <span className="dash-stat">
+                      💬 {blog.commentCount || 0}
+                    </span>
+                    <span className="dash-stat">
+                      ❤️ {blog.likeCount || 0}
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="dash-blog-actions">
+                <button
+                  className="dash-action-toggle"
+                  onClick={() => setActiveDropdown(activeDropdown === blog._id ? null : blog._id)}
+                >
+                  <MoreVertical size={20} />
+                </button>
+
+                {activeDropdown === blog._id && (
+                  <div className="dash-action-dropdown">
+                    <Link 
+                      to={`/blog/${blog.slug || blog._id}`}
+                      className="dash-action-item"
+                      target="_blank"
+                    >
+                      <Eye size={16} />
+                      View
+                    </Link>
+                    {canEdit(blog) && (
                       <>
-                        <span className="blog-spinner-small"></span>
-                        <span>Loading...</span>
-                      </>
-                    ) : (
-                      <>
-                        Load More Articles
-                        <span className="load-more-icon">↓</span>
+                        <Link 
+                          to={`/admin/blogs/edit/${blog._id}`}
+                          className="dash-action-item"
+                        >
+                          <Edit size={16} />
+                          Edit
+                        </Link>
+                        <button
+                          onClick={() => handleDelete(blog._id)}
+                          className="dash-action-item dash-action-danger"
+                        >
+                          <Trash2 size={16} />
+                          Delete
+                        </button>
                       </>
                     )}
-                  </button>
-                </div>
-              )}
-            </>
-          )}
+                  </div>
+                )}
+              </div>
+            </div>
+          ))}
         </div>
-      </section>
+      )}
+
+      {/* Pagination */}
+      {totalPages > 1 && (
+        <div className="dash-pagination">
+          <button
+            className="dash-page-btn"
+            onClick={() => setCurrentPage(currentPage - 1)}
+            disabled={currentPage === 1}
+          >
+            Previous
+          </button>
+          <span className="dash-page-info">
+            Page {currentPage} of {totalPages}
+          </span>
+          <button
+            className="dash-page-btn"
+            onClick={() => setCurrentPage(currentPage + 1)}
+            disabled={currentPage === totalPages}
+          >
+            Next
+          </button>
+        </div>
+      )}
     </div>
   );
 };
 
-export default BlogPage;
+export default BlogList;

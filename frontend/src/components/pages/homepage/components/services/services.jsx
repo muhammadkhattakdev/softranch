@@ -8,8 +8,10 @@ import {
   Palette, 
   Smartphone,
   ShoppingCart,
-  Zap
+  Zap,
 } from 'lucide-react';
+import { Link } from 'react-router-dom';
+
 
 const Services = () => {
   const services = [
@@ -83,7 +85,7 @@ const Services = () => {
           </p>
         </div>
         
-        <div className="services-grid">
+        <div className="homepage__services">
           {services.map((service, index) => (
             <div key={index} className="homepage__service-card" data-index={index}>
               <div className={`service-icon-wrapper gradient-${index}`}>
@@ -103,10 +105,10 @@ const Services = () => {
         </div>
         
         <div className="services-cta">
-          <button className="services-button">
-            Get Started Today
+          <Link to={'/services/'} className="services-button">
+            Our Services
             <span className="arrow-icon">↗</span>
-          </button>
+          </Link>
         </div>
       </div>
     </section>

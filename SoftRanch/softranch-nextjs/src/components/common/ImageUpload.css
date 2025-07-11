@@ -1,0 +1,318 @@
+/* Image Upload Styles */
+.dash-image-upload {
+    width: 100%;
+  }
+  
+  .dash-image-upload.error .dash-upload-area {
+    border-color: #ef4444;
+    background: rgba(239, 68, 68, 0.05);
+  }
+  
+  /* Upload Area */
+  .dash-upload-area {
+    border: 2px dashed var(--border-primary);
+    border-radius: 0.75rem;
+    padding: 2rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.02);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .dash-upload-area:hover {
+    border-color: rgba(138, 63, 252, 0.5);
+    background: rgba(138, 63, 252, 0.05);
+  }
+  
+  .dash-upload-area:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(138, 63, 252, 0.1);
+  }
+  
+  .dash-upload-area.dragging {
+    border-color: var(--primary-color);
+    background: rgba(138, 63, 252, 0.1);
+    transform: scale(1.02);
+  }
+  
+  .dash-upload-area.dragging::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(45deg, transparent, rgba(138, 63, 252, 0.1), transparent);
+    animation: shimmer 1s ease-in-out infinite;
+  }
+  
+  @keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+  }
+  
+  .dash-upload-content {
+    pointer-events: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .dash-upload-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    background: rgba(138, 63, 252, 0.1);
+    border-radius: 50%;
+    color: var(--primary-light);
+    transition: all 0.3s ease;
+  }
+  
+  .dash-upload-area:hover .dash-upload-icon {
+    background: rgba(138, 63, 252, 0.2);
+    transform: scale(1.1);
+  }
+  
+  .dash-upload-text {
+    color: var(--text-primary);
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 0;
+  }
+  
+  .dash-upload-hint {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    margin: 0;
+  }
+  
+  /* Image Preview */
+  .dash-image-preview {
+    position: relative;
+    width: 100%;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    group: hover;
+  }
+  
+  .dash-image-preview img {
+    width: 100%;
+    height: auto;
+    display: block;
+    max-height: 300px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .dash-image-preview:hover img {
+    transform: scale(1.05);
+  }
+  
+  .dash-image-remove {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    background: rgba(0, 0, 0, 0.8);
+    border: none;
+    color: white;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    backdrop-filter: blur(10px);
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  
+  .dash-image-preview:hover .dash-image-remove {
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+  .dash-image-remove:hover {
+    background: rgba(239, 68, 68, 0.9);
+    transform: scale(1.1);
+  }
+  
+  .image-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    backdrop-filter: blur(4px);
+  }
+  
+  .dash-image-preview:hover .image-overlay {
+    opacity: 1;
+  }
+  
+  .change-image-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(255, 255, 255, 0.9);
+    color: var(--primary-color);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    backdrop-filter: blur(10px);
+  }
+  
+  .change-image-btn:hover {
+    background: white;
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Upload Error */
+  .dash-upload-error {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.75rem;
+    padding: 0.75rem 1rem;
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.2);
+    border-radius: 0.5rem;
+    color: #ef4444;
+    font-size: 0.875rem;
+  }
+  
+  /* Loading State */
+  .dash-upload-loading {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    color: white;
+    backdrop-filter: blur(4px);
+  }
+  
+  .upload-spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-top-color: var(--primary-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+  
+  /* Multiple Upload Variant */
+  .dash-image-upload.multiple .dash-upload-area {
+    min-height: 200px;
+  }
+  
+  .dash-image-preview.multiple {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+  }
+  
+  .dash-image-preview.multiple img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .dash-upload-area {
+      padding: 1.5rem;
+    }
+  
+    .dash-upload-icon {
+      width: 60px;
+      height: 60px;
+    }
+  
+    .dash-upload-icon svg {
+      width: 32px;
+      height: 32px;
+    }
+  
+    .dash-upload-text {
+      font-size: 0.875rem;
+    }
+  
+    .dash-upload-hint {
+      font-size: 0.75rem;
+    }
+  
+    .dash-image-preview img {
+      max-height: 200px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .dash-upload-area {
+      padding: 1rem;
+    }
+  
+    .dash-upload-icon {
+      width: 50px;
+      height: 50px;
+    }
+  
+    .change-image-btn {
+      padding: 0.5rem 1rem;
+      font-size: 0.875rem;
+    }
+  }
+  
+  /* High contrast mode */
+  @media (prefers-contrast: high) {
+    .dash-upload-area {
+      border-width: 3px;
+    }
+    
+    .dash-upload-area:hover,
+    .dash-upload-area.dragging {
+      border-width: 3px;
+    }
+  }
+  
+  /* Reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    .dash-upload-area,
+    .dash-upload-icon,
+    .dash-image-remove,
+    .image-overlay,
+    .change-image-btn,
+    .dash-image-preview img {
+      transition: none;
+    }
+    
+    .dash-upload-area.dragging::before {
+      animation: none;
+    }
+    
+    .upload-spinner {
+      animation: none;
+    }
+  }

@@ -16,7 +16,7 @@ const TrustedBy = () => {
           <div className="logo-item">
             <img src={inspire} alt="Company Logo 1" className="company-logo" />
           </div>
-          
+
           <div className="logo-item">
             <img src={nurtify} alt="Company Logo 2" className="company-logo" />
           </div>

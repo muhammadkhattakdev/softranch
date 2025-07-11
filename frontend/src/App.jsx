@@ -1,13 +1,15 @@
 import React from 'react';
-import './App.css';
-import Homepage from './components/pages/homepage/homepage';
 import Router from './components/router';
+import './App.css';
+import { ThemeProvider } from './context/themeContext';
 
 function App() {
   return (
-    <div className="app">
-      <Router />
-    </div>
+    <ThemeProvider>
+        <div className="app">
+          <Router />
+        </div>
+    </ThemeProvider>
   );
 }
 

@@ -6,6 +6,7 @@ import mobile_app from "../../../../../static/work/mobile_app.png";
 import portfolio from "../../../../../static/work/portfolio.png";
 import corporate from "../../../../../static/work/corporate.webp";
 import business from "../../../../../static/work/business.png";
+import { Link } from 'react-router-dom';
 
 
 
@@ -104,10 +105,10 @@ const Portfolio = () => {
         </div>
         
         <div className="portfolio-cta">
-          <button className="portfolio-button">
-            See All Website Works
+          <Link to={"/portfolio"} className="portfolio-button">
+            Here's More 
             <span className="arrow-icon">↗</span>
-          </button>
+          </Link>
         </div>
       </div>
     </section>

@@ -50,8 +50,8 @@ export default function Router() {
           </Route>
 
           {/* Admin Auth Routes (Public) */}
-          <Route path="login" element={<Login />} />
-          <Route path="create-account" element={<CreateAdminAccount />} />
+          <Route path="admin/login" element={<Login />} />
+          <Route path="admin/create-account" element={<CreateAdminAccount />} />
 
           {/* Admin Dashboard Routes (Protected) */}
           <Route 

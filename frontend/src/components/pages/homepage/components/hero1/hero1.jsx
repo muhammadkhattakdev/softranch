@@ -22,14 +22,13 @@ const Hero = () => {
         <p className="hero-description">
           Get your website up and running quickly with powerful, scalable SaaS solutions designed to boost performance and drive business growth effortlessly.
         </p>
-        
         <div className="hero-buttons">
           <Link to='/contact' className="hero-button primary">
             Get started!
             <span className="arrow-icon">↗</span>
           </Link>
           <Link target='_blank' to='https://wa.me/923355398908/' className="hero-button secondary">
-            Let's Chat
+            Chat on Whatsapp
           </Link>
         </div>
       </div>

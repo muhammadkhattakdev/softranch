@@ -1,7 +1,9 @@
 import React from 'react';
 import './style.css';
-import myImg from "../../../../../static/ayaz.png";
-
+import teamImg1 from "../../../../../static/ayaz.png";
+import teamImg2 from "../../../../../static/shayan.jpg";
+import teamImg3 from "../../../../../static/danyal.png";
+import teamImg4 from "../../../../../static/haider.png";
 
 
 const Team = () => {
@@ -28,28 +30,28 @@ const Team = () => {
           <div className="carousel-track">
             {/* First set of team members */}
             <div className="team-member">
-              <img src={myImg} alt="Team Member 1" />
+              <img src={teamImg1} alt="Team Member 1" />
             </div>
             <div className="team-member">
-              <img src={myImg} alt="Team Member 2" />
+              <img src={teamImg2} alt="Team Member 2" />
             </div>
             <div className="team-member">
-              <img src={myImg} alt="Team Member 3" />
+              <img src={teamImg3} alt="Team Member 3" />
             </div>
             <div className="team-member">
-              <img src={myImg} alt="Team Member 4" />
+              <img src={teamImg4} alt="Team Member 4" />
             </div>
             <div className="team-member">
-              <img src={myImg} alt="Team Member 5" />
+              <img src={teamImg1} alt="Team Member 5" />
             </div>
             <div className="team-member">
-              <img src={myImg} alt="Team Member 6" />
+              <img src={teamImg1} alt="Team Member 6" />
             </div>
             <div className="team-member">
-              <img src={myImg} alt="Team Member 7" />
+              <img src={teamImg1} alt="Team Member 7" />
             </div>
             <div className="team-member">
-              <img src={myImg} alt="Team Member 8" />
+              <img src={teamImg1} alt="Team Member 8" />
             </div>            
           </div>
         </div>

@@ -10,7 +10,7 @@ import {
   Loader
 } from 'lucide-react';
 import api from '../../../../utils/request';
-import RichTextEditor from '../../../common/RichTextEditor/editor';
+import RichTextEditor from '../../../common/richTextEditor/editor';
 import ImageUpload from '../../../common/imageUpload/imageUpload';
 import '../blogCreate/style.css';
 

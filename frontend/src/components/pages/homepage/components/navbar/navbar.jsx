@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Linkedin, Instagram, Facebook, Menu, X, ChevronDown } from 'lucide-react';
-
 import "./style.css";
+import ThemeToggle from '../../../../common/themeToggle/themeToggle';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -105,29 +105,41 @@ const Navbar = () => {
           </div>
         </div>
         
-        {/* Desktop Social Icons */}
-        <div className="navbar-social desktop-only">
-          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="social-icon linkedin">
-            <Linkedin size={20} />
-          </a>
-          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="social-icon instagram">
-            <Instagram size={20} />
-          </a>
-          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="social-icon facebook">
-            <Facebook size={20} />
-          </a>
+        {/* Desktop Right Section - Theme Toggle + Social Icons */}
+        <div className="navbar-right desktop-only">
+          <div className="navbar-theme-toggle">
+            <ThemeToggle variant="button" />
+          </div>
+          
+          <div className="navbar-social">
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="social-icon linkedin">
+              <Linkedin size={20} />
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="social-icon instagram">
+              <Instagram size={20} />
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="social-icon facebook">
+              <Facebook size={20} />
+            </a>
+          </div>
         </div>
 
-        {/* Mobile Menu Toggle */}
-        <button 
-          className="mobile-menu-toggle mobile-only"
-          onClick={toggleMobileMenu}
-          aria-label="Toggle mobile menu"
-          aria-expanded={isMobileMenuOpen}
-          type="button"
-        >
-          {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        {/* Mobile Right Section - Theme Toggle + Menu Toggle */}
+        <div className="navbar-mobile-right mobile-only">
+          <div className="navbar-theme-toggle mobile">
+            <ThemeToggle variant="button" />
+          </div>
+          
+          <button 
+            className="mobile-menu-toggle"
+            onClick={toggleMobileMenu}
+            aria-label="Toggle mobile menu"
+            aria-expanded={isMobileMenuOpen}
+            type="button"
+          >
+            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Menu Overlay */}
@@ -151,6 +163,15 @@ const Navbar = () => {
                 Pages
               </Link>
             </div>
+            
+            {/* Mobile Theme Toggle Section */}
+            <div className="mobile-menu-theme">
+              <div className="mobile-menu-theme-label">
+                <span>Theme</span>
+              </div>
+              <ThemeToggle variant="switch" />
+            </div>
+            
             <div className="mobile-social">
               <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="mobile-social-icon linkedin" onClick={closeMobileMenu}>
                 <Linkedin size={24} />

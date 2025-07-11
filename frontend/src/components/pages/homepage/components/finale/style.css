@@ -359,7 +359,7 @@
 
 .finale-subtitle {
   font-size: clamp(1.1rem, 2.5vw, 1.4rem);
-  color: rgba(255, 255, 255, 0.8);
+  color: var(--white);
   max-width: 600px;
   line-height: 1.6;
   font-weight: 400;
@@ -534,7 +534,7 @@
   height: 40px;
   background: linear-gradient(135deg, var(--primary-color), #ec4899);
   border-radius: 0.5rem;
-  color: white;
+  color: var(--white);
 }
 
 .contact-info {
@@ -544,13 +544,13 @@
 
 .contact-label {
   font-size: 0.8rem;
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--white);
   margin-bottom: 0.2rem;
 }
 
 .contact-value {
   font-size: 0.9rem;
-  color: white;
+  color: var(--white);
   font-weight: 600;
 }
 
