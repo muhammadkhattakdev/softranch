@@ -10,6 +10,7 @@ import {
   Rocket,
 } from "lucide-react";
 import "./style.css";
+import { Link } from "react-router-dom";
 
 const TermsPage = () => {
   const services = [
@@ -57,7 +58,7 @@ const TermsPage = () => {
             <h1 className="terms-hero-title">
               Transparent Terms,
               <br />
-              <span className="gradient-text">Exceptional Results</span>
+              Exceptional Results
             </h1>
 
             <p className="terms-hero-description">
@@ -348,13 +349,13 @@ const TermsPage = () => {
               together
             </p>
             <div className="cta-buttons">
-              <a href="/contact" className="cta-button primary">
+              <Link to={"/contact/"} className="cta-button primary">
                 Get Your Custom Quote
                 <Rocket size={20} />
-              </a>
-              <a href="/portfolio" className="cta-button secondary">
+              </Link>
+              <Link to={"/portfolio/"} className="cta-button secondary">
                 View Our Work
-              </a>
+              </Link>
             </div>
           </div>
         </div>

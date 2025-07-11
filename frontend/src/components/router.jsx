@@ -2,6 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import { AuthProvider } from "../context/authContext";
 import { PERMISSIONS } from "../context/authContext";
 
+
 import HomeLayout from "./layouts/homeLayout";
 import AdminDashboardLayout from "./layouts/adminDashboardLayout/adminDashboardLayout";
 
@@ -31,6 +32,7 @@ import TeamEdit from "./pages/adminDashboardPages/teamEdit/teamEdit";
 import ProtectedRoute from "./auth/protectedRoute";
 import ScrollToTop from "./pageLoader/scrollToTop";
 import EnhancedRouteTransition from "./pageLoader/routerTransition";
+import ServicesPage from "./pages/servicesPage/services";
 
 export default function Router() {
   return (
@@ -43,6 +45,7 @@ export default function Router() {
             <Route element={<Homepage />} index />
             <Route element={<PortfolioPage />} path="portfolio" />
             <Route element={<ContactPage />} path="contact" />
+            <Route element={<ServicesPage />} path="services" />
             <Route element={<BlogPage />} path="blog" />
             <Route element={<BlogDetailPage />} path="blog/:id" />
             <Route element={<AboutPage />} path="about" />

@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Linkedin, Instagram, Facebook, Menu, X, ChevronDown } from 'lucide-react';
+import { Linkedin, Instagram, Facebook, Menu, X } from 'lucide-react';
 import "./style.css";
 import ThemeToggle from '../../../../common/themeToggle/themeToggle';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -19,31 +18,7 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      const mobileMenu = document.querySelector('.mobile-menu-overlay');
-      const toggleButton = document.querySelector('.mobile-menu-toggle');
-      
-      if (isMobileMenuOpen && 
-          mobileMenu && 
-          !mobileMenu.contains(event.target) && 
-          toggleButton && 
-          !toggleButton.contains(event.target)) {
-        setIsMobileMenuOpen(false);
-      }
-    };
-
-    if (isMobileMenuOpen) {
-      setTimeout(() => {
-        document.addEventListener('click', handleClickOutside);
-      }, 100);
-    }
-
-    return () => {
-      document.removeEventListener('click', handleClickOutside);
-    };
-  }, [isMobileMenuOpen]);
-
+  // Handle body scroll lock
   useEffect(() => {
     if (isMobileMenuOpen) {
       document.body.style.overflow = 'hidden';
@@ -56,137 +31,131 @@ const Navbar = () => {
     };
   }, [isMobileMenuOpen]);
 
-  const toggleMobileMenu = (e) => {
+  const handleMobileToggle = (e) => {
     e.preventDefault();
     e.stopPropagation();
-    console.log('Toggle mobile menu clicked, current state:', isMobileMenuOpen);
-    setIsMobileMenuOpen(prev => !prev);
-    setIsDropdownOpen(true); // Close dropdown when opening mobile menu
-  };
-
-  const toggleDropdown = () => {
-    setIsDropdownOpen(!isDropdownOpen);
+    console.log('Mobile toggle clicked, current state:', isMobileMenuOpen);
+    setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
   const closeMobileMenu = () => {
     setIsMobileMenuOpen(false);
-    setIsDropdownOpen(false);
   };
 
-  return (
-    <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
-      <div className="navbar-container">
-        <div className="navbar-logo">
-          <Link to="/" onClick={closeMobileMenu}>SoftRanch</Link>
-        </div>
+  const handleOverlayClick = (e) => {
+    if (e.target.classList.contains('mobile-menu-overlay')) {
+      closeMobileMenu();
+    }
+  };
 
-        {/* Desktop Navigation */}
-        <div className="navbar-links desktop-only">
-          <Link to="/portfolio" className="navbar-link">Portfolio</Link>
+  console.log('Navbar render - isMobileMenuOpen:', isMobileMenuOpen);
+
+  return (
+    <>
+      <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
+        <div className="navbar-container">
+          <div className="navbar-logo">
+            <Link to="/" onClick={closeMobileMenu}>SoftRanch</Link>
+          </div>
+
+          {/* Desktop Navigation */}
+          <div className="navbar-links desktop-only">
+            <Link to="/about" className="navbar-link">About</Link>
+            <Link to="/services" className="navbar-link">Services</Link>
+            <Link to="/portfolio" className="navbar-link">Portfolio</Link>
+            <Link to="/contact" className="navbar-link">Contact</Link>
+            <Link to="/terms-and-conditions" className="navbar-link">Terms and Conditions</Link>
+          </div>
           
-          <div className="navbar-dropdown">
-            <button 
-              className="navbar-link dropdown-toggle"
-              onClick={toggleDropdown}
-              aria-expanded={isDropdownOpen}
-            >
-              Go to 
-              <ChevronDown 
-                size={16} 
-                className={`dropdown-arrow ${isDropdownOpen ? 'rotated' : ''}`}
-              />
-            </button>
+          {/* Desktop Right Section */}
+          <div className="navbar-right desktop-only">
+            <div className="navbar-theme-toggle">
+              <ThemeToggle variant="button" />
+            </div>
             
-            <div className={`dropdown-menu ${isDropdownOpen ? 'open' : ''}`}>
-              <Link to="/contact" className="dropdown-item">Contact</Link>
-              <Link to="/blog" className="dropdown-item">Blog</Link>
-              <Link to="/pages" className="dropdown-item">Pages</Link>
+            <div className="navbar-social">
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="social-icon linkedin">
+                <Linkedin size={20} />
+              </a>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="social-icon instagram">
+                <Instagram size={20} />
+              </a>
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="social-icon facebook">
+                <Facebook size={20} />
+              </a>
             </div>
           </div>
-        </div>
-        
-        {/* Desktop Right Section - Theme Toggle + Social Icons */}
-        <div className="navbar-right desktop-only">
-          <div className="navbar-theme-toggle">
-            <ThemeToggle variant="button" />
-          </div>
-          
-          <div className="navbar-social">
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="social-icon linkedin">
-              <Linkedin size={20} />
-            </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="social-icon instagram">
-              <Instagram size={20} />
-            </a>
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="social-icon facebook">
-              <Facebook size={20} />
-            </a>
-          </div>
-        </div>
 
-        {/* Mobile Right Section - Theme Toggle + Menu Toggle */}
-        <div className="navbar-mobile-right mobile-only">
-          <div className="navbar-theme-toggle mobile">
-            <ThemeToggle variant="button" />
+          {/* Mobile Right Section */}
+          <div className="navbar-mobile-right mobile-only">
+            <div className="navbar-theme-toggle mobile">
+              <ThemeToggle variant="button" />
+            </div>
+            
+            <button 
+              className="mobile-menu-toggle"
+              onClick={handleMobileToggle}
+              aria-label="Toggle mobile menu"
+              type="button"
+            >
+              {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
           </div>
-          
-          <button 
-            className="mobile-menu-toggle"
-            onClick={toggleMobileMenu}
-            aria-label="Toggle mobile menu"
-            aria-expanded={isMobileMenuOpen}
-            type="button"
-          >
-            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
         </div>
-      </div>
+      </nav>
 
       {/* Mobile Menu Overlay */}
-      <div 
-        className={`mobile-menu-overlay ${isMobileMenuOpen ? 'open' : ''}`}
-        aria-hidden={!isMobileMenuOpen}
-      >
-        <div className="mobile-menu">
-          <div className="mobile-menu-content">
-            <div className="mobile-nav-links">
-              <Link to="/portfolio" className="mobile-nav-link" onClick={closeMobileMenu}>
-                Portfolio
-              </Link>
-              <Link to="/contact" className="mobile-nav-link" onClick={closeMobileMenu}>
-                Contact
-              </Link>
-              <Link to="/blog" className="mobile-nav-link" onClick={closeMobileMenu}>
-                Blog
-              </Link>
-              <Link to="/pages" className="mobile-nav-link" onClick={closeMobileMenu}>
-                Pages
-              </Link>
-            </div>
-            
-            {/* Mobile Theme Toggle Section */}
-            <div className="mobile-menu-theme">
-              <div className="mobile-menu-theme-label">
-                <span>Theme</span>
+      {isMobileMenuOpen && (
+        <div 
+          className="mobile-menu-overlay open"
+          onClick={handleOverlayClick}
+        >
+          <div className="mobile-menu">
+            <div className="mobile-menu-content">
+              <div className="mobile-nav-links">
+                <Link to="/about" className="mobile-nav-link" onClick={closeMobileMenu}>
+                  About
+                </Link>
+                <Link to="/services" className="mobile-nav-link" onClick={closeMobileMenu}>
+                  Services
+                </Link>
+                <Link to="/portfolio" className="mobile-nav-link" onClick={closeMobileMenu}>
+                  Portfolio
+                </Link>
+                <Link to="/contact" className="mobile-nav-link" onClick={closeMobileMenu}>
+                  Contact
+                </Link>
+                <Link to="/terms-and-conditions" className="mobile-nav-link" onClick={closeMobileMenu}>
+                  Terms and Conditions
+                </Link>
+                <Link to="/blog" className="mobile-nav-link" onClick={closeMobileMenu}>
+                  Blog
+                </Link>
               </div>
-              <ThemeToggle variant="switch" />
-            </div>
-            
-            <div className="mobile-social">
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="mobile-social-icon linkedin" onClick={closeMobileMenu}>
-                <Linkedin size={24} />
-              </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="mobile-social-icon instagram" onClick={closeMobileMenu}>
-                <Instagram size={24} />
-              </a>
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="mobile-social-icon facebook" onClick={closeMobileMenu}>
-                <Facebook size={24} />
-              </a>
+              
+              <div className="mobile-menu-theme">
+                <div className="mobile-menu-theme-label">
+                  <span>Theme</span>
+                </div>
+                <ThemeToggle variant="switch" />
+              </div>
+              
+              <div className="mobile-social">
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="mobile-social-icon linkedin">
+                  <Linkedin size={24} />
+                </a>
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="mobile-social-icon instagram">
+                  <Instagram size={24} />
+                </a>
+                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="mobile-social-icon facebook">
+                  <Facebook size={24} />
+                </a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </nav>
+      )}
+    </>
   );
 };
 

@@ -58,7 +58,7 @@ const AboutPage = () => {
             <h1 className="about-hero-title">
               We Build Digital
               <br />
-              <span className="gradient-text">Experiences That Matter</span>
+              Experiences That Matter
             </h1>
             
             <p className="about-hero-description">
@@ -192,28 +192,6 @@ const AboutPage = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="about-cta">
-        <div className="cta-glow-bg"></div>
-        
-        <div className="about-container">
-          <div className="cta-content">
-            <h2 className="cta-title">Ready to Build Something Amazing?</h2>
-            <p className="cta-description">
-              Let's transform your vision into a digital reality that drives results
-            </p>
-            <div className="cta-buttons">
-              <Link to="/contact" className="cta-button primary">
-                Get Started
-                <Rocket size={20} />
-              </Link>
-              <Link to="/portfolio" className="cta-button secondary">
-                View Our Work
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
   );
 };
