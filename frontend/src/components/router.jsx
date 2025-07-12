@@ -38,6 +38,8 @@ import EcommerceServices from "./pages/ecommerceServicesPage/ecommerceServicesPa
 import RestaurantServices from "./pages/restaurantServicesPage/restaurantServicesPage";
 import HealthcareServices from "./pages/healthcareServicesPage/healthcareServicesPage";
 import ProfessionalServices from "./pages/professionalServicesPage/professionalServicesPage";
+import LiveWorkSamplesPage from "./pages/liveWorkSamplesPage/liveWorkSamplesPage";
+import SavoriaRestaurant from "./pages/LiveWorkSampleWebsites/SavoriaRestaurantLandingPage/savoria";
 
 export default function Router() {
   return (
@@ -49,6 +51,7 @@ export default function Router() {
           <Route element={<HomeLayout />} path="/">
             <Route element={<Homepage />} index />
             <Route element={<PortfolioPage />} path="portfolio" />
+            <Route element={<LiveWorkSamplesPage />} path="live-work-samples" />
             <Route element={<ContactPage />} path="contact" />
             <Route element={<ServicesPage />} path="services" />
             <Route element={<BlogPage />} path="blog" />
@@ -61,8 +64,15 @@ export default function Router() {
             <Route element={<RestaurantServices />} path="restaurant-website-development-services" />
             <Route element={<HealthcareServices />} path="healthcare-website-development-services" />
             <Route element={<ProfessionalServices />} path="lawyer-accountant-consultant-website-development-services" />
-
           </Route>
+
+
+
+          {/* LIVE WORK SAMPLE WEBSITES DEMOS  */}
+
+          <Route element={<SavoriaRestaurant />} path="live-work-samples/savoria-restaurant-website" />
+
+
 
           {/* Admin Auth Routes (Public) */}
           <Route path="admin/login" element={<Login />} />

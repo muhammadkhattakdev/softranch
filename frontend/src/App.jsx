@@ -5,6 +5,10 @@ import { ThemeProvider } from './context/themeContext';
 import { HelmetProvider } from 'react-helmet-async';
 
 function App() {
+
+  
+
+
   return (
     <ThemeProvider>
         <div className="app">
@@ -16,4 +20,7 @@ function App() {
   );
 }
 
+
+
 export default App;
+
