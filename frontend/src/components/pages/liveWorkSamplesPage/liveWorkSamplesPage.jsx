@@ -21,11 +21,11 @@ import "./style.css";
 const sampleProjects = [
   {
     id: 1,
-    title: "Modern Restaurant Website",
+    title: "Saviora | Restaurant Website",
     category: "Restaurant & Food",
     description: "Elegant dining experience with online reservations and menu showcase",
     icon: <Coffee size={24} />,
-    slug: "modern-restaurant",
+    slug: "savoria-restaurant-website",
     technologies: ["React", "Node.js", "MongoDB"],
     features: ["Online Reservations", "Menu Management", "Reviews System"],
     gradient: "from-orange-500 to-red-500",
@@ -33,11 +33,11 @@ const sampleProjects = [
   },
   {
     id: 2,
-    title: "Healthcare Portal",
+    title: "Nebule Studios",
     category: "Healthcare",
     description: "Comprehensive patient management system with appointment booking",
     icon: <Stethoscope size={24} />,
-    slug: "healthcare-portal",
+    slug: "nebula-studios-website",
     technologies: ["React", "Express", "PostgreSQL"],
     features: ["Appointment Booking", "Patient Records", "Telemedicine"],
     gradient: "from-blue-500 to-cyan-500",

@@ -139,9 +139,9 @@ const Navbar = () => {
                 </div>
                 <ThemeToggle variant="switch" />
               </div>
-              
+
               <div className="mobile-social">
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="mobile-social-icon linkedin">
+                <a href="https://www.linkedin.com/company/softranch/" target="_blank" rel="noopener noreferrer" className="mobile-social-icon linkedin">
                   <Linkedin size={24} />
                 </a>
                 <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="mobile-social-icon instagram">

@@ -40,6 +40,8 @@ import HealthcareServices from "./pages/healthcareServicesPage/healthcareService
 import ProfessionalServices from "./pages/professionalServicesPage/professionalServicesPage";
 import LiveWorkSamplesPage from "./pages/liveWorkSamplesPage/liveWorkSamplesPage";
 import SavoriaRestaurant from "./pages/LiveWorkSampleWebsites/SavoriaRestaurantLandingPage/savoria";
+import NebulaStudios from "./pages/LiveWorkSampleWebsites/nebulaStudiosLandingPage/nebula";
+import EstateFlow from "./pages/LiveWorkSampleWebsites/estateFlowLandingPage/estate";
 
 export default function Router() {
   return (
@@ -70,7 +72,12 @@ export default function Router() {
 
           {/* LIVE WORK SAMPLE WEBSITES DEMOS  */}
 
-          <Route element={<SavoriaRestaurant />} path="live-work-samples/savoria-restaurant-website" />
+          <Route path="live-work-samples">
+          <Route element={<SavoriaRestaurant />} path="savoria-restaurant-website" />
+          <Route element={<NebulaStudios />} path="nebula-studios-website" />
+          <Route element={<EstateFlow />} path="estate-flow-website" />
+
+          </Route>
 
 
 
