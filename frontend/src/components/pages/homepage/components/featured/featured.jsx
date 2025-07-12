@@ -5,6 +5,7 @@ import landing2 from "../../../../../static/landing2.png";
 import landing3 from "../../../../../static/landing3.png";
 import landing4 from "../../../../../static/landing4.png";
 import landing5 from "../../../../../static/landing5.png";
+import { Link } from 'react-router-dom';
 
 const Featured = () => {
   return (
@@ -47,10 +48,10 @@ const Featured = () => {
                 Beat Zillow in local search results and convert website visitors into qualified buyers. Our real estate websites feature IDX integration, automated lead capture, local SEO optimization, and mobile-first design that turns clicks into closings.
               </p>
               
-              <button className="featured-button">
+              <Link to={"/real-estate-services/"} className="featured-button">
                 Learn More
                 <span className="arrow-icon">↗</span>
-              </button>
+              </Link>
             </div>
           </div>
           
@@ -71,10 +72,10 @@ const Featured = () => {
                 Transform your online store into a revenue-generating machine. Our e-commerce websites feature lightning-fast loading speeds, mobile optimization, abandoned cart recovery, and conversion-focused design that turns browsers into buyers.
               </p>
               
-              <button className="featured-button">
+              <Link to={"/ecommerce-website-development-services/"} className="featured-button">
                 Learn More
                 <span className="arrow-icon">↗</span>
-              </button>
+              </Link>
             </div>
             
             <div className="featured-image">
@@ -103,10 +104,10 @@ const Featured = () => {
                 Increase foot traffic and online orders with websites built for hungry customers. Features include online menu management, reservation systems, delivery integration, Google My Business optimization, and local SEO that puts you on the map.
               </p>
               
-              <button className="featured-button">
+              <Link to={"/restaurant-website-development-services/"} className="featured-button">
                 Learn More
                 <span className="arrow-icon">↗</span>
-              </button>
+              </Link>
             </div>
           </div>
           
@@ -127,10 +128,10 @@ const Featured = () => {
                 Build trust and attract more patients with HIPAA-compliant websites designed for healthcare professionals. Includes online appointment booking, patient portals, insurance verification, telehealth integration, and local SEO for medical practices.
               </p>
               
-              <button className="featured-button">
+              <Link to={"/healthcare-website-development-services/"} className="featured-button">
                 Learn More
                 <span className="arrow-icon">↗</span>
-              </button>
+              </Link>
             </div>
             
             <div className="featured-image">
@@ -157,10 +158,10 @@ const Featured = () => {
                 Position yourself as the go-to expert in your field with websites that showcase your expertise and convert visitors into high-value clients. Features include case studies, client testimonials, appointment scheduling, and SEO that attracts your ideal clients.
               </p>
               
-              <button className="featured-button">
+              <Link to={"/lawyer-accountant-consultant-website-development-services/"} className="featured-button">
                 Learn More
                 <span className="arrow-icon">↗</span>
-              </button>
+              </Link>
             </div>
           </div>
         </div>

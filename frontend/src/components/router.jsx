@@ -33,6 +33,11 @@ import ProtectedRoute from "./auth/protectedRoute";
 import ScrollToTop from "./pageLoader/scrollToTop";
 import EnhancedRouteTransition from "./pageLoader/routerTransition";
 import ServicesPage from "./pages/servicesPage/services";
+import RealEstateServices from "./pages/realEstateServicePage/realEstateServicePage";
+import EcommerceServices from "./pages/ecommerceServicesPage/ecommerceServicesPage";
+import RestaurantServices from "./pages/restaurantServicesPage/restaurantServicesPage";
+import HealthcareServices from "./pages/healthcareServicesPage/healthcareServicesPage";
+import ProfessionalServices from "./pages/professionalServicesPage/professionalServicesPage";
 
 export default function Router() {
   return (
@@ -50,6 +55,13 @@ export default function Router() {
             <Route element={<BlogDetailPage />} path="blog/:id" />
             <Route element={<AboutPage />} path="about" />
             <Route element={<TermsPage />} path="terms-and-conditions" />
+            <Route element={<RealEstateServices />} path="real-estate-services" />
+            <Route element={<EcommerceServices />} path="ecommerce-website-development-services" />
+            <Route element={<RestaurantServices />} path="restaurant-website-development-services" />
+            <Route element={<RestaurantServices />} path="restaurant-website-development-services" />
+            <Route element={<HealthcareServices />} path="healthcare-website-development-services" />
+            <Route element={<ProfessionalServices />} path="lawyer-accountant-consultant-website-development-services" />
+
           </Route>
 
           {/* Admin Auth Routes (Public) */}

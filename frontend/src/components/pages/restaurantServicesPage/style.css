@@ -1,0 +1,1137 @@
+/* Restaurant Services Page Styles - Enhanced Glassmorphism */
+.restaurant-services-wrapper {
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    position: relative;
+    overflow-x: hidden;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  /* Hero Section */
+  .restaurant-hero {
+    width: 100%;
+    padding: 8rem 1rem 6rem;
+    position: relative;
+    overflow: hidden;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+  }
+  
+  .restaurant-hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(
+      ellipse at 50% 50%,
+      rgba(249, 115, 22, 0.15) 0%,
+      rgba(249, 115, 22, 0.08) 30%,
+      rgba(249, 115, 22, 0.03) 50%,
+      transparent 70%
+    );
+    filter: blur(100px);
+    z-index: 0;
+  }
+  
+  /* Light mode hero background */
+  [data-theme="light"] .restaurant-hero-bg {
+    background: radial-gradient(
+      ellipse at 50% 50%,
+      rgba(249, 115, 22, 0.1) 0%,
+      rgba(249, 115, 22, 0.05) 30%,
+      rgba(249, 115, 22, 0.02) 50%,
+      transparent 70%
+    );
+  }
+  
+  .restaurant-glow-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(60px);
+    pointer-events: none;
+    z-index: 0;
+  }
+  
+  .restaurant-glow-orb-1 {
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(249, 115, 22, 0.4), transparent);
+    top: -10%;
+    left: -10%;
+    animation: restaurantFloat 12s ease-in-out infinite;
+  }
+  
+  .restaurant-glow-orb-2 {
+    width: 350px;
+    height: 350px;
+    background: radial-gradient(circle, rgba(220, 38, 38, 0.3), transparent);
+    bottom: -10%;
+    right: -10%;
+    animation: restaurantFloat 10s ease-in-out infinite reverse;
+  }
+  
+  /* Light mode glow orbs */
+  [data-theme="light"] .restaurant-glow-orb-1 {
+    background: radial-gradient(circle, rgba(249, 115, 22, 0.25), transparent);
+  }
+  
+  [data-theme="light"] .restaurant-glow-orb-2 {
+    background: radial-gradient(circle, rgba(220, 38, 38, 0.2), transparent);
+  }
+  
+  @keyframes restaurantFloat {
+    0%,
+    100% {
+      transform: translateY(0px) translateX(0px);
+    }
+    25% {
+      transform: translateY(-30px) translateX(15px);
+    }
+    50% {
+      transform: translateY(-15px) translateX(-10px);
+    }
+    75% {
+      transform: translateY(-40px) translateX(20px);
+    }
+  }
+  
+  .restaurant-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .restaurant-hero-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+  
+  @media (min-width: 992px) {
+    .restaurant-hero-content {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  /* Enhanced Badge */
+  .restaurant-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(249, 115, 22, 0.1);
+    border-radius: 2rem;
+    padding: 0.5rem 1.5rem;
+    margin-bottom: 2rem;
+    position: relative;
+    backdrop-filter: blur(10px);
+  }
+  
+  /* Light mode badge */
+  [data-theme="light"] .restaurant-badge {
+    background: rgba(249, 115, 22, 0.08);
+    border: 1px solid rgba(249, 115, 22, 0.15);
+  }
+  
+  .restaurant-badge::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 2rem;
+    padding: 1px;
+    background: linear-gradient(
+      135deg,
+      #f97316,
+      #ea580c,
+      #dc2626,
+      #f97316
+    );
+    background-size: 200% 200%;
+    animation: restaurantGradientBorder 3s ease infinite;
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: exclude;
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+  }
+  
+  @keyframes restaurantGradientBorder {
+    0%,
+    100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+  
+  .restaurant-badge span {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--text-primary);
+    position: relative;
+    z-index: 1;
+    transition: color 0.3s ease;
+  }
+  
+  .restaurant-hero-title {
+    font-size: clamp(2.5rem, 6vw, 3.5rem);
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: var(--text-primary);
+    transition: color 0.3s ease;
+  }
+  
+  .restaurant-gradient-text {
+    background: linear-gradient(
+      135deg,
+      #f97316,
+      #ea580c,
+      #dc2626
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .restaurant-hero-description {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    line-height: 1.6;
+    transition: color 0.3s ease;
+  }
+  
+  .restaurant-hero-stats {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .restaurant-stat-item {
+    text-align: center;
+  }
+  
+  .restaurant-stat-number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #f97316;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 0 30px rgba(249, 115, 22, 0.5);
+  }
+  
+  .restaurant-stat-label {
+    font-size: 0.9rem;
+    color: var(--text-primary);
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .restaurant-hero-cta {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .restaurant-cta-primary,
+  .restaurant-cta-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1.25rem 2rem;
+    border-radius: 2rem;
+    font-weight: 700;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+  }
+  
+  .restaurant-cta-primary {
+    background: linear-gradient(
+      135deg,
+      #f97316,
+      #ea580c,
+      #dc2626
+    );
+    background-size: 200% 200%;
+    color: #ffffff;
+    box-shadow: 0 8px 25px rgba(249, 115, 22, 0.3);
+    animation: restaurantButtonGradient 5s ease infinite;
+  }
+  
+  @keyframes restaurantButtonGradient {
+    0%,
+    100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+  
+  .restaurant-cta-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(249, 115, 22, 0.5);
+  }
+  
+  .restaurant-cta-secondary {
+    background: var(--bg-card);
+    color: var(--text-primary);
+    border: 2px solid var(--border-primary);
+    backdrop-filter: blur(20px);
+  }
+  
+  /* Dark theme secondary button */
+  [data-theme="dark"] .restaurant-cta-secondary {
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.08) 0%,
+      rgba(255, 255, 255, 0.04) 100%
+    );
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  /* Light theme secondary button */
+  [data-theme="light"] .restaurant-cta-secondary {
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.8) 0%,
+      rgba(255, 255, 255, 0.6) 100%
+    );
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  .restaurant-cta-secondary:hover {
+    transform: translateY(-3px);
+    border-color: rgba(249, 115, 22, 0.4);
+  }
+  
+  /* Hero Image */
+  .restaurant-hero-image {
+    position: relative;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  }
+  
+  .restaurant-hero-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+  }
+  
+  .restaurant-hero-image:hover img {
+    transform: scale(1.05);
+  }
+  
+  .restaurant-image-overlay {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: rgba(249, 115, 22, 0.9);
+    color: white;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    backdrop-filter: blur(10px);
+  }
+  
+  /* Floating Glows */
+  .restaurant-floating-glow {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(50px);
+    pointer-events: none;
+    z-index: 0;
+  }
+  
+  .restaurant-floating-glow-1 {
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(220, 38, 38, 0.2), transparent);
+    top: 20%;
+    left: 10%;
+    animation: restaurantGentleFloat 12s ease-in-out infinite;
+  }
+  
+  .restaurant-floating-glow-2 {
+    width: 250px;
+    height: 250px;
+    background: radial-gradient(circle, rgba(249, 115, 22, 0.15), transparent);
+    bottom: 20%;
+    right: 10%;
+    animation: restaurantGentleFloat 15s ease-in-out infinite reverse;
+  }
+  
+  /* Light mode floating glows */
+  [data-theme="light"] .restaurant-floating-glow-1 {
+    background: radial-gradient(circle, rgba(220, 38, 38, 0.12), transparent);
+  }
+  
+  [data-theme="light"] .restaurant-floating-glow-2 {
+    background: radial-gradient(circle, rgba(249, 115, 22, 0.1), transparent);
+  }
+  
+  @keyframes restaurantGentleFloat {
+    0%,
+    100% {
+      transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-30px) rotate(180deg);
+    }
+  }
+  
+  /* Section Headers */
+  .restaurant-section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .restaurant-section-title {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+    letter-spacing: -0.02em;
+    transition: color 0.3s ease;
+  }
+  
+  .restaurant-section-subtitle {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    transition: color 0.3s ease;
+  }
+  
+  /* Features Section */
+  .restaurant-features {
+    padding: 6rem 1rem;
+    position: relative;
+  }
+  
+  .restaurant-features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+  }
+  
+  /* Enhanced Feature Cards */
+  .restaurant-feature-card {
+    border-radius: 1.5rem;
+    padding: 2.5rem;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(20px);
+  }
+  
+  /* Dark theme feature cards */
+  [data-theme="dark"] .restaurant-feature-card {
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.03) 0%,
+      rgba(255, 255, 255, 0.01) 100%
+    );
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Light theme feature cards */
+  [data-theme="light"] .restaurant-feature-card {
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.7) 0%,
+      rgba(255, 255, 255, 0.5) 100%
+    );
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  }
+  
+  .restaurant-feature-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+  }
+  
+  /* Dark theme feature card hover effects */
+  [data-theme="dark"] .restaurant-feature-card::before {
+    background: linear-gradient(
+      135deg,
+      rgba(249, 115, 22, 0.1) 0%,
+      transparent 50%
+    );
+  }
+  
+  /* Light theme feature card hover effects */
+  [data-theme="light"] .restaurant-feature-card::before {
+    background: linear-gradient(
+      135deg,
+      rgba(249, 115, 22, 0.08) 0%,
+      transparent 50%
+    );
+  }
+  
+  .restaurant-feature-card:hover::before {
+    opacity: 1;
+  }
+  
+  .restaurant-feature-card:hover {
+    transform: translateY(-12px) scale(1.02);
+    border-color: rgba(249, 115, 22, 0.4);
+  }
+  
+  /* Dark theme feature card hover */
+  [data-theme="dark"] .restaurant-feature-card:hover {
+    box-shadow: 0 20px 40px rgba(249, 115, 22, 0.2);
+  }
+  
+  /* Light theme feature card hover */
+  [data-theme="light"] .restaurant-feature-card:hover {
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.8) 0%,
+      rgba(255, 255, 255, 0.6) 100%
+    );
+    box-shadow: 0 20px 40px rgba(249, 115, 22, 0.15);
+  }
+  
+  .restaurant-feature-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(
+      135deg,
+      #f97316,
+      #ea580c
+    );
+    border-radius: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+    box-shadow: 0 8px 25px rgba(249, 115, 22, 0.3);
+    transition: all 0.4s ease;
+  }
+  
+  .restaurant-feature-card:hover .restaurant-feature-icon {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 12px 35px rgba(249, 115, 22, 0.5);
+  }
+  
+  .restaurant-feature-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+    transition: color 0.3s ease;
+  }
+  
+  .restaurant-feature-description {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    transition: color 0.3s ease;
+  }
+  
+  /* Benefits Section */
+  .restaurant-benefits {
+    padding: 6rem 1rem;
+    background: linear-gradient(
+      180deg,
+      transparent 0%,
+      rgba(249, 115, 22, 0.05) 50%,
+      transparent 100%
+    );
+  }
+  
+  /* Light mode benefits background */
+  [data-theme="light"] .restaurant-benefits {
+    background: linear-gradient(
+      180deg,
+      transparent 0%,
+      rgba(249, 115, 22, 0.03) 50%,
+      transparent 100%
+    );
+  }
+  
+  .restaurant-benefits-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+  
+  @media (min-width: 992px) {
+    .restaurant-benefits-content {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  .restaurant-benefits-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .restaurant-benefit-item {
+    display: flex;
+    gap: 1rem;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    backdrop-filter: blur(20px);
+    transition: all 0.3s ease;
+  }
+  
+  /* Dark theme benefit items */
+  [data-theme="dark"] .restaurant-benefit-item {
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.02) 0%,
+      rgba(255, 255, 255, 0.01) 100%
+    );
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  
+  /* Light theme benefit items */
+  [data-theme="light"] .restaurant-benefit-item {
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.7) 0%,
+      rgba(255, 255, 255, 0.5) 100%
+    );
+    border: 1px solid rgba(0, 0, 0, 0.08);
+  }
+  
+  .restaurant-benefit-item:hover {
+    transform: translateY(-3px);
+    border-color: rgba(249, 115, 22, 0.3);
+  }
+  
+  .restaurant-benefit-icon {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(
+      135deg,
+      #f97316,
+      #ea580c
+    );
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    flex-shrink: 0;
+  }
+  
+  .restaurant-benefit-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+    transition: color 0.3s ease;
+  }
+  
+  .restaurant-benefit-description {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    transition: color 0.3s ease;
+  }
+  
+  .restaurant-benefits-image {
+    position: relative;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  }
+  
+  .restaurant-benefits-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+  }
+  
+  .restaurant-benefits-image:hover img {
+    transform: scale(1.05);
+  }
+  
+  /* Packages Section */
+  .restaurant-packages {
+    padding: 6rem 1rem;
+    position: relative;
+  }
+  
+  .restaurant-packages-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(
+      circle,
+      rgba(249, 115, 22, 0.1) 0%,
+      transparent 70%
+    );
+    filter: blur(100px);
+    z-index: 0;
+  }
+  
+  /* Light mode packages glow */
+  [data-theme="light"] .restaurant-packages-glow {
+    background: radial-gradient(
+      circle,
+      rgba(249, 115, 22, 0.06) 0%,
+      transparent 70%
+    );
+  }
+  
+  .restaurant-packages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Enhanced Package Cards */
+  .restaurant-package-card {
+    border-radius: 1.5rem;
+    padding: 2.5rem;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(20px);
+  }
+  
+  /* Dark theme package cards */
+  [data-theme="dark"] .restaurant-package-card {
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.03) 0%,
+      rgba(255, 255, 255, 0.01) 100%
+    );
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Light theme package cards */
+  [data-theme="light"] .restaurant-package-card {
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.7) 0%,
+      rgba(255, 255, 255, 0.5) 100%
+    );
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  }
+  
+  .restaurant-package-popular {
+    border-color: rgba(249, 115, 22, 0.4) !important;
+    transform: scale(1.05);
+  }
+  
+  .restaurant-package-badge {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(
+      135deg,
+      #f97316,
+      #ea580c
+    );
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+  
+  .restaurant-package-card:hover {
+    transform: translateY(-10px);
+    border-color: rgba(249, 115, 22, 0.4);
+  }
+  
+  /* Dark theme package card hover */
+  [data-theme="dark"] .restaurant-package-card:hover {
+    box-shadow: 0 25px 50px rgba(249, 115, 22, 0.2);
+  }
+  
+  /* Light theme package card hover */
+  [data-theme="light"] .restaurant-package-card:hover {
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.8) 0%,
+      rgba(255, 255, 255, 0.6) 100%
+    );
+    box-shadow: 0 25px 50px rgba(249, 115, 22, 0.15);
+  }
+  
+  .restaurant-package-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .restaurant-package-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+    transition: color 0.3s ease;
+  }
+  
+  .restaurant-package-price {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #f97316;
+  }
+  
+  .restaurant-package-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2rem 0;
+  }
+  
+  .restaurant-package-feature {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 0;
+    color: var(--text-secondary);
+    border-bottom: 1px solid var(--border-primary);
+    transition: color 0.3s ease, border-color 0.3s ease;
+  }
+  
+  .restaurant-package-feature svg {
+    color: #10b981;
+    flex-shrink: 0;
+  }
+  
+  .restaurant-package-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+    justify-content: center;
+    padding: 1rem 2rem;
+    background: linear-gradient(
+      135deg,
+      #f97316,
+      #ea580c
+    );
+    color: #ffffff;
+    border-radius: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(249, 115, 22, 0.3);
+  }
+  
+  .restaurant-package-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(249, 115, 22, 0.5);
+  }
+  
+  /* Testimonials Section */
+  .restaurant-testimonials {
+    padding: 6rem 1rem;
+    background: linear-gradient(
+      180deg,
+      transparent 0%,
+      rgba(249, 115, 22, 0.05) 50%,
+      transparent 100%
+    );
+  }
+  
+  /* Light mode testimonials background */
+  [data-theme="light"] .restaurant-testimonials {
+    background: linear-gradient(
+      180deg,
+      transparent 0%,
+      rgba(249, 115, 22, 0.03) 50%,
+      transparent 100%
+    );
+  }
+  
+  .restaurant-testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+  }
+  
+  /* Enhanced Testimonial Cards */
+  .restaurant-testimonial-card {
+    padding: 2rem;
+    border-radius: 1.5rem;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(20px);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Dark theme testimonial cards */
+  [data-theme="dark"] .restaurant-testimonial-card {
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.03) 0%,
+      rgba(255, 255, 255, 0.01) 100%
+    );
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Light theme testimonial cards */
+  [data-theme="light"] .restaurant-testimonial-card {
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.7) 0%,
+      rgba(255, 255, 255, 0.5) 100%
+    );
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  }
+  
+  .restaurant-testimonial-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(249, 115, 22, 0.3);
+  }
+  
+  .restaurant-testimonial-rating {
+    display: flex;
+    gap: 0.25rem;
+    margin-bottom: 1rem;
+  }
+  
+  .restaurant-star-filled {
+    color: #fbbf24;
+  }
+  
+  .restaurant-testimonial-text {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+    transition: color 0.3s ease;
+  }
+  
+  .restaurant-author-name {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.25rem;
+    transition: color 0.3s ease;
+  }
+  
+  .restaurant-author-title {
+    font-size: 0.9rem;
+    color: #f97316;
+    margin: 0;
+  }
+  
+  /* CTA Section */
+  .restaurant-cta {
+    padding: 6rem 1rem;
+    background: linear-gradient(
+      180deg,
+      transparent 0%,
+      rgba(249, 115, 22, 0.08) 100%
+    );
+    position: relative;
+  }
+  
+  /* Light mode CTA background */
+  [data-theme="light"] .restaurant-cta {
+    background: linear-gradient(
+      180deg,
+      transparent 0%,
+      rgba(249, 115, 22, 0.05) 100%
+    );
+  }
+  
+  .restaurant-cta-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 300px;
+    background: radial-gradient(
+      ellipse at center,
+      rgba(249, 115, 22, 0.2) 0%,
+      transparent 70%
+    );
+    filter: blur(80px);
+    z-index: 0;
+  }
+  
+  /* Light mode CTA glow */
+  [data-theme="light"] .restaurant-cta-glow {
+    background: radial-gradient(
+      ellipse at center,
+      rgba(249, 115, 22, 0.12) 0%,
+      transparent 70%
+    );
+  }
+  
+  .restaurant-cta-content {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .restaurant-cta-title {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 800;
+    margin-bottom: 1rem;
+    background: linear-gradient(
+      135deg,
+      var(--text-primary),
+      #f97316
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: background 0.3s ease;
+  }
+  
+  .restaurant-cta-description {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    margin-bottom: 2.5rem;
+    transition: color 0.3s ease;
+  }
+  
+  .restaurant-cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+  }
+  
+  .restaurant-cta-guarantee {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    color: var(--text-tertiary);
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+  }
+  
+  .restaurant-cta-guarantee svg {
+    color: #10b981;
+  }
+  
+  /* Mobile Responsive */
+  @media (max-width: 768px) {
+    .restaurant-hero {
+      padding: 6rem 1rem 4rem;
+      min-height: auto;
+    }
+  
+    .restaurant-hero-title {
+      font-size: 2.5rem;
+    }
+  
+    .restaurant-hero-description {
+      font-size: 1.1rem;
+    }
+  
+    .restaurant-hero-stats {
+      gap: 1rem;
+      justify-content: center;
+    }
+  
+    .restaurant-stat-number {
+      font-size: 2rem;
+    }
+  
+    .restaurant-section-title {
+      font-size: 2rem;
+    }
+  
+    .restaurant-features-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+  
+    .restaurant-feature-card {
+      padding: 2rem;
+    }
+  
+    .restaurant-packages-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+  
+    .restaurant-package-card {
+      padding: 2rem;
+    }
+  
+    .restaurant-testimonials-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+  
+    .restaurant-hero-cta,
+    .restaurant-cta-buttons {
+      flex-direction: column;
+      max-width: 300px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  
+    .restaurant-cta-primary,
+    .restaurant-cta-secondary {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .restaurant-hero {
+      padding: 5rem 1rem 3rem;
+    }
+  
+    .restaurant-feature-icon {
+      width: 60px;
+      height: 60px;
+    }
+  
+    .restaurant-package-popular {
+      transform: none;
+    }
+  }

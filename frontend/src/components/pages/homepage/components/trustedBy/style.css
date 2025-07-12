@@ -1,56 +1,122 @@
+/* TrustedBy Component - Enhanced for Light/Dark Mode */
 .trusted-by {
-    width: 100%;
-    padding: 3rem 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-  }
-  
-  .trusted-by-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
-  }
-  
-  .trusted-by-title {
-    text-align: center;
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-bottom: 3rem;
-    color: var(--white);
-  }
-  
+  width: 100%;
+  padding: 3rem 0;
+  transition: border-color 0.3s ease;
+  background: none !important;
+}
+
+.trusted-by-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.trusted-by-title {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 3rem;
+  color: var(--text-primary);
+  transition: color 0.3s ease;
+}
+
+.trusted-by-logos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.logo-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.company-logo {
+  height: 40px;
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+/* Dark theme logos - white/inverted */
+[data-theme="dark"] .company-logo {
+  filter: brightness(0) invert(1);
+}
+
+/* Light theme logos - darker/original colors */
+[data-theme="light"] .company-logo {
+  filter: brightness(0.3) contrast(1.2);
+}
+
+.company-logo:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+/* Text logos (h3 elements) */
+.company-logo h3,
+.logo-item h3.company-logo {
+  height: auto;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+/* Dark theme text logos */
+[data-theme="dark"] .company-logo h3,
+[data-theme="dark"] .logo-item h3.company-logo {
+  color: var(--text-primary);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.05) 0%,
+    rgba(255, 255, 255, 0.02) 100%
+  );
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Light theme text logos */
+[data-theme="light"] .company-logo h3,
+[data-theme="light"] .logo-item h3.company-logo {
+  color: var(--text-primary);
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.05) 0%,
+    rgba(0, 0, 0, 0.02) 100%
+  );
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.company-logo h3:hover,
+.logo-item h3.company-logo:hover {
+  border-color: rgba(138, 63, 252, 0.3);
+  color: var(--primary-light);
+}
+
+/* Remove filter from text logos */
+.company-logo h3,
+.logo-item h3.company-logo {
+  filter: none !important;
+}
+
+@media (max-width: 768px) {
   .trusted-by-logos {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 2rem;
-  }
-  
-  .logo-item {
-    display: flex;
     justify-content: center;
-    align-items: center;
+    gap: 2.5rem;
   }
   
   .company-logo {
-    height: 40px;
-    filter: brightness(0) invert(1);
-    opacity: 0.9;
-    transition: opacity 0.3s ease;
+    height: 30px;
   }
   
-  .company-logo:hover {
-    opacity: 1;
+  .company-logo h3,
+  .logo-item h3.company-logo {
+    font-size: 1rem;
+    padding: 0.4rem 0.8rem;
   }
-  
-  @media (max-width: 768px) {
-    .trusted-by-logos {
-      justify-content: center;
-      gap: 2.5rem;
-    }
-    
-    .company-logo {
-      height: 30px;
-    }
-  }
+}
