@@ -2,9 +2,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Home, ArrowLeft, Search } from 'lucide-react';
 import './style.css';
+import EnhancedNavbar from '../homepage/components/navbar/navbar';
+import Finale from '../homepage/components/finale/finale';
 
 const NotFoundPage = () => {
   return (
+    <>
+      <EnhancedNavbar />
     <div className="notfound-wrapper">
       {/* Background Elements */}
       <div className="notfound-glow-orb notfound-glow-orb-1"></div>
@@ -64,6 +68,9 @@ const NotFoundPage = () => {
         </div>
       </div>
     </div>
+    <Finale />
+    </>
+
   );
 };
 

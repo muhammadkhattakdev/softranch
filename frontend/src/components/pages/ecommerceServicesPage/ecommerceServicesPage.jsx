@@ -24,6 +24,7 @@ import {
 } from 'lucide-react';
 import './style.css';
 import img1 from "../../../static/featured_services_images/softCommerce.png";
+import img2 from "../../../static/featured_services_images/commerce.png";
 
 const EcommerceServices = () => {
   const features = [
@@ -100,7 +101,7 @@ const EcommerceServices = () => {
   const servicePackages = [
     {
       title: "Starter E-commerce",
-      price: "Starting at $3,497",
+      price: "Starting at $499",
       features: [
         "Professional E-commerce Website",
         "Up to 100 Products",
@@ -113,7 +114,7 @@ const EcommerceServices = () => {
     },
     {
       title: "Growth Package",
-      price: "Starting at $5,997",
+      price: "Starting at $1,997",
       features: [
         "Everything in Starter Package",
         "Unlimited Products", 
@@ -127,7 +128,7 @@ const EcommerceServices = () => {
     },
     {
       title: "Enterprise Solution",
-      price: "Starting at $9,997",
+      price: "Starting at $3,995",
       features: [
         "Everything in Growth Package",
         "AI-Powered Personalization",
@@ -296,7 +297,7 @@ const EcommerceServices = () => {
               </div>
               
               <div className="ecommerce-benefits-image">
-                <img src="/api/placeholder/500/400" alt="E-commerce analytics dashboard showing conversion rates and sales metrics on mobile device" />
+                <img src={img2} alt="E-commerce analytics dashboard showing conversion rates and sales metrics on mobile device" />
               </div>
             </div>
           </div>
@@ -366,7 +367,6 @@ const EcommerceServices = () => {
                   </div>
                   <p className="ecommerce-testimonial-text">"{testimonial.text}"</p>
                   <div className="ecommerce-testimonial-author">
-                    <h4 className="ecommerce-author-name">{testimonial.name}</h4>
                     <p className="ecommerce-author-title">{testimonial.title}</p>
                   </div>
                 </div>

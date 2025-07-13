@@ -49,6 +49,7 @@ import PhotographerPortfolio from "./pages/LiveWorkSampleWebsites/photographerWe
 import RestaurantDashboard from "./pages/LiveWorkSampleWebsites/restaurantDashboard/dashboard";
 import SoftFoodDashboard from "./pages/LiveWorkSampleWebsites/softFoodDashboard/softFood";
 import SoftCommerceDashboard from "./pages/LiveWorkSampleWebsites/softCommerce/softCommerce";
+import MedicalDashboard from "./pages/LiveWorkSampleWebsites/medicalDashboard/dashboard";
 
 export default function Router() {
   return (
@@ -88,9 +89,8 @@ export default function Router() {
             <Route element={<RestaurantDashboard />} path="restaurant-management-saas-website" />
             <Route element={<SoftFoodDashboard />} path="softfood-restaurant-management-saas-website" />
             <Route element={<SoftCommerceDashboard />} path="soft-commerce-saas-website" />
+            <Route element={<MedicalDashboard />} path="medical-saas-website" />
           </Route>
-
-
 
           {/* Admin Auth Routes (Public) */}
           <Route path="admin/login" element={<Login />} />

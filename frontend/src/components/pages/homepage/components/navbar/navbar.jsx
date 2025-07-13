@@ -397,10 +397,10 @@ const EnhancedNavbar = () => {
             </div>
             
             <div className="navbar-social">
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="social-icon linkedin">
+              <a href="https://linkedin.com/company/softranch/" target="_blank" rel="noopener noreferrer" className="social-icon linkedin">
                 <Linkedin size={20} />
               </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="social-icon instagram">
+              <a href="https://www.instagram.com/softranch.agency/" target="_blank" rel="noopener noreferrer" className="social-icon instagram">
                 <Instagram size={20} />
               </a>
               <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="social-icon facebook">
