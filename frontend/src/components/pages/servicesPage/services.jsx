@@ -366,14 +366,14 @@ const ServicesPage = () => {
                     </ul>
 
                     <div className="services-page-service-meta">
-                      <div className="services-page-service-pricing">
+                      {/* <div className="services-page-service-pricing">
                         <span className="services-page-pricing-label">
                           Starting at
                         </span>
                         <span className="services-page-pricing-value">
                           {service.pricing}
                         </span>
-                      </div>
+                      </div> */}
                       <div className="services-page-service-delivery">
                         <Clock size={16} />
                         <span>{service.deliveryTime}</span>

@@ -42,6 +42,11 @@ import LiveWorkSamplesPage from "./pages/liveWorkSamplesPage/liveWorkSamplesPage
 import SavoriaRestaurant from "./pages/LiveWorkSampleWebsites/SavoriaRestaurantLandingPage/savoria";
 import NebulaStudios from "./pages/LiveWorkSampleWebsites/nebulaStudiosLandingPage/nebula";
 import EstateFlow from "./pages/LiveWorkSampleWebsites/estateFlowLandingPage/estate";
+import CorporateLanding from "./pages/LiveWorkSampleWebsites/innovateTech/tech";
+import PlantWebsite from "./pages/LiveWorkSampleWebsites/plansWebsite/plantWebsite";
+import EcommerceDashboard from "./pages/LiveWorkSampleWebsites/CommerceFlowDashboard/commerceFlow";
+import PhotographerPortfolio from "./pages/LiveWorkSampleWebsites/photographerWebsite/photographer";
+import RestaurantDashboard from "./pages/LiveWorkSampleWebsites/restaurantDashboard/dashboard";
 
 export default function Router() {
   return (
@@ -68,15 +73,17 @@ export default function Router() {
             <Route element={<ProfessionalServices />} path="lawyer-accountant-consultant-website-development-services" />
           </Route>
 
-
-
           {/* LIVE WORK SAMPLE WEBSITES DEMOS  */}
 
           <Route path="live-work-samples">
-          <Route element={<SavoriaRestaurant />} path="savoria-restaurant-website" />
-          <Route element={<NebulaStudios />} path="nebula-studios-website" />
-          <Route element={<EstateFlow />} path="estate-flow-website" />
-
+            <Route element={<SavoriaRestaurant />} path="savoria-restaurant-website" />
+            <Route element={<NebulaStudios />} path="nebula-studios-website" />
+            <Route element={<EstateFlow />} path="estate-flow-website" />
+            <Route element={<CorporateLanding />} path="innovate-tech-website" />
+            <Route element={<PlantWebsite />} path="plants-website" />
+            <Route element={<EcommerceDashboard />} path="commerce-flow-saas-website" />
+            <Route element={<PhotographerPortfolio />} path="photography-portfolio-website" />
+            <Route element={<RestaurantDashboard />} path="restaurant-management-saas-website" />
           </Route>
 
 

@@ -94,8 +94,8 @@ const AboutPage = () => {
                 every business deserves a powerful online presence, and we're here to make 
                 that happen.
               </p>
-              <Link to="/contact" className="mission-cta">
-                Start Your Journey
+              <Link to="/live-work-samples/" className="mission-cta">
+                See Live Work Samples
                 <Zap size={20} />
               </Link>
             </div>

@@ -13,9 +13,18 @@ import {
   GraduationCap,
   Camera,
   Coffee,
-  Car
+  Car,
+  TreePalm
 } from 'lucide-react';
 import "./style.css";
+import savioraImg from "../../../static/saviora/header.webp";
+import estateFlowImg from "../../../static/estateFlow/villa.webp";
+import nebula from "../../../static/nebula.webp";
+import innovateTech from "../../../static/innovateTech.webp";
+import planto from "../../../static/planto/thumb.png";
+import commerceFlow from "../../../static/commerceFlow.png";
+import photographyWebsiteThumb from "../../../static/photography_website/thumb.png";
+import restaurantSaaSThumb from "../../../static/restaurant_saas.png";
 
 // Sample project data - you can replace these with actual thumbnails later
 const sampleProjects = [
@@ -29,67 +38,67 @@ const sampleProjects = [
     technologies: ["React", "Node.js", "MongoDB"],
     features: ["Online Reservations", "Menu Management", "Reviews System"],
     gradient: "from-orange-500 to-red-500",
-    img: ''
+    img: savioraImg
+  },
+  {
+    id: 6,
+    title: "CommerceFlow",
+    category: "Dashboard | SaaS",
+    description: "Online learning management system with course creation and progress tracking",
+    icon: <GraduationCap size={24} />,
+    slug: "commerce-flow-saas-website",
+    technologies: ["React", "Video API", "LMS"],
+    features: ["Course Creation", "Progress Tracking", "Certificates"],
+    gradient: "from-teal-500 to-green-500",
+    img: commerceFlow
+  },
+  {
+    id: 4,
+    title: "Planto | Buy And Sell Plants",
+    category: "Ecommerce | Gallery | Showcase",
+    description: "Amazing and creative website design for Planto.",
+    icon: <TreePalm size={24} />,
+    slug: "plants-website",
+    technologies: ["React", "Auth0", "AWS"],
+    features: ["Ordering System", "Plants Gallery", "Admin Panel"],
+    gradient: "from-indigo-500 to-blue-500",
+    img: planto
+  },
+  {
+    id: 3,
+    title: "EstateFlow | Real Estate Website",
+    category: "Real Estate",
+    description: "Property listing platform with virtual tours and mortgage calculator",
+    icon: <Home size={24} />,
+    slug: "estate-flow-website/",
+    technologies: ["React", "Maps API", "CMS"],
+    features: ["Property Search", "Virtual Tours", "Mortgage Calculator"],
+    gradient: "from-purple-500 to-violet-500",
+    img: estateFlowImg
   },
   {
     id: 2,
-    title: "Nebule Studios",
-    category: "Healthcare",
+    title: "Nebula Studios",
+    category: "A.I | Machine Learning",
     description: "Comprehensive patient management system with appointment booking",
     icon: <Stethoscope size={24} />,
     slug: "nebula-studios-website",
     technologies: ["React", "Express", "PostgreSQL"],
     features: ["Appointment Booking", "Patient Records", "Telemedicine"],
     gradient: "from-blue-500 to-cyan-500",
-    img: ''
-  },
-  {
-    id: 3,
-    title: "E-commerce Platform",
-    category: "E-commerce",
-    description: "Full-featured online store with payment integration and inventory management",
-    icon: <ShoppingCart size={24} />,
-    slug: "ecommerce-platform",
-    technologies: ["React", "Stripe", "Firebase"],
-    features: ["Payment Gateway", "Inventory Management", "Order Tracking"],
-    gradient: "from-green-500 to-emerald-500",
-    img: ''
-  },
-  {
-    id: 4,
-    title: "Real Estate Website",
-    category: "Real Estate",
-    description: "Property listing platform with virtual tours and mortgage calculator",
-    icon: <Home size={24} />,
-    slug: "real-estate-website",
-    technologies: ["React", "Maps API", "CMS"],
-    features: ["Property Search", "Virtual Tours", "Mortgage Calculator"],
-    gradient: "from-purple-500 to-violet-500",
-    img: ''
+    img: nebula
   },
   {
     id: 5,
-    title: "Business Consulting",
+    title: "Corporate Website",
     category: "Corporate",
-    description: "Professional consulting firm website with client portal and resources",
-    icon: <Briefcase size={24} />,
-    slug: "business-consulting",
-    technologies: ["React", "Auth0", "AWS"],
-    features: ["Client Portal", "Resource Library", "Consultation Booking"],
-    gradient: "from-indigo-500 to-blue-500",
-    img: ''
-  },
-  {
-    id: 6,
-    title: "Education Platform",
-    category: "Education",
-    description: "Online learning management system with course creation and progress tracking",
-    icon: <GraduationCap size={24} />,
-    slug: "education-platform",
-    technologies: ["React", "Video API", "LMS"],
-    features: ["Course Creation", "Progress Tracking", "Certificates"],
-    gradient: "from-teal-500 to-green-500",
-    img: ''
+    description: "Professional corporate website with team portal and investor relations",
+    icon: <Globe size={24} />,
+    slug: "corporate-website",
+    technologies: ["React", "CMS", "Analytics"],
+    features: ["Team Portal", "Investor Relations", "News Management"],
+    gradient: "from-slate-600 to-slate-800",
+    img: innovateTech,
   },
   {
     id: 7,
@@ -97,11 +106,11 @@ const sampleProjects = [
     category: "Portfolio",
     description: "Stunning visual portfolio with gallery management and client booking",
     icon: <Camera size={24} />,
-    slug: "photography-portfolio",
+    slug: "photography-portfolio-website",
     technologies: ["React", "Cloudinary", "Booking"],
     features: ["Gallery Management", "Client Booking", "Print Orders"],
     gradient: "from-pink-500 to-rose-500",
-    img: ''
+    img: photographyWebsiteThumb
   },
   {
     id: 8,
@@ -117,28 +126,16 @@ const sampleProjects = [
   },
   {
     id: 9,
-    title: "Mobile App Landing",
-    category: "App Landing",
+    title: "Restaurant Management Dashboard",
+    category: "SaaS | Dashboard | Management Tool",
     description: "Modern app landing page with download tracking and user analytics",
     icon: <Smartphone size={24} />,
-    slug: "mobile-app-landing",
+    slug: "restaurant-management-saas-website",
     technologies: ["React", "Analytics", "SEO"],
     features: ["Download Tracking", "User Analytics", "App Store Integration"],
     gradient: "from-yellow-500 to-orange-500",
-    img: ''
+    img: restaurantSaaSThumb,
   },
-  {
-    id: 10,
-    title: "Corporate Website",
-    category: "Corporate",
-    description: "Professional corporate website with team portal and investor relations",
-    icon: <Globe size={24} />,
-    slug: "corporate-website",
-    technologies: ["React", "CMS", "Analytics"],
-    features: ["Team Portal", "Investor Relations", "News Management"],
-    gradient: "from-slate-600 to-slate-800",
-    img: ''
-  }
 ];
 
 // Optimized Sample Card Component
@@ -152,6 +149,7 @@ const SampleCard = memo(({ project, index }) => {
 
   return (
     <Link 
+      target='_blank'
       to={`/live-work-samples/${project.slug}`}
       className="live-samples-card"
       data-index={index}

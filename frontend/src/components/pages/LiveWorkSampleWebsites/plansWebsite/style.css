@@ -1,0 +1,2009 @@
+/* Plant Website 1440px Styles - Exact Anima conversion scaled for 1440px with plant-website__ prefix */
+
+.plant-website__macbook-pro-1440 {
+    background-color: #1b2316;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+    padding-top: 0;
+    margin-top: -80px;
+  }
+  
+  .plant-website__div-1440 {
+    background-color: #1b2316;
+    overflow: hidden;
+    width: 1440px;
+    height: 6394px;
+    position: relative;
+  }
+  
+  .plant-website__overlap-1440 {
+    position: absolute;
+    width: 1440px;
+    height: 2210px;
+    top: 0;
+    left: 0;
+  }
+  
+  .plant-website__nagy-arnold-x-1440 {
+    position: absolute;
+    width: 1440px;
+    height: 2160px;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+  }
+  
+  .plant-website__rectangle-1440 {
+    position: absolute;
+    width: 1349px;
+    height: 438px;
+    top: 1088px;
+    left: 53px;
+    background-color: #ffffff0d;
+    border-radius: 126px;
+    border: none;
+    backdrop-filter: blur(17px) brightness(100%);
+    -webkit-backdrop-filter: blur(17px) brightness(100%);
+  }
+  
+  .plant-website__rectangle-1440::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: 2px;
+    border-radius: 126px;
+    background: linear-gradient(
+      136deg,
+      rgba(255, 255, 255, 0.27) 0%,
+      rgba(255, 255, 255, 0) 62%,
+      rgba(255, 255, 255, 0.33) 100%
+    );
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    z-index: 1;
+    pointer-events: none;
+  }
+  
+  .plant-website__img-1440 {
+    position: absolute;
+    width: 458px;
+    height: 556px;
+    top: 225px;
+    left: 961px;
+  }
+  
+  .plant-website__rectangle-2-1440 {
+    position: absolute;
+    width: 17px;
+    height: 5px;
+    top: 718px;
+    left: 1165px;
+    background-color: #ffffff;
+    border-radius: 38px;
+  }
+  
+  .plant-website__search-interface-1440 {
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    top: 57px;
+    left: 1226px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .plant-website__search-interface-1440:hover {
+    transform: scale(1.1);
+  }
+  
+  .plant-website__plant-1440 {
+    width: 154px;
+    height: 190px;
+    top: 47px;
+    position: absolute;
+    left: 0;
+    object-fit: cover;
+  }
+  
+  .plant-website__text-wrapper-1440 {
+    position: absolute;
+    top: 57px;
+    left: 99px;
+    opacity: 0.75;
+    font-family: "Inter", "Inter-Black", Helvetica, sans-serif;
+    font-weight: 900;
+    color: #ffffff;
+    font-size: 23px;
+    letter-spacing: 0;
+    line-height: normal;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+  }
+  
+  .plant-website__text-wrapper-1440:hover {
+    opacity: 1;
+  }
+  
+  .plant-website__group-1440 {
+    position: absolute;
+    width: 459px;
+    height: 24px;
+    top: 55px;
+    left: 483px;
+    opacity: 0.75;
+  }
+  
+  .plant-website__text-wrapper-2-1440 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-family: "Inter", "Inter-Medium", Helvetica, sans-serif;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .plant-website__text-wrapper-2-1440:hover,
+  .plant-website__text-wrapper-2-1440.plant-website__active-1440 {
+    color: #4ade80;
+    transform: translateY(-2px);
+  }
+  
+  .plant-website__text-wrapper-3-1440 {
+    top: 0;
+    left: 279px;
+    position: absolute;
+    font-family: "Inter", "Inter-Medium", Helvetica, sans-serif;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .plant-website__text-wrapper-3-1440:hover,
+  .plant-website__text-wrapper-3-1440.plant-website__active-1440 {
+    color: #4ade80;
+    transform: translateY(-2px);
+  }
+  
+  .plant-website__text-wrapper-4-1440 {
+    top: 0;
+    left: 377px;
+    position: absolute;
+    font-family: "Inter", "Inter-Medium", Helvetica, sans-serif;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .plant-website__text-wrapper-4-1440:hover,
+  .plant-website__text-wrapper-4-1440.plant-website__active-1440 {
+    color: #4ade80;
+    transform: translateY(-2px);
+  }
+  
+  .plant-website__group-2-1440 {
+    position: absolute;
+    width: 126px;
+    height: 24px;
+    top: 0;
+    left: 106px;
+    cursor: pointer;
+  }
+  
+  .plant-website__polygon-1440 {
+    position: absolute;
+    width: 8px;
+    height: 4px;
+    top: 11px;
+    left: 115px;
+  }
+  
+  .plant-website__bag-1440 {
+    width: 22px;
+    height: 22px;
+    top: 57px;
+    left: 1297px;
+    position: absolute;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .plant-website__bag-1440:hover {
+    transform: scale(1.1);
+  }
+  
+  .plant-website__group-3-1440 {
+    position: absolute;
+    width: 26px;
+    height: 11px;
+    top: 62px;
+    left: 1367px;
+    opacity: 0.75;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+  }
+  
+  .plant-website__group-3-1440:hover {
+    opacity: 1;
+  }
+  
+  .plant-website__line-1440 {
+    width: 26px;
+    top: -3px;
+    left: 0;
+    position: absolute;
+    height: 3px;
+  }
+  
+  .plant-website__line-2-1440 {
+    width: 19px;
+    top: 8px;
+    left: 7px;
+    position: absolute;
+    height: 3px;
+  }
+  
+  .plant-website__text-wrapper-5-1440 {
+    position: absolute;
+    height: 119px;
+    top: 221px;
+    left: 47px;
+    opacity: 0.75;
+    font-family: "Inter", "Inter-SemiBold", Helvetica, sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 98px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .plant-website__p-1440 {
+    width: 744px;
+    height: 47px;
+    top: 337px;
+    left: 52px;
+    opacity: 0.75;
+    font-family: "Inter", "Inter-Medium", Helvetica, sans-serif;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 19px;
+    position: absolute;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .plant-website__overlap-group-wrapper-1440 {
+    position: absolute;
+    width: 182px;
+    height: 53px;
+    top: 401px;
+    left: 52px;
+    opacity: 0.75;
+  }
+  
+  .plant-website__overlap-group-1440 {
+    position: relative;
+    width: 181px;
+    height: 53px;
+    border-radius: 10px;
+    border: 2px solid;
+    border-color: #ffffff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .plant-website__overlap-group-1440:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+  }
+  
+  .plant-website__text-wrapper-6-1440 {
+    position: absolute;
+    top: 11px;
+    left: 47px;
+    font-family: "Inter", "Inter-Regular", Helvetica, sans-serif;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 23px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .plant-website__group-4-1440 {
+    position: absolute;
+    width: 262px;
+    height: 53px;
+    top: 1368px;
+    left: 765px;
+  }
+  
+  .plant-website__div-wrapper-1440 {
+    position: absolute;
+    width: 181px;
+    height: 53px;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    border: 2px solid;
+    border-color: #ffffff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .plant-website__div-wrapper-1440:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+  }
+  
+  .plant-website__text-wrapper-7-1440 {
+    position: absolute;
+    top: 11px;
+    left: 47px;
+    font-family: "Inter", "Inter-Medium", Helvetica, sans-serif;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 23px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .plant-website__rectangle-3-1440 {
+    position: absolute;
+    width: 53px;
+    height: 53px;
+    top: 0;
+    left: 207px;
+    border-radius: 10px;
+    border: 2px solid;
+    border-color: #ffffff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .plant-website__rectangle-3-1440:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: scale(1.05);
+  }
+  
+  .plant-website__overlap-wrapper-1440 {
+    position: absolute;
+    width: 182px;
+    height: 53px;
+    top: 635px;
+    left: 1036px;
+    opacity: 0.75;
+  }
+  
+  .plant-website__text-wrapper-8-1440 {
+    position: absolute;
+    top: 11px;
+    left: 38px;
+    font-family: "Inter", "Inter-Regular", Helvetica, sans-serif;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 23px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .plant-website__group-5-1440 {
+    position: absolute;
+    width: 165px;
+    height: 53px;
+    top: 401px;
+    left: 262px;
+  }
+  
+  .plant-website__polygon-wrapper-1440 {
+    position: absolute;
+    width: 53px;
+    height: 53px;
+    top: 0;
+    left: 0;
+    border-radius: 27px;
+    border: 2px solid;
+    border-color: #ffffffbf;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .plant-website__polygon-wrapper-1440:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: scale(1.05);
+  }
+  
+  .plant-website__polygon-2-1440 {
+    position: absolute;
+    width: 18px;
+    height: 21px;
+    top: 14px;
+    left: 18px;
+  }
+  
+  .plant-website__text-wrapper-9-1440 {
+    position: absolute;
+    top: 17px;
+    left: 67px;
+    opacity: 0.75;
+    font-family: "Inter", "Inter-Regular", Helvetica, sans-serif;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 17px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .plant-website__rose-gold-feminine-1440 {
+    width: 509px;
+    height: 532px;
+    top: 127px;
+    left: 930px;
+    position: absolute;
+    object-fit: cover;
+  }
+  
+  .plant-website__text-wrapper-10-1440 {
+    top: 579px;
+    left: 1036px;
+    position: absolute;
+    height: 38px;
+    font-family: "Inter", "Inter-Regular", Helvetica, sans-serif;
+    font-weight: 400;
+    color: #ffffffbf;
+    font-size: 32px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .plant-website__text-wrapper-11-1440 {
+    position: absolute;
+    top: 539px;
+    left: 1036px;
+    font-family: "Inter", "Inter-Regular", Helvetica, sans-serif;
+    font-weight: 400;
+    color: #ffffffbf;
+    font-size: 19px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .plant-website__ellipse-1440 {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    top: 718px;
+    left: 1193px;
+    background-color: #ffffff;
+    border-radius: 3px;
+  }
+  
+  .plant-website__ellipse-2-1440 {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    top: 718px;
+    left: 1207px;
+    background-color: #ffffff;
+    border-radius: 3px;
+  }
+  
+  .plant-website__right-arrow-1440 {
+    width: 17px;
+    height: 17px;
+    top: 595px;
+    left: 1358px;
+    position: absolute;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .plant-website__right-arrow-1440:hover {
+    transform: translateX(5px);
+  }
+  
+  .plant-website__rectangle-4-1440 {
+    position: absolute;
+    width: 341px;
+    height: 197px;
+    top: 659px;
+    left: 47px;
+  }
+  
+  .plant-website__group-6-1440 {
+    position: absolute;
+    width: 172px;
+    height: 53px;
+    top: 695px;
+    left: 86px;
+  }
+  
+  .plant-website__unsplash-1440 {
+    position: absolute;
+    width: 53px;
+    height: 53px;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  
+  .plant-website__group-7-1440 {
+    position: absolute;
+    width: 97px;
+    height: 39px;
+    top: 7px;
+    left: 77px;
+  }
+  
+  .plant-website__text-wrapper-12-1440 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-family: "Inter", "Inter-Regular", Helvetica, sans-serif;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 18px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .plant-website__group-8-1440 {
+    position: absolute;
+    width: 87px;
+    height: 12px;
+    top: 27px;
+    left: 0;
+  }
+  
+  .plant-website__star-1440 {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    top: 0;
+    left: 0;
+  }
+  
+  .plant-website__star-2-1440 {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    top: 0;
+    left: 20px;
+  }
+  
+  .plant-website__star-3-1440 {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    top: 0;
+    left: 40px;
+  }
+  
+  .plant-website__star-4-1440 {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    top: 0;
+    left: 60px;
+  }
+  
+  .plant-website__star-5-1440 {
+    position: absolute;
+    width: 6px;
+    height: 12px;
+    top: 0;
+    left: 80px;
+  }
+  
+  .plant-website__text-wrapper-13-1440 {
+    width: 284px;
+    top: 766px;
+    left: 81px;
+    opacity: 0.75;
+    font-family: "Inter", "Inter-Regular", Helvetica, sans-serif;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 14px;
+    position: absolute;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .plant-website__text-wrapper-14-1440 {
+    position: absolute;
+    top: 923px;
+    left: 521px;
+    text-shadow: 0px 1.99px 1.59px #00000016;
+    font-family: "Inter", "Inter-SemiBold", Helvetica, sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 46px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .plant-website__text-wrapper-15-1440 {
+    position: absolute;
+    top: 1191px;
+    left: 765px;
+    text-shadow: 0px -0.18px 1.59px #00000010;
+    font-family: "Inter", "Inter-SemiBold", Helvetica, sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 32px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .plant-website__text-wrapper-16-1440 {
+    width: 610px;
+    top: 1249px;
+    left: 765px;
+    font-family: "Inter", "Inter-SemiBold", Helvetica, sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 17px;
+    position: absolute;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .plant-website__vector-1440 {
+    top: 912px;
+    left: 882px;
+    position: absolute;
+    width: 62px;
+    height: 62px;
+  }
+  
+  .plant-website__vector-2-1440 {
+    top: 937px;
+    left: 491px;
+    position: absolute;
+    width: 62px;
+    height: 62px;
+  }
+  
+  .plant-website__rectangle-5-1440 {
+    position: absolute;
+    width: 1346px;
+    height: 438px;
+    top: 1639px;
+    left: 53px;
+    background-color: #ffffff0d;
+    border-radius: 126px;
+    border: none;
+    backdrop-filter: blur(17px) brightness(100%);
+    -webkit-backdrop-filter: blur(17px) brightness(100%);
+  }
+  
+  .plant-website__rectangle-5-1440::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: 2px;
+    border-radius: 126px;
+    background: linear-gradient(
+      136deg,
+      rgba(255, 255, 255, 0.27) 0%,
+      rgba(255, 255, 255, 0) 62%,
+      rgba(255, 255, 255, 0.33) 100%
+    );
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    z-index: 1;
+    pointer-events: none;
+  }
+  
+  .plant-website__rose-gold-feminine-2-1440 {
+    width: 634px;
+    height: 743px;
+    top: 869px;
+    left: 16px;
+    position: absolute;
+    object-fit: cover;
+  }
+  
+  .plant-website__rose-gold-feminine-3-1440 {
+    width: 714px;
+    height: 743px;
+    top: 1467px;
+    left: 726px;
+    position: absolute;
+    object-fit: cover;
+  }
+  
+  .plant-website__text-wrapper-17-1440 {
+    top: 1309px;
+    left: 765px;
+    text-shadow: 0px 1.02px 2.21px #0000002c;
+    font-family: "Inter", "Inter-SemiBold", Helvetica, sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+    position: absolute;
+    font-size: 32px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .plant-website__bag-2-1440 {
+    width: 28px;
+    height: 28px;
+    top: 1381px;
+    left: 985px;
+    position: absolute;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .plant-website__bag-2-1440:hover {
+    transform: scale(1.1);
+  }
+  
+  .plant-website__group-9-1440 {
+    position: absolute;
+    width: 615px;
+    height: 230px;
+    top: 1743px;
+    left: 155px;
+  }
+  
+  .plant-website__overlap-2-1440 {
+    position: absolute;
+    width: 262px;
+    height: 53px;
+    top: 177px;
+    left: 0;
+  }
+  
+  .plant-website__group-10-1440 {
+    position: absolute;
+    width: 262px;
+    height: 53px;
+    top: 0;
+    left: 0;
+  }
+  
+  .plant-website__bag-3-1440 {
+    width: 28px;
+    height: 28px;
+    top: 12px;
+    left: 220px;
+    position: absolute;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .plant-website__bag-3-1440:hover {
+    transform: scale(1.1);
+  }
+  
+  .plant-website__text-wrapper-18-1440 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-family: "Inter", "Inter-SemiBold", Helvetica, sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 32px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .plant-website__text-wrapper-19-1440 {
+    width: 610px;
+    top: 58px;
+    left: 0;
+    font-family: "Inter", "Inter-SemiBold", Helvetica, sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 17px;
+    position: absolute;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .plant-website__text-wrapper-20-1440 {
+    top: 118px;
+    left: 0;
+    text-shadow: 0px 1.02px 2.21px #0000002c;
+    font-family: "Inter", "Inter-SemiBold", Helvetica, sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+    position: absolute;
+    font-size: 32px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .plant-website__group-11-1440 {
+    position: absolute;
+    width: 430px;
+    height: 631px;
+    top: 2425px;
+    left: 53px;
+    transition: transform 0.3s ease;
+  }
+  
+  .plant-website__group-11-1440:hover {
+    transform: translateY(-10px);
+  }
+  
+  .plant-website__overlap-3-1440 {
+    position: relative;
+    width: 516px;
+    height: 653px;
+    left: -45px;
+  }
+  
+  .plant-website__rectangle-6-1440 {
+    position: absolute;
+    width: 458px;
+    height: 556px;
+    top: 97px;
+    left: 30px;
+  }
+  
+  .plant-website__rose-gold-feminine-4-1440 {
+    position: absolute;
+    width: 516px;
+    height: 532px;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+  }
+  
+  .plant-website__text-wrapper-21-1440 {
+    position: absolute;
+    height: 38px;
+    top: 395px;
+    left: 100px;
+    font-family: "Inter", "Inter-Regular", Helvetica, sans-serif;
+    font-weight: 400;
+    color: #ffffffbf;
+    font-size: 32px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .plant-website__text-wrapper-22-1440 {
+    position: absolute;
+    width: 264px;
+    height: 48px;
+    top: 464px;
+    left: 100px;
+    font-family: "Inter", "Inter-Regular", Helvetica, sans-serif;
+    font-weight: 400;
+    color: #ffffffbf;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .plant-website__group-12-1440 {
+    position: absolute;
+    width: 312px;
+    height: 46px;
+    top: 542px;
+    left: 100px;
+  }
+  
+  .plant-website__frame-wrapper-1440 {
+    position: absolute;
+    width: 46px;
+    height: 46px;
+    top: 0;
+    left: 264px;
+  }
+  
+  .plant-website__frame-1440 {
+    position: relative;
+    height: 46px;
+    border-radius: 10px;
+    border: 2px solid;
+    border-color: #ffffff8f;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .plant-website__frame-1440:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: scale(1.05);
+  }
+  
+  .plant-website__bag-4-1440 {
+    width: 23px;
+    height: 23px;
+    top: 10px;
+    left: 10px;
+    position: absolute;
+    object-fit: cover;
+  }
+  
+  .plant-website__text-wrapper-23-1440 {
+    height: 38px;
+    top: 4px;
+    left: 0;
+    font-family: "Inter", "Inter-Regular", Helvetica, sans-serif;
+    font-weight: 400;
+    color: #ffffffbf;
+    position: absolute;
+    font-size: 32px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .plant-website__overlap-4-1440 {
+    position: absolute;
+    width: 935px;
+    height: 653px;
+    top: 3056px;
+    left: 8px;
+  }
+  
+  .plant-website__text-wrapper-24-1440 {
+    top: 394px;
+    left: 100px;
+    position: absolute;
+    height: 38px;
+    font-family: "Inter", "Inter-Regular", Helvetica, sans-serif;
+    font-weight: 400;
+    color: #ffffffbf;
+    font-size: 32px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .plant-website__text-wrapper-25-1440 {
+    width: 264px;
+    height: 48px;
+    top: 463px;
+    left: 100px;
+    font-family: "Inter", "Inter-Regular", Helvetica, sans-serif;
+    font-weight: 400;
+    color: #ffffffbf;
+    font-size: 20px;
+    position: absolute;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .plant-website__group-13-1440 {
+    position: absolute;
+    width: 430px;
+    height: 631px;
+    top: 0;
+    left: 506px;
+    transition: transform 0.3s ease;
+  }
+  
+  .plant-website__group-13-1440:hover {
+    transform: translateY(-10px);
+  }
+  
+  .plant-website__group-14-1440 {
+    position: absolute;
+    width: 430px;
+    height: 631px;
+    top: 2425px;
+    left: 514px;
+    transition: transform 0.3s ease;
+  }
+  
+  .plant-website__group-14-1440:hover {
+    transform: translateY(-10px);
+  }
+  
+  .plant-website__group-15-1440 {
+    position: absolute;
+    width: 430px;
+    height: 631px;
+    top: 2425px;
+    left: 976px;
+    transition: transform 0.3s ease;
+  }
+  
+  .plant-website__group-15-1440:hover {
+    transform: translateY(-10px);
+  }
+  
+  .plant-website__overlap-5-1440 {
+    position: relative;
+    width: 509px;
+    height: 653px;
+    left: -45px;
+  }
+  
+  .plant-website__rose-gold-feminine-5-1440 {
+    width: 509px;
+    height: 532px;
+    top: 0;
+    left: 0;
+    position: absolute;
+    object-fit: cover;
+  }
+  
+  .plant-website__group-16-1440 {
+    position: absolute;
+    width: 430px;
+    height: 631px;
+    top: 3056px;
+    left: 976px;
+    transition: transform 0.3s ease;
+  }
+  
+  .plant-website__group-16-1440:hover {
+    transform: translateY(-10px);
+  }
+  
+  .plant-website__group-17-1440 {
+    position: absolute;
+    width: 392px;
+    height: 82px;
+    top: 2279px;
+    left: 525px;
+  }
+  
+  .plant-website__overlap-6-1440 {
+    position: relative;
+    width: 395px;
+    height: 87px;
+    top: -2px;
+    left: -2px;
+  }
+  
+  .plant-website__text-wrapper-26-1440 {
+    position: absolute;
+    top: 12px;
+    left: 30px;
+    text-shadow: 0px 1.99px 1.59px #00000016;
+    font-family: "Inter", "Inter-SemiBold", Helvetica, sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 46px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .plant-website__vector-3-1440 {
+    top: 0;
+    left: 333px;
+    position: absolute;
+    width: 62px;
+    height: 62px;
+  }
+  
+  .plant-website__vector-4-1440 {
+    top: 25px;
+    left: 0;
+    position: absolute;
+    width: 62px;
+    height: 62px;
+  }
+  
+  .plant-website__overlap-7-1440 {
+    position: absolute;
+    width: 1403px;
+    height: 916px;
+    top: 4742px;
+    left: -11px;
+  }
+  
+  .plant-website__group-18-1440 {
+    position: absolute;
+    width: 1403px;
+    height: 916px;
+    top: 0;
+    left: 0;
+  }
+  
+  .plant-website__overlap-8-1440 {
+    position: relative;
+    width: 1388px;
+    height: 916px;
+    left: 11px;
+  }
+  
+  .plant-website__group-19-1440 {
+    position: absolute;
+    width: 317px;
+    height: 85px;
+    top: 0;
+    left: 562px;
+  }
+  
+  .plant-website__overlap-group-2-1440 {
+    position: relative;
+    width: 320px;
+    height: 89px;
+    top: -2px;
+    left: -2px;
+  }
+  
+  .plant-website__text-wrapper-27-1440 {
+    position: absolute;
+    top: 13px;
+    left: 30px;
+    text-shadow: 0px 1.99px 1.59px #00000016;
+    font-family: "Inter", "Inter-SemiBold", Helvetica, sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 46px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .plant-website__vector-5-1440 {
+    left: 258px;
+    position: absolute;
+    width: 62px;
+    height: 62px;
+    top: 0;
+  }
+  
+  .plant-website__vector-6-1440 {
+    top: 27px;
+    position: absolute;
+    width: 62px;
+    height: 62px;
+    left: 0;
+  }
+  
+  .plant-website__rectangle-7-1440 {
+    position: absolute;
+    width: 1333px;
+    height: 629px;
+    top: 287px;
+    left: 54px;
+    background-color: #ffffff0d;
+    border-radius: 77px;
+    border: none;
+  }
+  
+  .plant-website__rectangle-7-1440::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: 3px;
+    border-radius: 77px;
+    background: linear-gradient(
+      102deg,
+      rgba(255, 255, 255, 0.44) 0%,
+      rgba(0, 0, 0, 0) 38%,
+      rgba(255, 255, 255, 0.33) 100%
+    );
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    z-index: 1;
+    pointer-events: none;
+  }
+  
+  .plant-website__group-20-1440 {
+    position: absolute;
+    width: 182px;
+    height: 53px;
+    top: 751px;
+    left: 729px;
+    opacity: 0.75;
+  }
+  
+  .plant-website__rose-gold-feminine-6-1440 {
+    width: 786px;
+    height: 879px;
+    top: 35px;
+    left: 0;
+    position: absolute;
+    object-fit: cover;
+  }
+  
+  .plant-website__text-wrapper-28-1440 {
+    position: absolute;
+    width: 616px;
+    top: 399px;
+    left: 728px;
+    font-family: "Inter", "Inter-SemiBold", Helvetica, sans-serif;
+    font-weight: 600;
+    color: #ffffffbf;
+    font-size: 32px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .plant-website__text-wrapper-29-1440 {
+    width: 623px;
+    top: 511px;
+    left: 728px;
+    font-family: "Inter", "Inter-SemiBold", Helvetica, sans-serif;
+    font-weight: 600;
+    color: #ffffffbf;
+    font-size: 23px;
+    position: absolute;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .plant-website__text-wrapper-30-1440 {
+    width: 623px;
+    top: 631px;
+    left: 728px;
+    font-family: "Inter", "Inter-SemiBold", Helvetica, sans-serif;
+    font-weight: 600;
+    color: #ffffffbf;
+    font-size: 23px;
+    position: absolute;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .plant-website__right-arrow-2-1440 {
+    width: 20px;
+    height: 20px;
+    top: 768px;
+    left: 1302px;
+    position: absolute;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .plant-website__right-arrow-2-1440:hover {
+    transform: translateX(5px);
+  }
+  
+  .plant-website__element-1440 {
+    position: absolute;
+    top: 767px;
+    left: 1223px;
+    font-family: "Inter", "Inter-Bold", Helvetica, sans-serif;
+    font-weight: 700;
+    color: #ffffffbf;
+    font-size: 17px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .plant-website__span-1440 {
+    font-family: "Inter", "Inter-Bold", Helvetica, sans-serif;
+    font-weight: 700;
+    color: #ffffffbf;
+    font-size: 17px;
+    letter-spacing: 0;
+  }
+  
+  .plant-website__text-wrapper-31-1440 {
+    font-size: 12px;
+  }
+  
+  .plant-website__right-arrow-3-1440 {
+    width: 20px;
+    height: 20px;
+    top: 768px;
+    left: 1167px;
+    position: absolute;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .plant-website__right-arrow-3-1440:hover {
+    transform: translateX(-5px);
+  }
+  
+  .plant-website__group-21-1440 {
+    position: absolute;
+    width: 1335px;
+    height: 635px;
+    top: 3869px;
+    left: 52px;
+  }
+  
+  .plant-website__group-22-1440 {
+    position: absolute;
+    width: 445px;
+    height: 83px;
+    top: 0;
+    left: 446px;
+  }
+  
+  .plant-website__overlap-group-3-1440 {
+    position: relative;
+    width: 449px;
+    height: 87px;
+    top: -2px;
+    left: -2px;
+  }
+  
+  .plant-website__vector-7-1440 {
+    left: 387px;
+    position: absolute;
+    width: 62px;
+    height: 62px;
+    top: 0;
+  }
+  
+  .plant-website__vector-8-1440 {
+    top: 26px;
+    position: absolute;
+    width: 62px;
+    height: 62px;
+    left: 0;
+  }
+  
+  .plant-website__group-23-1440 {
+    position: absolute;
+    width: 1335px;
+    height: 400px;
+    top: 235px;
+    left: 0;
+  }
+  
+  .plant-website__group-24-1440 {
+    position: absolute;
+    width: 430px;
+    height: 400px;
+    top: 0;
+    left: 0;
+    transition: transform 0.3s ease;
+  }
+  
+  .plant-website__group-24-1440:hover {
+    transform: translateY(-5px);
+  }
+  
+  .plant-website__overlap-group-4-1440 {
+    position: relative;
+    width: 460px;
+    height: 422px;
+    left: -18px;
+  }
+  
+  .plant-website__rectangle-8-1440 {
+    position: absolute;
+    width: 458px;
+    height: 422px;
+    top: 0;
+    left: 3px;
+  }
+  
+  .plant-website__unsplash-lbcj-jw-1440 {
+    position: absolute;
+    width: 207px;
+    height: 223px;
+    top: 76px;
+    left: 0;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  
+  .plant-website__text-wrapper-32-1440 {
+    position: absolute;
+    height: 38px;
+    top: 82px;
+    left: 172px;
+    font-family: "Inter", "Inter-SemiBold", Helvetica, sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 32px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .plant-website__group-25-1440 {
+    position: absolute;
+    width: 109px;
+    height: 16px;
+    top: 120px;
+    left: 172px;
+  }
+  
+  .plant-website__star-6-1440 {
+    width: 15px;
+    left: 0;
+    position: absolute;
+    height: 14px;
+    top: 0;
+  }
+  
+  .plant-website__star-7-1440 {
+    width: 15px;
+    left: 26px;
+    position: absolute;
+    height: 14px;
+    top: 0;
+  }
+  
+  .plant-website__star-8-1440 {
+    width: 15px;
+    left: 51px;
+    position: absolute;
+    height: 14px;
+    top: 0;
+  }
+  
+  .plant-website__star-9-1440 {
+    width: 15px;
+    left: 77px;
+    position: absolute;
+    height: 14px;
+    top: 0;
+  }
+  
+  .plant-website__star-10-1440 {
+    width: 8px;
+    left: 102px;
+    position: absolute;
+    height: 14px;
+    top: 0;
+  }
+  
+  .plant-website__text-wrapper-33-1440 {
+    width: 336px;
+    top: 200px;
+    left: 67px;
+    font-family: "Inter", "Inter-Regular", Helvetica, sans-serif;
+    font-weight: 400;
+    color: #ffffffbf;
+    font-size: 20px;
+    position: absolute;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .plant-website__group-26-1440 {
+    position: absolute;
+    width: 430px;
+    height: 400px;
+    top: 0;
+    left: 454px;
+    transition: transform 0.3s ease;
+  }
+  
+  .plant-website__group-26-1440:hover {
+    transform: translateY(-5px);
+  }
+  
+  .plant-website__group-27-1440 {
+    position: absolute;
+    width: 430px;
+    height: 400px;
+    top: 0;
+    left: 908px;
+    transition: transform 0.3s ease;
+  }
+  
+  .plant-website__group-27-1440:hover {
+    transform: translateY(-5px);
+  }
+  
+  .plant-website__overlap-9-1440 {
+    position: absolute;
+    width: 1440px;
+    height: 475px;
+    top: 5919px;
+    left: 0;
+    background-color: #222b1c;
+  }
+  
+  .plant-website__group-28-1440 {
+    position: absolute;
+    width: 262px;
+    height: 78px;
+    top: 75px;
+    left: 52px;
+  }
+  
+  .plant-website__overlap-10-1440 {
+    position: relative;
+    width: 312px;
+    height: 228px;
+    left: -52px;
+  }
+  
+  .plant-website__plant-2-1440 {
+    width: 197px;
+    height: 228px;
+    top: 0;
+    position: absolute;
+    left: 0;
+    object-fit: cover;
+  }
+  
+  .plant-website__text-wrapper-34-1440 {
+    position: absolute;
+    top: 20px;
+    left: 141px;
+    opacity: 0.75;
+    font-family: "Inter", "Inter-Black", Helvetica, sans-serif;
+    font-weight: 900;
+    color: #ffffff;
+    font-size: 48px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .plant-website__text-wrapper-35-1440 {
+    width: 483px;
+    top: 188px;
+    left: 63px;
+    font-family: "Inter", "Inter-Medium", Helvetica, sans-serif;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 23px;
+    position: absolute;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .plant-website__group-29-1440 {
+    position: absolute;
+    width: 197px;
+    height: 28px;
+    top: 373px;
+    left: 63px;
+  }
+  
+  .plant-website__text-wrapper-36-1440 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-family: "Inter", "Inter-ExtraBold", Helvetica, sans-serif;
+    font-weight: 800;
+    color: #ffffff;
+    font-size: 23px;
+    letter-spacing: 0;
+    line-height: normal;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .plant-website__text-wrapper-36-1440:hover {
+    color: #4ade80;
+  }
+  
+  .plant-website__text-wrapper-37-1440 {
+    position: absolute;
+    top: 0;
+    left: 80px;
+    font-family: "Inter", "Inter-ExtraBold", Helvetica, sans-serif;
+    font-weight: 800;
+    color: #ffffff;
+    font-size: 23px;
+    letter-spacing: 0;
+    line-height: normal;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .plant-website__text-wrapper-37-1440:hover {
+    color: #4ade80;
+  }
+  
+  .plant-website__text-wrapper-38-1440 {
+    position: absolute;
+    top: 0;
+    left: 172px;
+    font-family: "Inter", "Inter-ExtraBold", Helvetica, sans-serif;
+    font-weight: 800;
+    color: #ffffff;
+    font-size: 23px;
+    letter-spacing: 0;
+    line-height: normal;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .plant-website__text-wrapper-38-1440:hover {
+    color: #4ade80;
+  }
+  
+  .plant-website__text-wrapper-39-1440 {
+    position: absolute;
+    top: 74px;
+    left: 654px;
+    font-family: "Inter", "Inter-ExtraBold", Helvetica, sans-serif;
+    font-weight: 800;
+    color: #ffffff;
+    font-size: 23px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .plant-website__text-wrapper-40-1440 {
+    position: absolute;
+    top: 74px;
+    left: 943px;
+    font-family: "Inter", "Inter-ExtraBold", Helvetica, sans-serif;
+    font-weight: 800;
+    color: #ffffff;
+    font-size: 23px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .plant-website__text-wrapper-41-1440 {
+    top: 141px;
+    left: 654px;
+    position: absolute;
+    font-family: "Inter", "Inter-Medium", Helvetica, sans-serif;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .plant-website__text-wrapper-41-1440:hover {
+    color: #4ade80;
+  }
+  
+  .plant-website__text-wrapper-42-1440 {
+    position: absolute;
+    top: 187px;
+    left: 654px;
+    font-family: "Inter", "Inter-Medium", Helvetica, sans-serif;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .plant-website__text-wrapper-42-1440:hover {
+    color: #4ade80;
+  }
+  
+  .plant-website__text-wrapper-43-1440 {
+    top: 232px;
+    left: 654px;
+    position: absolute;
+    font-family: "Inter", "Inter-Medium", Helvetica, sans-serif;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .plant-website__text-wrapper-43-1440:hover {
+    color: #4ade80;
+  }
+  
+  .plant-website__text-wrapper-44-1440 {
+    position: absolute;
+    top: 278px;
+    left: 654px;
+    font-family: "Inter", "Inter-Medium", Helvetica, sans-serif;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .plant-website__text-wrapper-44-1440:hover {
+    color: #4ade80;
+  }
+  
+  .plant-website__text-wrapper-45-1440 {
+    position: absolute;
+    top: 377px;
+    left: 943px;
+    font-family: "Inter", "Inter-Medium", Helvetica, sans-serif;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .plant-website__overlap-11-1440 {
+    position: absolute;
+    width: 468px;
+    height: 62px;
+    top: 145px;
+    left: 943px;
+    border-radius: 7px;
+    border: 2px solid;
+    border-color: #ffffff;
+  }
+  
+  .plant-website__text-wrapper-46-1440 {
+    position: absolute;
+    top: 16px;
+    left: 22px;
+    font-family: "Inter", "Inter-Medium", Helvetica, sans-serif;
+    font-weight: 500;
+    color: #ffffffbf;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+    background: transparent;
+    border: none;
+    outline: none;
+    width: 250px;
+  }
+  
+  .plant-website__text-wrapper-46-1440::placeholder {
+    color: #ffffffbf;
+  }
+  
+  .plant-website__exclude-1440 {
+    position: absolute;
+    width: 138px;
+    height: 54px;
+    top: 3px;
+    left: 326px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .plant-website__exclude-1440:hover {
+    transform: scale(1.05);
+  }
+  
+  .plant-website__group-30-1440 {
+    position: absolute;
+    width: 71px;
+    height: 9px;
+    top: 5768px;
+    left: 684px;
+  }
+  
+  .plant-website__rectangle-9-1440 {
+    position: absolute;
+    width: 26px;
+    height: 9px;
+    top: 0;
+    left: 0;
+    background-color: #ffffffbf;
+    border-radius: 40px;
+  }
+  
+  .plant-website__ellipse-3-1440 {
+    position: absolute;
+    width: 9px;
+    height: 9px;
+    top: 0;
+    left: 39px;
+    background-color: #ffffffbf;
+    border-radius: 5px;
+  }
+  
+  .plant-website__ellipse-4-1440 {
+    position: absolute;
+    width: 9px;
+    height: 9px;
+    top: 0;
+    left: 62px;
+    background-color: #ffffffbf;
+    border-radius: 5px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1440px) {
+    .plant-website__div-1440 {
+      width: 100%;
+      max-width: 1440px;
+    }
+  }
+  
+  @media (max-width: 1200px) {
+    .plant-website__div-1440 {
+      transform: scale(0.85);
+      transform-origin: top center;
+    }
+  }
+  
+  @media (max-width: 1024px) {
+    .plant-website__div-1440 {
+      transform: scale(0.7);
+    }
+    
+    .plant-website__group-1440 {
+      display: none;
+    }
+    
+    .plant-website__group-3-1440 {
+      display: block;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .plant-website__div-1440 {
+      transform: scale(0.6);
+      height: auto;
+    }
+    
+    .plant-website__macbook-pro-1440 {
+      overflow-x: auto;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .plant-website__div-1440 {
+      transform: scale(0.5);
+    }
+  }
+  
+  /* Additional Interactive States */
+  .plant-website__overlap-group-1440:active,
+  .plant-website__div-wrapper-1440:active,
+  .plant-website__rectangle-3-1440:active,
+  .plant-website__polygon-wrapper-1440:active,
+  .plant-website__frame-1440:active {
+    transform: scale(0.95);
+  }
+  
+  /* Font Fallbacks */
+  .plant-website__div-1440 * {
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+
+  /* Desktop Only Message Styles */
+.plant-website__desktop-only-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, #1b2316 0%, #2d3748 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    padding: 20px;
+  }
+  
+  .plant-website__desktop-only-container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 40px 30px;
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    animation: fadeInUp 0.6s ease-out;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .plant-website__desktop-only-icon {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    animation: bounce 2s infinite;
+  }
+  
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-10px);
+    }
+    60% {
+      transform: translateY(-5px);
+    }
+  }
+  
+  .plant-website__desktop-only-title {
+    color: #ffffff;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+  
+  .plant-website__desktop-only-description {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+  
+  .plant-website__desktop-only-features {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 30px;
+  }
+  
+  .plant-website__feature-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.95rem;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+  
+  .plant-website__feature-icon {
+    font-size: 1.2rem;
+  }
+  
+  .plant-website__desktop-only-button {
+    background: linear-gradient(135deg, #4ade80 0%, #22c55e 100%);
+    color: #ffffff;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+  
+  .plant-website__desktop-only-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(74, 222, 128, 0.3);
+  }
+  
+  .plant-website__desktop-only-button:active {
+    transform: translateY(0);
+  }
+  
+  /* Mobile specific adjustments */
+  @media (max-width: 480px) {
+    .plant-website__desktop-only-container {
+      padding: 30px 20px;
+      margin: 20px;
+    }
+    
+    .plant-website__desktop-only-title {
+      font-size: 1.5rem;
+    }
+    
+    .plant-website__desktop-only-description {
+      font-size: 1rem;
+    }
+    
+    .plant-website__desktop-only-icon {
+      font-size: 3rem;
+    }
+  }

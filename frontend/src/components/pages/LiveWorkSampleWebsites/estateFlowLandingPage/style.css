@@ -562,7 +562,11 @@
 }
 
 /* Wave Separators */
-
+.sample3__wave-separator {
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
 
 .sample3__wave-separator svg {
   position: relative;
