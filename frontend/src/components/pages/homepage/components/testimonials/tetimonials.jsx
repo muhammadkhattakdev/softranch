@@ -1,10 +1,8 @@
 import React from 'react';
 import './style.css';
-import {PersonStanding} from "lucide-react"
 import monique from "../../../../../static/trusted_by/monique.webp";
 import avatar from "../../../../../static/trusted_by/avatar.png";
 import f_avatar from "../../../../../static/trusted_by/f_avatar.png";
-
 
 const Testimonials = () => {
   return (
@@ -21,7 +19,7 @@ const Testimonials = () => {
           </h2>
           
           <p className="testimonials-description">
-            Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.
+            Don't just take our word for it. See what our clients have to say about their experience working with SoftRanch and how we've helped transform their digital presence.
           </p>
         </div>
         
@@ -53,7 +51,7 @@ const Testimonials = () => {
           <div className="testimonial-card">
             <div className="testimonial-user">
               <div className="user-avatar">
-                <img src={f_avatar} alt="" />
+                <img src={f_avatar} alt="Maryam Al-Qureshi" />
               </div>
               <div className="user-info">
                 <h3 className="user-name">Maryam Al-Qureshi</h3>
@@ -77,7 +75,7 @@ const Testimonials = () => {
           <div className="testimonial-card">
             <div className="testimonial-user">
               <div className="user-avatar">
-                <img src={avatar} alt="" />
+                <img src={avatar} alt="Ada Uyi" />
               </div>
               <div className="user-info">
                 <h3 className="user-name">Ada Uyi</h3>
@@ -92,7 +90,7 @@ const Testimonials = () => {
               <span className="star">★</span>
               <span className="star">★</span>
             </div>
-            
+
             <p className="testimonial-text">
                 This my first Woking with these guys and I really appreciate the honesty, understanding and a great job and I will be very happy to work with him in the near future also I will gladly recommend him to anyone who needs is services above all am rating him 5 stars!
             </p>
@@ -101,14 +99,14 @@ const Testimonials = () => {
           <div className="testimonial-card">
             <div className="testimonial-user">
               <div className="user-avatar">
-                <img src={avatar} alt="" />
+                <img src={avatar} alt="Ayan" />
               </div>
               <div className="user-info">
                 <h3 className="user-name">Ayan</h3>
                 <p className="user-title">Student</p>
               </div>
             </div>
-            
+
             <div className="testimonial-rating">
               <span className="star">★</span>
               <span className="star">★</span>

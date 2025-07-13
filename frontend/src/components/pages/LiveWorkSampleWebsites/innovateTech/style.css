@@ -1,0 +1,1619 @@
+/* InnovateTech Website CSS */
+
+:root {
+  /* Light Color Palette */
+  --primary-white: #ffffff;
+  --light-gray: #f8fafc;
+  --medium-gray: #e2e8f0;
+  --text-dark: #1e293b;
+  --text-gray: #64748b;
+  --text-light: #94a3b8;
+
+  /* Vibrant Accent Colors */
+  --purple-500: #8b5cf6;
+  --purple-400: #a78bfa;
+  --blue-500: #3b82f6;
+  --blue-400: #60a5fa;
+  --green-500: #10b981;
+  --green-400: #34d399;
+  --pink-500: #ec4899;
+  --pink-400: #f472b6;
+  --orange-500: #f59e0b;
+  --orange-400: #fbbf24;
+  --red-500: #ef4444;
+  --red-400: #f87171;
+  --cyan-500: #06b6d4;
+  --cyan-400: #22d3ee;
+
+  /* Gradients */
+  --gradient-primary: linear-gradient(
+    135deg,
+    var(--blue-500),
+    var(--purple-500)
+  );
+  --gradient-secondary: linear-gradient(
+    135deg,
+    var(--green-400),
+    var(--blue-400)
+  );
+  --gradient-accent: linear-gradient(
+    135deg,
+    var(--pink-400),
+    var(--orange-400)
+  );
+  --gradient-bg: linear-gradient(
+    180deg,
+    var(--primary-white) 0%,
+    var(--light-gray) 100%
+  );
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1),
+    0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1),
+    0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+
+  /* Transitions */
+  --transition-fast: 0.15s ease-out;
+  --transition-normal: 0.3s ease-out;
+  --transition-slow: 0.5s ease-out;
+}
+
+.innovate-tech-website__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Navigation */
+.innovate-tech-website__navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--medium-gray);
+  z-index: 1000;
+  transition: all var(--transition-normal);
+}
+
+.innovate-tech-website__nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.innovate-tech-website__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.innovate-tech-website__logo-icon {
+  background: var(--gradient-primary);
+  border-radius: 8px;
+  padding: 4px;
+  color: white;
+}
+
+.innovate-tech-website__nav-menu {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.innovate-tech-website__nav-menu a {
+  text-decoration: none;
+  color: var(--text-gray);
+  font-weight: 500;
+  transition: all var(--transition-normal);
+  position: relative;
+}
+
+.innovate-tech-website__nav-menu a:hover {
+  color: var(--text-dark);
+  transform: translateY(-1px);
+}
+
+.innovate-tech-website__nav-menu a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--gradient-primary);
+  transition: width var(--transition-normal);
+}
+
+.innovate-tech-website__nav-menu a:hover::after {
+  width: 100%;
+}
+
+.innovate-tech-website__nav-cta {
+  background: var(--gradient-primary) !important;
+  color: white !important;
+  padding: 0.5rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  box-shadow: var(--shadow-lg);
+  transition: all var(--transition-normal);
+}
+
+.innovate-tech-website__nav-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-xl);
+}
+
+.innovate-tech-website__nav-cta::after {
+  display: none;
+}
+
+.innovate-tech-website__mobile-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-dark);
+}
+
+/* Hero Section */
+.innovate-tech-website__hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  background: var(--gradient-bg);
+  overflow: hidden;
+}
+
+.innovate-tech-website__hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+}
+
+.innovate-tech-website__floating-shape {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.1;
+  animation: innovate-tech-website__float 6s ease-in-out infinite;
+}
+
+.innovate-tech-website__shape-1 {
+  width: 100px;
+  height: 100px;
+  background: var(--gradient-primary);
+  top: 20%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.innovate-tech-website__shape-2 {
+  width: 150px;
+  height: 150px;
+  background: var(--gradient-secondary);
+  top: 60%;
+  right: 15%;
+  animation-delay: 2s;
+}
+
+.innovate-tech-website__shape-3 {
+  width: 80px;
+  height: 80px;
+  background: var(--gradient-accent);
+  bottom: 20%;
+  left: 20%;
+  animation-delay: 4s;
+}
+
+.innovate-tech-website__gradient-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: 0.3;
+  animation: innovate-tech-website__pulse 4s ease-in-out infinite;
+}
+
+.innovate-tech-website__orb-1 {
+  width: 300px;
+  height: 300px;
+  background: var(--gradient-primary);
+  top: 10%;
+  right: 10%;
+}
+
+.innovate-tech-website__orb-2 {
+  width: 200px;
+  height: 200px;
+  background: var(--gradient-accent);
+  bottom: 10%;
+  left: 10%;
+  animation-delay: 2s;
+}
+
+@keyframes innovate-tech-website__float {
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(180deg);
+  }
+}
+
+@keyframes innovate-tech-website__pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.5;
+  }
+}
+
+.innovate-tech-website__hero-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.innovate-tech-website__hero-content {
+  animation: innovate-tech-website__slideInLeft 1s ease-out;
+}
+
+.innovate-tech-website__hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(59, 130, 246, 0.1);
+  color: var(--blue-500);
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  border: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+.innovate-tech-website__badge-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.innovate-tech-website__hero-title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  color: var(--text-dark);
+}
+
+.innovate-tech-website__gradient-text {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.innovate-tech-website__hero-description {
+  font-size: 1.2rem;
+  color: var(--text-gray);
+  margin-bottom: 2rem;
+  max-width: 500px;
+}
+
+.innovate-tech-website__hero-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.innovate-tech-website__btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--gradient-primary);
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: var(--shadow-lg);
+  transition: all var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+}
+
+.innovate-tech-website__btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-xl);
+}
+
+.innovate-tech-website__btn-primary::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.5s;
+}
+
+.innovate-tech-website__btn-primary:hover::before {
+  left: 100%;
+}
+
+.innovate-tech-website__btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: white;
+  color: var(--text-dark);
+  padding: 1rem 2rem;
+  border: 2px solid var(--medium-gray);
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all var(--transition-normal);
+}
+
+.innovate-tech-website__btn-secondary:hover {
+  background: var(--light-gray);
+  border-color: var(--blue-500);
+  transform: translateY(-2px);
+}
+
+.innovate-tech-website__btn-icon {
+  width: 20px;
+  height: 20px;
+  transition: transform var(--transition-normal);
+}
+
+.innovate-tech-website__btn-primary:hover .innovate-tech-website__btn-icon,
+.innovate-tech-website__btn-secondary:hover .innovate-tech-website__btn-icon {
+  transform: translateX(4px);
+}
+
+.innovate-tech-website__hero-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.innovate-tech-website__stat-item {
+  text-align: center;
+}
+
+.innovate-tech-website__stat-number {
+  font-size: 2rem;
+  font-weight: 800;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.5rem;
+}
+
+.innovate-tech-website__stat-label {
+  color: var(--text-gray);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.innovate-tech-website__hero-visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: innovate-tech-website__slideInRight 1s ease-out;
+}
+
+.innovate-tech-website__hero-card {
+  background: white;
+  border-radius: 20px;
+  padding: 1.5rem;
+  box-shadow: var(--shadow-xl);
+  border: 1px solid var(--medium-gray);
+  transition: all var(--transition-normal);
+}
+
+.innovate-tech-website__main-card {
+  width: 300px;
+  position: relative;
+  z-index: 3;
+}
+
+.innovate-tech-website__card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.innovate-tech-website__card-dots {
+  display: flex;
+  gap: 0.3rem;
+}
+
+.innovate-tech-website__card-dots span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--medium-gray);
+}
+
+.innovate-tech-website__card-dots span:nth-child(1) {
+  background: var(--red-400);
+}
+.innovate-tech-website__card-dots span:nth-child(2) {
+  background: var(--orange-400);
+}
+.innovate-tech-website__card-dots span:nth-child(3) {
+  background: var(--green-400);
+}
+
+.innovate-tech-website__card-title {
+  font-weight: 600;
+  color: var(--text-gray);
+  font-size: 0.9rem;
+}
+
+.innovate-tech-website__progress-bar {
+  width: 100%;
+  height: 8px;
+  background: var(--light-gray);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.innovate-tech-website__progress-fill {
+  width: 75%;
+  height: 100%;
+  background: var(--gradient-primary);
+  border-radius: 4px;
+  animation: innovate-tech-website__progressFill 2s ease-out;
+}
+
+@keyframes innovate-tech-website__progressFill {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 75%;
+  }
+}
+
+.innovate-tech-website__card-stats {
+  display: flex;
+  gap: 1rem;
+}
+
+.innovate-tech-website__mini-stat {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  color: var(--text-gray);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.innovate-tech-website__floating-card-1 {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  width: 120px;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  animation: innovate-tech-website__float 4s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+.innovate-tech-website__floating-card-2 {
+  position: absolute;
+  bottom: -20px;
+  left: -20px;
+  width: 120px;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  animation: innovate-tech-website__float 4s ease-in-out infinite;
+  animation-delay: 3s;
+}
+
+.innovate-tech-website__card-icon {
+  width: 24px;
+  height: 24px;
+  color: var(--blue-500);
+}
+
+.innovate-tech-website__card-text {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-gray);
+}
+
+.innovate-tech-website__scroll-indicator {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--text-gray);
+  animation: innovate-tech-website__bounce 2s infinite;
+}
+
+@keyframes innovate-tech-website__bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  40% {
+    transform: translateX(-50%) translateY(-10px);
+  }
+  60% {
+    transform: translateX(-50%) translateY(-5px);
+  }
+}
+
+@keyframes innovate-tech-website__slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes innovate-tech-website__slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Section Styles */
+.innovate-tech-website__section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.innovate-tech-website__section-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(59, 130, 246, 0.1);
+  color: var(--blue-500);
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  border: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+.innovate-tech-website__section-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.innovate-tech-website__section-description {
+  font-size: 1.2rem;
+  color: var(--text-gray);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* About Section */
+.innovate-tech-website__about {
+  padding: 6rem 0;
+  background: var(--primary-white);
+}
+
+.innovate-tech-website__about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.innovate-tech-website__feature-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.innovate-tech-website__feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: var(--light-gray);
+  border-radius: 15px;
+  transition: all var(--transition-normal);
+}
+
+.innovate-tech-website__feature-item:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.innovate-tech-website__feature-icon {
+  width: 24px;
+  height: 24px;
+  color: var(--green-500);
+  flex-shrink: 0;
+  margin-top: 0.2rem;
+}
+
+.innovate-tech-website__feature-item h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 0.5rem;
+}
+
+.innovate-tech-website__feature-item p {
+  color: var(--text-gray);
+}
+
+.innovate-tech-website__about-visual {
+  display: flex;
+  justify-content: center;
+}
+
+.innovate-tech-website__visual-card {
+  background: var(--light-gray);
+  border-radius: 20px;
+  padding: 3rem;
+  text-align: center;
+  box-shadow: var(--shadow-lg);
+  transition: all var(--transition-normal);
+}
+
+.innovate-tech-website__visual-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-xl);
+}
+
+.innovate-tech-website__placeholder-content {
+  text-align: center;
+}
+
+.innovate-tech-website__placeholder-text {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+}
+
+.innovate-tech-website__placeholder-content p {
+  color: var(--text-gray);
+}
+
+/* Services Section */
+.innovate-tech-website__services {
+  padding: 6rem 0;
+  background: var(--light-gray);
+}
+
+.innovate-tech-website__services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.innovate-tech-website__service-card {
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--medium-gray);
+  transition: all var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+}
+
+.innovate-tech-website__service-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 4px;
+  background: var(--gradient-primary);
+  transition: left var(--transition-slow);
+}
+
+.innovate-tech-website__service-card:hover::before {
+  left: 0;
+}
+
+.innovate-tech-website__service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-xl);
+  border-color: var(--blue-500);
+}
+
+.innovate-tech-website__service-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  color: white;
+  font-size: 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.innovate-tech-website__bg-gradient-to-r {
+  background: var(--gradient-primary);
+}
+
+.innovate-tech-website__from-blue-400.innovate-tech-website__to-purple-500 {
+  background: linear-gradient(135deg, var(--blue-400), var(--purple-500));
+}
+
+.innovate-tech-website__from-green-400.innovate-tech-website__to-blue-500 {
+  background: linear-gradient(135deg, var(--green-400), var(--blue-500));
+}
+
+.innovate-tech-website__from-purple-400.innovate-tech-website__to-pink-500 {
+  background: linear-gradient(135deg, var(--purple-400), var(--pink-500));
+}
+
+.innovate-tech-website__from-orange-400.innovate-tech-website__to-red-500 {
+  background: linear-gradient(135deg, var(--orange-400), var(--red-500));
+}
+
+.innovate-tech-website__from-red-400.innovate-tech-website__to-pink-500 {
+  background: linear-gradient(135deg, var(--red-400), var(--pink-500));
+}
+
+.innovate-tech-website__from-cyan-400.innovate-tech-website__to-blue-500 {
+  background: linear-gradient(135deg, var(--cyan-400), var(--blue-500));
+}
+
+.innovate-tech-website__service-card h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+}
+
+.innovate-tech-website__service-card p {
+  color: var(--text-gray);
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.innovate-tech-website__service-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: none;
+  border: none;
+  color: var(--blue-500);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+}
+
+.innovate-tech-website__service-btn:hover {
+  color: var(--purple-500);
+  transform: translateX(4px);
+}
+
+/* Stats Section */
+.innovate-tech-website__stats {
+  padding: 4rem 0;
+  background: white;
+}
+
+.innovate-tech-website__stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+}
+
+.innovate-tech-website__stat-card {
+  text-align: center;
+  padding: 2rem 1rem;
+  position: relative;
+}
+
+.innovate-tech-website__stat-card .innovate-tech-website__stat-number {
+  font-size: 3rem;
+  font-weight: 800;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.innovate-tech-website__stat-card .innovate-tech-website__stat-label {
+  color: var(--text-gray);
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.innovate-tech-website__stat-decoration {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 3px;
+  background: var(--gradient-primary);
+  border-radius: 2px;
+}
+
+/* Portfolio Section */
+.innovate-tech-website__portfolio {
+  padding: 6rem 0;
+  background: var(--light-gray);
+}
+
+.innovate-tech-website__portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.innovate-tech-website__portfolio-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  transition: all var(--transition-normal);
+  border: 1px solid var(--medium-gray);
+}
+
+.innovate-tech-website__portfolio-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-2xl);
+}
+
+.innovate-tech-website__portfolio-card.innovate-tech-website__featured {
+  grid-column: span 2;
+}
+
+.innovate-tech-website__portfolio-image {
+  height: 200px;
+  background: var(--gradient-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 600;
+  position: relative;
+  overflow: hidden;
+}
+
+.innovate-tech-website__portfolio-image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    45deg,
+    rgba(0, 0, 0, 0.1) 25%,
+    transparent 25%,
+    transparent 75%,
+    rgba(0, 0, 0, 0.1) 75%
+  );
+  background-size: 20px 20px;
+}
+
+.innovate-tech-website__portfolio-content {
+  padding: 2rem;
+}
+
+.innovate-tech-website__portfolio-tags {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.innovate-tech-website__portfolio-tags span {
+  background: rgba(59, 130, 246, 0.1);
+  color: var(--blue-500);
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.innovate-tech-website__portfolio-content h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+}
+
+.innovate-tech-website__portfolio-content p {
+  color: var(--text-gray);
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.innovate-tech-website__portfolio-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: none;
+  border: none;
+  color: var(--blue-500);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+}
+
+.innovate-tech-website__portfolio-btn:hover {
+  color: var(--purple-500);
+  transform: translateX(4px);
+}
+
+/* Team Section */
+.innovate-tech-website__team {
+  padding: 6rem 0;
+  background: white;
+}
+
+.innovate-tech-website__team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.innovate-tech-website__team-card {
+  background: var(--light-gray);
+  border-radius: 20px;
+  padding: 2rem;
+  text-align: center;
+  transition: all var(--transition-normal);
+  border: 1px solid var(--medium-gray);
+  position: relative;
+  overflow: hidden;
+}
+
+.innovate-tech-website__team-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(59, 130, 246, 0.05),
+    transparent
+  );
+  transition: left var(--transition-slow);
+}
+
+.innovate-tech-website__team-card:hover::before {
+  left: 100%;
+}
+
+.innovate-tech-website__team-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-xl);
+  background: white;
+}
+
+.innovate-tech-website__team-avatar {
+  width: 80px;
+  height: 80px;
+  background: var(--gradient-primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 600;
+  position: relative;
+}
+
+.innovate-tech-website__avatar-decoration {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  width: 20px;
+  height: 20px;
+  background: var(--green-500);
+  border: 3px solid white;
+  border-radius: 50%;
+}
+
+.innovate-tech-website__team-card h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 0.5rem;
+}
+
+.innovate-tech-website__team-role {
+  color: var(--blue-500);
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.innovate-tech-website__team-specialty {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(59, 130, 246, 0.1);
+  color: var(--blue-500);
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.innovate-tech-website__team-social button {
+  background: var(--gradient-primary);
+  color: white;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 25px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+}
+
+.innovate-tech-website__team-social button:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Testimonials Section */
+.innovate-tech-website__testimonials {
+  padding: 6rem 0;
+  background: var(--light-gray);
+}
+
+.innovate-tech-website__testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.innovate-tech-website__testimonial-card {
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--medium-gray);
+  transition: all var(--transition-normal);
+  position: relative;
+}
+
+.innovate-tech-website__testimonial-card::before {
+  content: '"';
+  position: absolute;
+  top: -10px;
+  left: 20px;
+  font-size: 4rem;
+  color: var(--blue-500);
+  opacity: 0.2;
+  font-family: serif;
+}
+
+.innovate-tech-website__testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-xl);
+}
+
+.innovate-tech-website__testimonial-stars {
+  display: flex;
+  gap: 0.2rem;
+  color: var(--orange-400);
+  margin-bottom: 1rem;
+}
+
+.innovate-tech-website__testimonial-card p {
+  color: var(--text-gray);
+  font-style: italic;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  position: relative;
+  z-index: 2;
+}
+
+.innovate-tech-website__testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.innovate-tech-website__author-avatar {
+  width: 50px;
+  height: 50px;
+  background: var(--gradient-primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 600;
+}
+
+.innovate-tech-website__testimonial-author h4 {
+  color: var(--text-dark);
+  margin-bottom: 0.2rem;
+}
+
+.innovate-tech-website__testimonial-author span {
+  color: var(--text-gray);
+  font-size: 0.9rem;
+}
+
+/* Technology Section */
+.innovate-tech-website__technology {
+  padding: 6rem 0;
+  background: white;
+}
+
+.innovate-tech-website__tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.innovate-tech-website__tech-category {
+  background: var(--light-gray);
+  border-radius: 20px;
+  padding: 2rem;
+  text-align: center;
+  transition: all var(--transition-normal);
+  border: 1px solid var(--medium-gray);
+}
+
+.innovate-tech-website__tech-category:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+  background: white;
+}
+
+.innovate-tech-website__tech-category h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 1.5rem;
+}
+
+.innovate-tech-website__tech-items {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.innovate-tech-website__tech-item {
+  background: rgba(59, 130, 246, 0.1);
+  color: var(--blue-500);
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  font-weight: 500;
+  transition: all var(--transition-normal);
+}
+
+.innovate-tech-website__tech-item:hover {
+  background: var(--gradient-primary);
+  color: white;
+  transform: translateX(5px);
+}
+
+/* Contact Section */
+.innovate-tech-website__contact {
+  padding: 6rem 0;
+  background: var(--light-gray);
+}
+
+.innovate-tech-website__contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.innovate-tech-website__contact-form-container {
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--medium-gray);
+}
+
+.innovate-tech-website__contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.innovate-tech-website__form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.innovate-tech-website__form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.innovate-tech-website__form-group label {
+  font-weight: 500;
+  color: var(--text-dark);
+}
+
+.innovate-tech-website__form-group input,
+.innovate-tech-website__form-group textarea {
+  padding: 0.8rem;
+  border: 2px solid var(--medium-gray);
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: all var(--transition-normal);
+  background: white;
+}
+
+.innovate-tech-website__form-group input:focus,
+.innovate-tech-website__form-group textarea:focus {
+  outline: none;
+  border-color: var(--blue-500);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.innovate-tech-website__full-width {
+  width: 100%;
+}
+
+.innovate-tech-website__contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.innovate-tech-website__contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 15px;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--medium-gray);
+  transition: all var(--transition-normal);
+}
+
+.innovate-tech-website__contact-item:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.innovate-tech-website__contact-icon {
+  width: 50px;
+  height: 50px;
+  background: var(--gradient-primary);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  flex-shrink: 0;
+}
+
+.innovate-tech-website__contact-item h4 {
+  color: var(--text-dark);
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.innovate-tech-website__contact-item p {
+  color: var(--text-gray);
+  line-height: 1.5;
+}
+
+/* Footer */
+.innovate-tech-website__footer {
+  background: var(--text-dark);
+  color: white;
+  padding: 3rem 0 2rem;
+}
+
+.innovate-tech-website__footer-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.innovate-tech-website__footer-brand {
+  grid-column: span 2;
+}
+
+.innovate-tech-website__footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.innovate-tech-website__footer-logo .innovate-tech-website__logo-icon {
+  background: var(--gradient-primary);
+  border-radius: 8px;
+  padding: 4px;
+  color: white;
+}
+
+.innovate-tech-website__footer-logo span {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.innovate-tech-website__footer-brand p {
+  color: var(--text-light);
+  margin-bottom: 1.5rem;
+  max-width: 300px;
+}
+
+.innovate-tech-website__footer-social {
+  display: flex;
+  gap: 1rem;
+}
+
+.innovate-tech-website__footer-social button {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+}
+
+.innovate-tech-website__footer-social button:hover {
+  background: var(--gradient-primary);
+  border-color: transparent;
+}
+
+.innovate-tech-website__footer-links {
+  display: contents;
+}
+
+.innovate-tech-website__footer-column {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.innovate-tech-website__footer-column h4 {
+  color: white;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.innovate-tech-website__footer-column a {
+  color: var(--text-light);
+  text-decoration: none;
+  transition: color var(--transition-normal);
+}
+
+.innovate-tech-website__footer-column a:hover {
+  color: var(--blue-400);
+}
+
+.innovate-tech-website__footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--text-light);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .innovate-tech-website__nav-menu {
+    position: fixed;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: white;
+    flex-direction: column;
+    padding: 2rem;
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all var(--transition-normal);
+  }
+
+  .innovate-tech-website__nav-menu.innovate-tech-website__active {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .innovate-tech-website__mobile-toggle {
+    display: block;
+  }
+
+  .innovate-tech-website__hero-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .innovate-tech-website__hero-visual {
+    order: -1;
+  }
+
+  .innovate-tech-website__hero-stats {
+    justify-content: center;
+  }
+
+  .innovate-tech-website__about-grid,
+  .innovate-tech-website__tech-grid,
+  .innovate-tech-website__contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .innovate-tech-website__portfolio-card.innovate-tech-website__featured {
+    grid-column: span 1;
+  }
+
+  .innovate-tech-website__form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .innovate-tech-website__footer-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .innovate-tech-website__footer-brand {
+    grid-column: span 1;
+  }
+
+  .innovate-tech-website__footer-bottom {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .innovate-tech-website__container {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .innovate-tech-website__hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .innovate-tech-website__btn-primary,
+  .innovate-tech-website__btn-secondary {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .innovate-tech-website__hero-stats {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .innovate-tech-website__services-grid,
+  .innovate-tech-website__portfolio-grid,
+  .innovate-tech-website__team-grid,
+  .innovate-tech-website__testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Scroll Animations */
+.innovate-tech-website__fade-in-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
+
+.innovate-tech-website__fade-in-up.innovate-tech-website__visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Add smooth hover transitions to all interactive elements */
+button,
+a,
+.innovate-tech-website__card,
+.innovate-tech-website__service-card,
+.innovate-tech-website__portfolio-card,
+.innovate-tech-website__team-card,
+.innovate-tech-website__testimonial-card {
+  transition: all var(--transition-normal);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--light-gray);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gradient-primary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gradient-secondary);
+}

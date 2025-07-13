@@ -111,6 +111,7 @@
   grid-template-columns: 1fr;
   gap: 4rem;
   align-items: center;
+  margin-bottom: 2.5rem;
 }
 
 @media (min-width: 992px) {

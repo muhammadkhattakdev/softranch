@@ -1,9 +1,15 @@
 .team-section {
   width: 100%;
   padding: 6rem 1rem;
-  background-color: var(--black);
+  background-color: var(--bg-primary);
   position: relative;
   overflow: hidden;
+  transition: background-color 0.3s ease;
+}
+
+/* Light theme compatibility */
+[data-theme="light"] .team-section {
+  background-color: var(--bg-primary);
 }
 
 .team-glow {
@@ -22,6 +28,17 @@
   filter: blur(100px);
   z-index: 0;
   pointer-events: none;
+}
+
+/* Light mode glow */
+[data-theme="light"] .team-glow {
+  background: radial-gradient(
+    ellipse at 50% 50%,
+    rgba(138, 63, 252, 0.2) 0%,
+    rgba(138, 63, 252, 0.1) 30%,
+    rgba(138, 63, 252, 0.05) 50%,
+    transparent 70%
+  );
 }
 
 .team-container {
@@ -46,10 +63,17 @@
   margin-bottom: 2rem;
 }
 
+/* Light mode badge */
+[data-theme="light"] .team-badge {
+  background-color: rgba(138, 63, 252, 0.08);
+  border: 1px solid rgba(138, 63, 252, 0.2);
+}
+
 .team-badge span {
   font-weight: 600;
   font-size: 0.9rem;
-  color: var(--white);
+  color: var(--text-primary);
+  transition: color 0.3s ease;
 }
 
 .team-title {
@@ -58,15 +82,17 @@
   margin-bottom: 2rem;
   line-height: 1.2;
   letter-spacing: -0.02em;
-  color: var(--white);
+  color: var(--text-primary);
+  transition: color 0.3s ease;
 }
 
 .team-description {
   font-size: 1.1rem;
-  color: var(--white);
+  color: var(--text-secondary);
   max-width: 700px;
   margin: 0 auto;
   line-height: 1.6;
+  transition: color 0.3s ease;
 }
 
 .team-carousel {
@@ -79,7 +105,7 @@
 .carousel-track {
   display: flex;
   gap: 2rem;
-  animation: slideLeft 30s linear infinite;
+  animation: slideLeftInfinite 30s linear infinite;
   width: fit-content;
 }
 
@@ -87,7 +113,8 @@
   animation-play-state: paused;
 }
 
-@keyframes slideLeft {
+/* Infinite loop animation - moves by 50% since we duplicated the array */
+@keyframes slideLeftInfinite {
   0% {
     transform: translateX(0);
   }
@@ -104,13 +131,22 @@
   overflow: hidden;
   position: relative;
   cursor: pointer;
+  transition: transform 0.3s ease;
+  background-color: var(--bg-secondary);
 }
+
+/* Light theme team member */
+[data-theme="light"] .team-member {
+  background-color: var(--bg-secondary);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
 
 .team-member img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  background-color: var(--gray-light);
+  background-color: var(--bg-tertiary);
   filter: grayscale(100%);
   transition: filter 0.4s ease;
 }
@@ -165,5 +201,25 @@
 
   .team-section {
     padding: 4rem 1rem;
+  }
+}
+
+/* Performance optimization */
+.carousel-track {
+  will-change: transform;
+}
+
+.team-member {
+  will-change: transform;
+}
+
+/* Reduced motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .carousel-track {
+    animation: none;
+  }
+  
+  .team-member:hover {
+    transform: none;
   }
 }

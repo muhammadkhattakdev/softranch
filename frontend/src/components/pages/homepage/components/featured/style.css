@@ -240,7 +240,7 @@
 
 .featured-button {
   background-color: var(--primary-color);
-  color: var(--white);
+  color: rgba(255, 255, 255, 0.816);
   font-weight: 700;
   padding: 0.8rem 1.8rem;
   border: none;

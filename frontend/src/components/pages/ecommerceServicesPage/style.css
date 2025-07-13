@@ -111,6 +111,7 @@
   grid-template-columns: 1fr;
   gap: 4rem;
   align-items: center;
+  margin-bottom: 2.5rem;
 }
 
 @media (min-width: 992px) {
@@ -333,9 +334,7 @@
   transition: transform 0.5s ease;
 }
 
-.ecommerce-hero-image:hover img {
-  transform: scale(1.05);
-}
+
 
 .ecommerce-image-overlay {
   position: absolute;

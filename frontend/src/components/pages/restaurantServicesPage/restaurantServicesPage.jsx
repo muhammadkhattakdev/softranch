@@ -24,6 +24,9 @@ import {
   MessageSquare,
 } from "lucide-react";
 import "./style.css";
+import img1 from "../../../static/featured_services_images/softFood.png";
+import agent from "../../../static/featured_services_images/agent.jpg";
+
 
 const RestaurantServices = () => {
   const features = [
@@ -110,7 +113,7 @@ const RestaurantServices = () => {
   const servicePackages = [
     {
       title: "Essential Restaurant",
-      price: "Starting at $2,997",
+      price: "Starting at $697",
       features: [
         "Professional Restaurant Website",
         "Online Menu Display",
@@ -123,7 +126,7 @@ const RestaurantServices = () => {
     },
     {
       title: "Growth Package",
-      price: "Starting at $4,497",
+      price: "Starting at $2,499",
       features: [
         "Everything in Essential Package",
         "Commission-Free Online Ordering",
@@ -137,7 +140,7 @@ const RestaurantServices = () => {
     },
     {
       title: "Restaurant Empire",
-      price: "Starting at $6,997",
+      price: "Starting at $4,498",
       features: [
         "Everything in Growth Package",
         "Multi-Location Management",
@@ -265,7 +268,7 @@ const RestaurantServices = () => {
 
             <div className="restaurant-hero-image">
               <img
-                src="/api/placeholder/600/400"
+                src={img1}
                 alt="Modern restaurant ordering system dashboard showing online orders and table reservations"
               />
               <div className="restaurant-image-overlay">
@@ -349,7 +352,7 @@ const RestaurantServices = () => {
 
               <div className="restaurant-benefits-image">
                 <img
-                  src="/api/placeholder/500/400"
+                  src={agent}
                   alt="Restaurant owner managing online orders and reservations on tablet device"
                 />
               </div>
@@ -433,9 +436,9 @@ const RestaurantServices = () => {
                     "{testimonial.text}"
                   </p>
                   <div className="restaurant-testimonial-author">
-                    <h4 className="restaurant-author-name">
+                    {/* <h4 className="restaurant-author-name">
                       {testimonial.name}
-                    </h4>
+                    </h4> */}
                     <p className="restaurant-author-title">
                       {testimonial.title}
                     </p>

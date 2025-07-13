@@ -21,6 +21,9 @@ import {
 } from 'lucide-react';
 import './style.css';
 
+import img1 from "../../../static/featured_services_images/real_estate1.png";
+import img2 from "../../../static/featured_services_images/real_estate_agent.jpg";
+
 const RealEstateServices = () => {
   const features = [
     {
@@ -96,7 +99,7 @@ const RealEstateServices = () => {
   const servicePackages = [
     {
       title: "Starter Package",
-      price: "Starting at $2,997",
+      price: "Starting at $499",
       features: [
         "Professional Real Estate Website",
         "Basic IDX Integration",
@@ -109,7 +112,7 @@ const RealEstateServices = () => {
     },
     {
       title: "Professional Package",
-      price: "Starting at $4,997",
+      price: "Starting at $1,999",
       features: [
         "Everything in Starter Package",
         "Advanced IDX with Search Filters", 
@@ -123,7 +126,7 @@ const RealEstateServices = () => {
     },
     {
       title: "Premium Package",
-      price: "Starting at $7,997",
+      price: "Starting at $3,997",
       features: [
         "Everything in Professional Package",
         "Custom Property Portal",
@@ -163,7 +166,7 @@ const RealEstateServices = () => {
             "serviceType": "Real Estate Web Development",
             "offers": {
               "@type": "Offer",
-              "priceRange": "$2,997 - $7,997"
+              "priceRange": "$500 - $7,997"
             }
           })}
         </script>
@@ -217,13 +220,13 @@ const RealEstateServices = () => {
                   <ArrowRight size={20} />
                 </Link>
                 <Link to="/portfolio" className="real-estate-cta-secondary">
-                  View Success Stories
+                  View Live Work Samples
                 </Link>
               </div>
             </div>
             
             <div className="real-estate-hero-image">
-              <img src="/api/placeholder/600/400" alt="Real Estate Website Dashboard showing IDX integration and lead management system" />
+              <img src={img1} alt="Real Estate Website Dashboard showing IDX integration and lead management system" />
               <div className="real-estate-image-overlay">
                 <div className="real-estate-overlay-stat">
                   <TrendingUp size={24} />
@@ -292,7 +295,7 @@ const RealEstateServices = () => {
               </div>
               
               <div className="real-estate-benefits-image">
-                <img src="/api/placeholder/500/400" alt="Real estate agent using mobile-optimized website to capture leads on the go" />
+                <img src={img2} alt="Real estate agent using mobile-optimized website to capture leads on the go" />
               </div>
             </div>
           </div>
@@ -362,7 +365,7 @@ const RealEstateServices = () => {
                   </div>
                   <p className="real-estate-testimonial-text">"{testimonial.text}"</p>
                   <div className="real-estate-testimonial-author">
-                    <h4 className="real-estate-author-name">{testimonial.name}</h4>
+                    {/* <h4 className="real-estate-author-name">{testimonial.name}</h4> */}
                     <p className="real-estate-author-title">{testimonial.title}</p>
                   </div>
                 </div>

@@ -1,237 +1,223 @@
-import React, { memo, useState, useEffect, useCallback, useMemo } from 'react';
-import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
+import React, { memo, useState, useEffect, useCallback, useMemo } from "react";
+import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import {
-  ExternalLink,
-  Eye,
   Globe,
-  Smartphone,
-  ShoppingCart,
-  Stethoscope,
+  Coffee,
+  TreePalm,
   Home,
-  Briefcase,
+  Stethoscope,
   GraduationCap,
   Camera,
-  Coffee,
   Car,
-  TreePalm
-} from 'lucide-react';
+  Smartphone,
+} from "lucide-react";
 import "./style.css";
-import savioraImg from "../../../static/saviora/header.webp";
-import estateFlowImg from "../../../static/estateFlow/villa.webp";
-import nebula from "../../../static/nebula.webp";
-import innovateTech from "../../../static/innovateTech.webp";
-import planto from "../../../static/planto/thumb.png";
-import commerceFlow from "../../../static/commerceFlow.png";
-import photographyWebsiteThumb from "../../../static/photography_website/thumb.png";
-import restaurantSaaSThumb from "../../../static/restaurant_saas.png";
 
-// Sample project data - you can replace these with actual thumbnails later
+// Static image imports
+import savoriaImg from "../../../static/portfolio_thumbs/saviora.png";
+import commerceFlowImg from "../../../static/portfolio_thumbs/commerceFlow.png";
+import plantoImg from "../../../static/portfolio_thumbs/planto.png";
+import estateFlowImg from "../../../static/portfolio_thumbs/estateFlow.png";
+import nebulaImg from "../../../static/portfolio_thumbs/nebula.png";
+import innovateTechImg from "../../../static/innovateTech.png";
+import photographyImg from "../../../static/portfolio_thumbs/photography.png";
+import restaurantSaasImg from "../../../static/portfolio_thumbs/restaurantOS.png";
+
+// Sample project data with static image references
 const sampleProjects = [
   {
     id: 1,
-    title: "Saviora | Restaurant Website",
+    title: "Saviora Restaurant",
     category: "Restaurant & Food",
-    description: "Elegant dining experience with online reservations and menu showcase",
+    description:
+      "Elegant dining experience with online reservations and menu showcase",
     icon: <Coffee size={24} />,
     slug: "savoria-restaurant-website",
-    technologies: ["React", "Node.js", "MongoDB"],
-    features: ["Online Reservations", "Menu Management", "Reviews System"],
+    image: savoriaImg,
     gradient: "from-orange-500 to-red-500",
-    img: savioraImg
   },
   {
     id: 6,
     title: "CommerceFlow",
     category: "Dashboard | SaaS",
-    description: "Online learning management system with course creation and progress tracking",
+    description:
+      "E-commerce management dashboard with analytics and inventory control",
     icon: <GraduationCap size={24} />,
     slug: "commerce-flow-saas-website",
-    technologies: ["React", "Video API", "LMS"],
-    features: ["Course Creation", "Progress Tracking", "Certificates"],
+    image: commerceFlowImg,
     gradient: "from-teal-500 to-green-500",
-    img: commerceFlow
   },
   {
     id: 4,
-    title: "Planto | Buy And Sell Plants",
-    category: "Ecommerce | Gallery | Showcase",
-    description: "Amazing and creative website design for Planto.",
+    title: "Planto",
+    category: "Ecommerce | Gallery",
+    description:
+      "Buy and sell plants marketplace with stunning gallery showcase",
     icon: <TreePalm size={24} />,
     slug: "plants-website",
-    technologies: ["React", "Auth0", "AWS"],
-    features: ["Ordering System", "Plants Gallery", "Admin Panel"],
+    image: plantoImg,
     gradient: "from-indigo-500 to-blue-500",
-    img: planto
   },
   {
     id: 3,
-    title: "EstateFlow | Real Estate Website",
+    title: "EstateFlow",
     category: "Real Estate",
-    description: "Property listing platform with virtual tours and mortgage calculator",
+    description:
+      "Property listing platform with virtual tours and mortgage calculator",
     icon: <Home size={24} />,
-    slug: "estate-flow-website/",
-    technologies: ["React", "Maps API", "CMS"],
-    features: ["Property Search", "Virtual Tours", "Mortgage Calculator"],
+    slug: "estate-flow-website",
+    image: estateFlowImg,
     gradient: "from-purple-500 to-violet-500",
-    img: estateFlowImg
   },
   {
     id: 2,
     title: "Nebula Studios",
-    category: "A.I | Machine Learning",
-    description: "Comprehensive patient management system with appointment booking",
+    category: "A.I | Technology",
+    description: "Cutting-edge AI solutions and machine learning platform",
     icon: <Stethoscope size={24} />,
     slug: "nebula-studios-website",
-    technologies: ["React", "Express", "PostgreSQL"],
-    features: ["Appointment Booking", "Patient Records", "Telemedicine"],
+    image: nebulaImg,
     gradient: "from-blue-500 to-cyan-500",
-    img: nebula
   },
   {
     id: 5,
-    title: "Corporate Website",
+    title: "InnovateTech",
     category: "Corporate",
-    description: "Professional corporate website with team portal and investor relations",
+    description:
+      "Professional corporate website with modern design and functionality",
     icon: <Globe size={24} />,
-    slug: "corporate-website",
-    technologies: ["React", "CMS", "Analytics"],
-    features: ["Team Portal", "Investor Relations", "News Management"],
+    slug: "innovate-tech-website",
+    image: innovateTechImg,
     gradient: "from-slate-600 to-slate-800",
-    img: innovateTech,
   },
   {
     id: 7,
     title: "Photography Portfolio",
     category: "Portfolio",
-    description: "Stunning visual portfolio with gallery management and client booking",
+    description:
+      "Stunning visual portfolio with gallery management and client booking",
     icon: <Camera size={24} />,
     slug: "photography-portfolio-website",
-    technologies: ["React", "Cloudinary", "Booking"],
-    features: ["Gallery Management", "Client Booking", "Print Orders"],
+    image: photographyImg,
     gradient: "from-pink-500 to-rose-500",
-    img: photographyWebsiteThumb
   },
   {
     id: 8,
     title: "Automotive Dealership",
     category: "Automotive",
-    description: "Car dealership website with inventory management and financing options",
+    description:
+      "Car dealership website with inventory management and financing",
     icon: <Car size={24} />,
     slug: "automotive-dealership",
-    technologies: ["React", "Inventory API", "Finance"],
-    features: ["Inventory Search", "Finance Calculator", "Test Drive Booking"],
+    image: null,
     gradient: "from-gray-600 to-gray-800",
-    img: ''
   },
   {
     id: 9,
-    title: "Restaurant Management Dashboard",
-    category: "SaaS | Dashboard | Management Tool",
-    description: "Modern app landing page with download tracking and user analytics",
+    title: "Restaurant Management",
+    category: "SaaS | Dashboard",
+    description: "Complete restaurant management system with POS and analytics",
     icon: <Smartphone size={24} />,
     slug: "restaurant-management-saas-website",
-    technologies: ["React", "Analytics", "SEO"],
-    features: ["Download Tracking", "User Analytics", "App Store Integration"],
+    image: restaurantSaasImg,
     gradient: "from-yellow-500 to-orange-500",
-    img: restaurantSaaSThumb,
   },
 ];
 
-// Optimized Sample Card Component
-const SampleCard = memo(({ project, index }) => {
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [isHovered, setIsHovered] = useState(false);
+// Image placeholder component
+const ImagePlaceholder = ({ gradient, icon, title }) => (
+  <div
+    className={`live-samples-placeholder-gradient bg-gradient-to-br ${gradient}`}
+  >
+    <div className="live-samples-placeholder-content">
+      <div className="live-samples-placeholder-icon">{icon}</div>
+    </div>
+  </div>
+);
 
-  const handleLoad = useCallback(() => {
-    setIsLoaded(true);
-  }, []);
+// Optimized Sample Card Component using portfolio design
+const SampleCard = memo(({ project, index }) => {
+  const [isLoading, setIsLoading] = useState(true);
+  const [hasError, setHasError] = useState(false);
+
+  useEffect(() => {
+    let isMounted = true;
+
+    const loadProjectImage = async () => {
+      if (!project.image) {
+        setIsLoading(false);
+        setHasError(true);
+        return;
+      }
+
+      try {
+        // Simulate loading delay for staggered effect
+        await new Promise(resolve => setTimeout(resolve, index * 100));
+        
+        if (isMounted) {
+          setHasError(false);
+          setIsLoading(false);
+        }
+      } catch (error) {
+        if (isMounted) {
+          setHasError(true);
+          setIsLoading(false);
+        }
+      }
+    };
+
+    loadProjectImage();
+
+    return () => {
+      isMounted = false;
+    };
+  }, [project.image, index]);
 
   return (
-    <Link 
-      target='_blank'
-      to={`/live-work-samples/${project.slug}`}
-      className="live-samples-card"
-      data-index={index}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-    >
-      <div className="live-samples-card-inner">
-        {/* Website Thumbnail Image */}
-        <div className="live-samples-thumbnail">
-          <div className="live-samples-image-container">
-            <img 
-              src={project.img} 
-              alt={project.title}
-              className="live-samples-website-image"
-              onError={(e) => {
-                // Fallback to placeholder if image doesn't exist
-                e.target.style.display = 'none';
-                e.target.nextSibling.style.display = 'flex';
-              }}
+    <div className="live-samples-portfolio-item" data-index={index}>
+      <Link
+        to={`/live-work-samples/${project.slug}`}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="live-samples-portfolio-link"
+      >
+        <div className="live-samples-portfolio-image">
+          {isLoading ? (
+            <div className="live-samples-image-skeleton">
+              <div className="live-samples-skeleton-shimmer"></div>
+            </div>
+          ) : hasError || !project.image ? (
+            <ImagePlaceholder
+              gradient={project.gradient}
+              icon={project.icon}
+              title={project.title}
             />
-            <div className={`live-samples-placeholder-gradient bg-gradient-to-br ${project.gradient}`} style={{display: 'none'}}>
-              <div className="live-samples-placeholder-icon">
-                {project.icon}
-              </div>
-            </div>
-            <div className="live-samples-overlay">
-              <div className="live-samples-view-icon">
-                <Eye size={20} />
-                <span>View Live</span>
-              </div>
+          ) : (
+            <img
+              src={project.image}
+              alt={`${project.title} - Live Website Demo`}
+              loading="lazy"
+              decoding="async"
+              className="live-samples-portfolio-img"
+            />
+          )}
+
+          <div className="live-samples-portfolio-overlay">
+            <div className="live-samples-portfolio-info">
+              <h3 className="live-samples-project-title">{project.title}</h3>
+              <p className="live-samples-project-category">
+                {project.category}
+              </p>
             </div>
           </div>
         </div>
-
-        {/* Project Info */}
-        <div className="live-samples-card-content">
-          <div className="live-samples-category">
-            {project.category}
-          </div>
-          
-          <h3 className="live-samples-title">
-            {project.title}
-          </h3>
-          
-          <p className="live-samples-description">
-            {project.description}
-          </p>
-
-          {/* Technologies */}
-          <div className="live-samples-technologies">
-            {project.technologies.map((tech, idx) => (
-              <span key={idx} className="live-samples-tech-tag">
-                {tech}
-              </span>
-            ))}
-          </div>
-
-          {/* Features */}
-          <div className="live-samples-features">
-            {project.features.map((feature, idx) => (
-              <div key={idx} className="live-samples-feature">
-                <div className="live-samples-feature-dot"></div>
-                <span>{feature}</span>
-              </div>
-            ))}
-          </div>
-
-          {/* CTA */}
-          <div className="live-samples-cta">
-            <span className="live-samples-cta-text">View Live Sample</span>
-            <ExternalLink size={16} />
-          </div>
-        </div>
-
-        {/* Hover Effects */}
-        <div className="live-samples-card-glow"></div>
-      </div>
-    </Link>
+      </Link>
+    </div>
   );
 });
 
-SampleCard.displayName = 'SampleCard';
+SampleCard.displayName = "SampleCard";
 
 // Stats Component
 const StatsSection = memo(() => (
@@ -239,7 +225,7 @@ const StatsSection = memo(() => (
     <div className="live-samples-stats-glow"></div>
     <div className="live-samples-stat-item">
       <span className="live-samples-stat-number">10+</span>
-      <span className="live-samples-stat-label">Live Samples</span>
+      <span className="live-samples-stat-label">Live Demos</span>
     </div>
     <div className="live-samples-stat-item">
       <span className="live-samples-stat-number">100%</span>
@@ -252,7 +238,7 @@ const StatsSection = memo(() => (
   </div>
 ));
 
-StatsSection.displayName = 'StatsSection';
+StatsSection.displayName = "StatsSection";
 
 // Glow Effects Component
 const GlowEffects = memo(() => (
@@ -263,7 +249,7 @@ const GlowEffects = memo(() => (
   </>
 ));
 
-GlowEffects.displayName = 'GlowEffects';
+GlowEffects.displayName = "GlowEffects";
 
 // Grid Glow Effects
 const GridGlowEffects = memo(() => (
@@ -275,53 +261,197 @@ const GridGlowEffects = memo(() => (
   </>
 ));
 
-GridGlowEffects.displayName = 'GridGlowEffects';
+GridGlowEffects.displayName = "GridGlowEffects";
 
 const LiveWorkSamplesPage = () => {
   // Performance monitoring
   useEffect(() => {
-    if (typeof window !== 'undefined' && window.performance) {
-      performance.mark('live-samples-page-start');
-      
+    if (typeof window !== "undefined" && window.performance) {
+      performance.mark("live-samples-page-start");
+
       const cleanup = () => {
-        performance.mark('live-samples-page-end');
-        performance.measure('live-samples-page-load', 'live-samples-page-start', 'live-samples-page-end');
+        performance.mark("live-samples-page-end");
+        performance.measure(
+          "live-samples-page-load",
+          "live-samples-page-start",
+          "live-samples-page-end"
+        );
       };
 
-      window.addEventListener('load', cleanup);
-      return () => window.removeEventListener('load', cleanup);
+      window.addEventListener("load", cleanup);
+      return () => window.removeEventListener("load", cleanup);
     }
   }, []);
 
   // Memoize projects with staggered animation delays
-  const projectsWithDelay = useMemo(() => 
-    sampleProjects.map((project, index) => ({
-      ...project,
-      animationDelay: index * 0.1
-    })), 
+  const projectsWithDelay = useMemo(
+    () =>
+      sampleProjects.map((project, index) => ({
+        ...project,
+        animationDelay: index * 0.1,
+      })),
     []
   );
+
+  // Generate structured data for SEO
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: "Live Website Demos - SoftRanch Web Development Samples",
+    description:
+      "Explore our live website demonstrations across various industries including restaurants, real estate, e-commerce, healthcare, and more. See our web development expertise in action.",
+    url: "https://softranch.com/live-work-samples",
+    mainEntity: {
+      "@type": "ItemList",
+      itemListElement: sampleProjects.map((project, index) => ({
+        "@type": "WebSite",
+        position: index + 1,
+        name: project.title,
+        description: project.description,
+        url: `https://softranch.com/live-work-samples/${project.slug}`,
+        applicationCategory: project.category,
+        creator: {
+          "@type": "Organization",
+          name: "SoftRanch",
+          url: "https://softranch.com",
+        },
+      })),
+    },
+    provider: {
+      "@type": "Organization",
+      name: "SoftRanch",
+      url: "https://softranch.com",
+      description:
+        "Professional web development agency specializing in custom websites and applications",
+    },
+  };
 
   return (
     <>
       <Helmet>
-        <title>Live Work Samples | SoftRanch - Interactive Website Demos</title>
+        <title>
+          Live Website Demos & Interactive Samples | SoftRanch Web Development
+          Agency
+        </title>
         <meta
           name="description"
-          content="Explore our live website samples across various industries. See our web development work in action with fully functional demos including restaurants, healthcare, e-commerce, and more."
+          content="Explore 10+ live website demonstrations by SoftRanch. Interactive demos across restaurants, real estate, e-commerce, healthcare & more industries. See our web development expertise in action."
         />
         <meta
           name="keywords"
-          content="live website samples, web development demos, portfolio examples, interactive websites, restaurant websites, healthcare portals, e-commerce platforms, SoftRanch work samples"
+          content="live website demos, interactive website samples, web development portfolio, restaurant website demo, real estate website demo, e-commerce demo, healthcare website demo, SoftRanch portfolio, website development examples, live web demos"
         />
-        <meta property="og:title" content="Live Work Samples | SoftRanch" />
+
+        {/* Open Graph Tags */}
+        <meta
+          property="og:title"
+          content="Live Website Demos & Interactive Samples | SoftRanch"
+        />
         <meta
           property="og:description"
-          content="Explore our live website samples across various industries. Fully functional demos showcasing our web development expertise."
+          content="Explore 10+ live website demonstrations across various industries. See our web development expertise with fully functional interactive demos."
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://softranch.com/live-work-samples" />
+        <meta
+          property="og:url"
+          content="https://softranch.com/live-work-samples"
+        />
+        <meta property="og:site_name" content="SoftRanch" />
+        <meta property="og:locale" content="en_US" />
+
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Live Website Demos | SoftRanch Web Development"
+        />
+        <meta
+          name="twitter:description"
+          content="Interactive website demonstrations across 8+ industries. See our development expertise in action."
+        />
+
+        {/* Additional SEO Tags */}
+        <meta name="robots" content="index, follow, max-image-preview:large" />
+        <meta name="googlebot" content="index, follow" />
         <link rel="canonical" href="https://softranch.com/live-work-samples" />
+
+        {/* Performance & Loading */}
+        <link rel="preload" as="style" href="/static/css/live-samples.css" />
+        <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.googleapis.com"
+          crossOrigin=""
+        />
+
+        {/* Structured Data */}
+        <script type="application/ld+json">
+          {JSON.stringify(structuredData)}
+        </script>
+
+        {/* Additional Schema for Organization */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            name: "SoftRanch",
+            url: "https://softranch.com",
+            description:
+              "Professional web development agency creating custom websites and applications for businesses worldwide",
+            foundingDate: "2020",
+            numberOfEmployees: "10-50",
+            address: {
+              "@type": "PostalAddress",
+              addressLocality: "Nowshera",
+              addressRegion: "Peshawar",
+              addressCountry: "Pakistan",
+            },
+            contactPoint: {
+              "@type": "ContactPoint",
+              telephone: "+92-335-5398908",
+              contactType: "customer service",
+              availableLanguage: "English",
+            },
+            sameAs: [
+              "https://linkedin.com/company/softranch",
+              "https://instagram.com/softranch",
+              "https://facebook.com/softranch",
+            ],
+            hasOfferCatalog: {
+              "@type": "OfferCatalog",
+              name: "Web Development Services",
+              itemListElement: [
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Restaurant Website Development",
+                    description:
+                      "Custom restaurant websites with online reservations and menu management",
+                  },
+                },
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Real Estate Website Development",
+                    description:
+                      "Property listing platforms with virtual tours and lead generation",
+                  },
+                },
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "E-commerce Website Development",
+                    description:
+                      "Online stores with payment integration and inventory management",
+                  },
+                },
+              ],
+            },
+          })}
+        </script>
       </Helmet>
 
       <div className="live-samples-wrapper">
@@ -335,12 +465,12 @@ const LiveWorkSamplesPage = () => {
               <span>Live Demos</span>
             </div>
             <h1 className="live-samples-hero-title">
-              Our Live Work Samples
+              Interactive Website Demos
             </h1>
             <p className="live-samples-hero-description">
-              Explore fully functional website demos across different industries. 
-              Click on any sample to interact with live features and see our development 
-              expertise in action.
+              Explore fully functional website demonstrations across different
+              industries. Click on any demo to interact with live features and
+              experience our development expertise firsthand.
             </p>
             <StatsSection />
           </div>
@@ -352,27 +482,25 @@ const LiveWorkSamplesPage = () => {
           <div className="live-samples-container">
             <div className="live-samples-section-header">
               <h2 className="live-samples-section-title">
-                Interactive Website Demos
+                Live Website Demonstrations
               </h2>
               <p className="live-samples-section-subtitle">
-                Click on any sample to explore a fully functional website demo
+                Each demo represents real-world functionality and showcases our
+                expertise across various industries
               </p>
             </div>
 
-            <div className="live-samples-grid">
+            <div className="live-samples-portfolio-grid">
               {projectsWithDelay.map((project, index) => (
-                <SampleCard
-                  key={project.id}
-                  project={project}
-                  index={index}
-                />
+                <SampleCard key={project.id} project={project} index={index} />
               ))}
             </div>
 
             <div className="live-samples-grid-footer">
               <p className="live-samples-footer-text">
-                More samples coming soon! Each demo represents a different industry 
-                and showcases unique features and functionalities.
+                More interactive demos coming soon! Each demonstration showcases
+                unique features and industry-specific functionalities to help
+                you visualize your next project.
               </p>
             </div>
           </div>

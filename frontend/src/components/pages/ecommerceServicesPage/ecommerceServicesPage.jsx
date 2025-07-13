@@ -23,6 +23,7 @@ import {
   Cpu
 } from 'lucide-react';
 import './style.css';
+import img1 from "../../../static/featured_services_images/softCommerce.png";
 
 const EcommerceServices = () => {
   const features = [
@@ -219,14 +220,14 @@ const EcommerceServices = () => {
                   Get Your Free E-commerce Audit
                   <ArrowRight size={20} />
                 </Link>
-                <Link to="/portfolio" className="ecommerce-cta-secondary">
-                  View Success Stories
+                <Link to="/live-work-samples" className="ecommerce-cta-secondary">
+                  View Live Work Samples
                 </Link>
               </div>
             </div>
             
             <div className="ecommerce-hero-image">
-              <img src="/api/placeholder/600/400" alt="Modern e-commerce dashboard showing AI-powered analytics and sales growth metrics" />
+              <img src={img1} alt="Modern e-commerce dashboard showing AI-powered analytics and sales growth metrics" />
               <div className="ecommerce-image-overlay">
                 <div className="ecommerce-overlay-stat">
                   <TrendingUp size={24} />
