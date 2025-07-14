@@ -105,8 +105,8 @@ const Portfolio = () => {
         </div>
         
         <div className="portfolio-cta">
-          <Link to={"/portfolio"} className="portfolio-button">
-            Here's More 
+          <Link to={"/live-work-samples/"} className="portfolio-button">
+            View Live Work Samples
             <span className="arrow-icon">↗</span>
           </Link>
         </div>

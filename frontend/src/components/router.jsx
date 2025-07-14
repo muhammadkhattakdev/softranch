@@ -52,6 +52,9 @@ import SoftCommerceDashboard from "./pages/LiveWorkSampleWebsites/softCommerce/s
 import MedicalDashboard from "./pages/LiveWorkSampleWebsites/medicalDashboard/dashboard";
 import LawyerBookingPage from "./pages/LiveWorkSampleWebsites/lawyerBookingPage/booking";
 import CarDealershipLanding from "./pages/LiveWorkSampleWebsites/softMotors/dealership";
+import StaticBlog1 from "./pages/staticBlogs/blog1/blog";
+import StaticBlog2 from "./pages/staticBlogs/blog2/blog";
+import StaticBlog3 from "./pages/staticBlogs/blog3/blog";
 
 export default function Router() {
   return (
@@ -77,6 +80,14 @@ export default function Router() {
             <Route element={<HealthcareServices />} path="healthcare-website-development-services" />
             <Route element={<ProfessionalServices />} path="lawyer-accountant-consultant-website-development-services" />
 
+
+
+            <Route path="blog">
+              <Route element={<StaticBlog1 />} path="beautiful-website-transform-business-2025" />
+              <Route element={<StaticBlog2 />} path="digital-marketing-real-estate-success" />
+              <Route element={<StaticBlog3 />} path="ecommerce-conversion-optimization-case-" />
+            </Route>
+
           </Route>
 
           {/* LIVE WORK SAMPLE WEBSITES DEMOS  */}
@@ -95,7 +106,6 @@ export default function Router() {
             <Route element={<MedicalDashboard />} path="medical-saas-website" />
             <Route element={<LawyerBookingPage />} path="lawyer-services-booking-website" />
             <Route element={<CarDealershipLanding />} path="car-dealership-website" />
-
           </Route>
 
 

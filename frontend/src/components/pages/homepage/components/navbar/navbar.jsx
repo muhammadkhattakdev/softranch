@@ -184,19 +184,19 @@ const EnhancedNavbar = () => {
           title: "Portfolio",
           links: [
             {
+              title: "Live Demonstrations",
+              description: "Interactive live work samples",
+              href: "/live-work-samples",
+              icon: <Eye size={20} />,
+              color: "gradient-pink"
+            },
+            {
               title: "Work Samples",
               description: "Browse our portfolio gallery",
               href: "/portfolio",
               icon: <Briefcase size={20} />,
               color: "gradient-indigo"
             },
-            {
-              title: "Live Demonstrations",
-              description: "Interactive live work samples",
-              href: "/live-work-samples",
-              icon: <Eye size={20} />,
-              color: "gradient-pink"
-            }
           ]
         },
         {
@@ -453,7 +453,7 @@ const EnhancedNavbar = () => {
                 <Link to="/services" className={`mobile-nav-link ${isNavItemActive('services') ? 'mobile-nav-link--active' : ''}`} onClick={closeMobileMenu}>
                   Services
                 </Link>
-                <Link to="/portfolio" className={`mobile-nav-link ${isNavItemActive('portfolio') ? 'mobile-nav-link--active' : ''}`} onClick={closeMobileMenu}>
+                <Link to="/live-work-samples" className={`mobile-nav-link ${isNavItemActive('live-work-samples') ? 'mobile-nav-link--active' : ''}`} onClick={closeMobileMenu}>
                   Portfolio
                 </Link>
                 <Link to="/contact" className={`mobile-nav-link ${isNavItemActive('contact') ? 'mobile-nav-link--active' : ''}`} onClick={closeMobileMenu}>
