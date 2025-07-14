@@ -26,6 +26,8 @@ import restaurantSaasImg from "../../../static/portfolio_thumbs/restaurantOS.png
 import softCommerceImg from "../../../static/portfolio_thumbs/softCommerce.png";
 import softFoodImg from "../../../static/portfolio_thumbs/softFood.png";
 import medicalDashboardImg from "../../../static/portfolio_thumbs/medicalDashboard.png";
+import lawyerBookingImg from "../../../static/portfolio_thumbs/lawyer_website.png";
+import dealershipImg from "../../../static/portfolio_thumbs/dealership.png";
 
 // Sample project data with static image references
 const sampleProjects = [
@@ -112,8 +114,8 @@ const sampleProjects = [
     description:
       "Car dealership website with inventory management and financing",
     icon: <Car size={24} />,
-    slug: "automotive-dealership",
-    image: null,
+    slug: "car-dealership-website",
+    image: dealershipImg,
     gradient: "from-gray-600 to-gray-800",
   },
   {
@@ -134,6 +136,16 @@ const sampleProjects = [
     icon: <Smartphone size={24} />,
     slug: "medical-saas-website",
     image: medicalDashboardImg,
+    gradient: "from-yellow-500 to-orange-500",
+  },
+  {
+    id: 11,
+    title: "Lawyer Website",
+    category: "Landing Page | Website Development | Booking System",
+    description: "Landing page for Lawyer booking services with authority design and visuals",
+    icon: <Smartphone size={24} />,
+    slug: "lawyer-services-booking-website",
+    image: lawyerBookingImg,
     gradient: "from-yellow-500 to-orange-500",
   },
 ];

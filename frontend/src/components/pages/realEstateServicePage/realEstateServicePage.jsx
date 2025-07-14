@@ -83,14 +83,14 @@ const RealEstateServices = () => {
 
   const testimonials = [
     {
-      name: "Sarah Johnson",
-      title: "Top Real Estate Agent, Denver",
+      name: "Ada Uyi",
+      title: "Real Estate Agent, Denver",
       text: "Since launching our new website with SoftRanch, we've seen a 300% increase in online leads. The IDX integration is seamless and our clients love the user experience.",
       rating: 5
     },
     {
       name: "Michael Chen",
-      title: "Broker/Owner, Phoenix Realty",
+      title: "Broker/Owner, Phoenix",
       text: "We now rank #1 for 'Phoenix real estate agent' and generate 50+ qualified leads per month. Best investment we've made for our business growth.",
       rating: 5
     }
