@@ -6,7 +6,6 @@ import './style.css';
 import Hero from './components/hero1/hero1';
 import TrustedBy from './components/trustedBy/trustedBy';
 import Services from './components/services/services';
-import BlogSection from './components/blogSection/blog';
 
 // Non-critical components - lazy load for better performance
 const Features = lazy(() => import('./components/features/features'));
@@ -427,9 +426,6 @@ const Homepage = () => {
           <Portfolio />
         </Suspense>
 
-        <Suspense fallback={<SectionLoader />}>
-          <BlogSection />
-        </Suspense>
       </div>
     </>
   );
