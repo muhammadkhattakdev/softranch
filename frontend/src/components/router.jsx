@@ -33,11 +33,11 @@ import ProtectedRoute from "./auth/protectedRoute";
 import ScrollToTop from "./pageLoader/scrollToTop";
 import EnhancedRouteTransition from "./pageLoader/routerTransition";
 import ServicesPage from "./pages/servicesPage/services";
-import RealEstateServices from "./pages/realEstateServicePage/realEstateServicePage";
-import EcommerceServices from "./pages/ecommerceServicesPage/ecommerceServicesPage";
-import RestaurantServices from "./pages/restaurantServicesPage/restaurantServicesPage";
-import HealthcareServices from "./pages/healthcareServicesPage/healthcareServicesPage";
-import ProfessionalServices from "./pages/professionalServicesPage/professionalServicesPage";
+import RealEstateServices from "./pages/featuredServicesPages/realEstateServicePage/realEstateServicePage";
+import EcommerceServices from "./pages/featuredServicesPages/ecommerceServicesPage/ecommerceServicesPage";
+import RestaurantServices from "./pages/featuredServicesPages/restaurantServicesPage/restaurantServicesPage";
+import HealthcareServices from "./pages/featuredServicesPages/healthcareServicesPage/healthcareServicesPage";
+import ProfessionalServices from "./pages/featuredServicesPages/professionalServicesPage/professionalServicesPage";
 import LiveWorkSamplesPage from "./pages/liveWorkSamplesPage/liveWorkSamplesPage";
 import SavoriaRestaurant from "./pages/LiveWorkSampleWebsites/SavoriaRestaurantLandingPage/savoria";
 import NebulaStudios from "./pages/LiveWorkSampleWebsites/nebulaStudiosLandingPage/nebula";
@@ -55,6 +55,10 @@ import CarDealershipLanding from "./pages/LiveWorkSampleWebsites/softMotors/deal
 import StaticBlog1 from "./pages/staticBlogs/blog1/blog";
 import StaticBlog2 from "./pages/staticBlogs/blog2/blog";
 import StaticBlog3 from "./pages/staticBlogs/blog3/blog";
+import ConsultationBooking from "./pages/consultationBookingPage/booking";
+import CarDealershipServices from "./pages/featuredServicesPages/carDealershipServicesPage/dealershipServicesPage";
+import ConstructionServices from "./pages/featuredServicesPages/constructionServicesPage/construction";
+import ConstructionLanding from "./pages/LiveWorkSampleWebsites/constructionsLandingPage/construction";
 
 export default function Router() {
   return (
@@ -68,6 +72,7 @@ export default function Router() {
             <Route element={<PortfolioPage />} path="portfolio" />
             <Route element={<LiveWorkSamplesPage />} path="live-work-samples" />
             <Route element={<ContactPage />} path="contact" />
+            <Route element={<ConsultationBooking />} path="consultation-booking" />
             <Route element={<ServicesPage />} path="services" />
             {/* <Route element={<BlogPage />} path="blog" />
             <Route element={<BlogDetailPage />} path="blog/:id" /> */}
@@ -79,8 +84,10 @@ export default function Router() {
             <Route element={<RestaurantServices />} path="restaurant-website-development-services" />
             <Route element={<HealthcareServices />} path="healthcare-website-development-services" />
             <Route element={<ProfessionalServices />} path="lawyer-accountant-consultant-website-development-services" />
+            <Route element={<CarDealershipServices />} path="car-dealership-website-development-services" />
+            <Route element={<ConstructionServices />} path="construction-website-development-services" />
 
-
+          {/* STATIC BLOG PAGES  */}
 
             <Route path="blog">
               <Route element={<StaticBlog1 />} path="beautiful-website-transform-business-2025" />
@@ -106,11 +113,8 @@ export default function Router() {
             <Route element={<MedicalDashboard />} path="medical-saas-website" />
             <Route element={<LawyerBookingPage />} path="lawyer-services-booking-website" />
             <Route element={<CarDealershipLanding />} path="car-dealership-website" />
+            <Route element={<ConstructionLanding />} path="constructions-company-website" />
           </Route>
-
-
-
-
 
 
           {/* Admin Auth Routes (Public) */}

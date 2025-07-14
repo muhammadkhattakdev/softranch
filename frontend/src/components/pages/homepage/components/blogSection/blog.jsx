@@ -87,7 +87,7 @@ const BlogSection = () => {
                 </div>
                 <div className="homepage-blog__image-overlay"></div>
               </div>
-              
+
               <div className="homepage-blog__content">
                 <div className="homepage-blog__meta">
                   <div className="homepage-blog__meta-item">

@@ -28,8 +28,8 @@ import {
   FileText,
 } from "lucide-react";
 import "./style.css";
-import img1 from "../../../static/featured_services_images/medicalDashboard.png";
-import img2 from "../../../static/featured_services_images/medical2.png";
+import img1 from "../../../../static/featured_services_images/medicalDashboard.png";
+import img2 from "../../../../static/featured_services_images/medical2.png";
 
 const HealthcareServices = () => {
   const features = [

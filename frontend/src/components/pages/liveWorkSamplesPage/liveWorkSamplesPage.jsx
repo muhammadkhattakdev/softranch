@@ -28,6 +28,7 @@ import softFoodImg from "../../../static/portfolio_thumbs/softFood.png";
 import medicalDashboardImg from "../../../static/portfolio_thumbs/medicalDashboard.png";
 import lawyerBookingImg from "../../../static/portfolio_thumbs/lawyer_website.png";
 import dealershipImg from "../../../static/portfolio_thumbs/dealership.png";
+import constructionLandingImg from "../../../static/portfolio_thumbs/construction_website.png";
 
 // Sample project data with static image references
 const sampleProjects = [
@@ -43,6 +44,16 @@ const sampleProjects = [
     gradient: "from-orange-500 to-red-500",
   },
   {
+    id: 11,
+    title: "Construction Company Website",
+    category: "Landing Page | Website Development | Portfolio",
+    description: "Complete website and management and booking tools for construction company with portfolio and about for authority building and social proof",
+    icon: <Smartphone size={24} />,
+    slug: "constructions-company-website",
+    image: constructionLandingImg,
+    gradient: "from-yellow-500 to-orange-500",
+  },
+  {
     id: 6,
     title: "CommerceFlow",
     category: "Dashboard | SaaS",
@@ -53,6 +64,7 @@ const sampleProjects = [
     image: commerceFlowImg,
     gradient: "from-teal-500 to-green-500",
   },
+  
   {
     id: 4,
     title: "Planto",
@@ -148,6 +160,7 @@ const sampleProjects = [
     image: lawyerBookingImg,
     gradient: "from-yellow-500 to-orange-500",
   },
+
 ];
 
 // Image placeholder component

@@ -1,0 +1,1076 @@
+/* Consultation Booking Styles */
+.consultation-booking__wrapper {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  position: relative;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hero Section */
+.consultation-booking__hero {
+  width: 100%;
+  padding: 8rem 1rem 4rem;
+  position: relative;
+  overflow: hidden;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+}
+
+.consultation-booking__hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    ellipse at 50% 50%,
+    rgba(138, 63, 252, 0.15) 0%,
+    rgba(138, 63, 252, 0.08) 30%,
+    rgba(138, 63, 252, 0.03) 50%,
+    transparent 70%
+  );
+  filter: blur(100px);
+  z-index: 0;
+}
+
+/* Light mode hero background */
+[data-theme="light"] .consultation-booking__hero-bg {
+  background: radial-gradient(
+    ellipse at 50% 50%,
+    rgba(138, 63, 252, 0.1) 0%,
+    rgba(138, 63, 252, 0.05) 30%,
+    rgba(138, 63, 252, 0.02) 50%,
+    transparent 70%
+  );
+}
+
+.consultation-booking__glow-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.consultation-booking__glow-orb-1 {
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(138, 63, 252, 0.4), transparent);
+  top: -10%;
+  left: -5%;
+  animation: consultationBookingFloat 12s ease-in-out infinite;
+}
+
+.consultation-booking__glow-orb-2 {
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(165, 110, 255, 0.3), transparent);
+  bottom: -10%;
+  right: -5%;
+  animation: consultationBookingFloat 10s ease-in-out infinite reverse;
+}
+
+/* Light mode glow orbs */
+[data-theme="light"] .consultation-booking__glow-orb-1 {
+  background: radial-gradient(circle, rgba(138, 63, 252, 0.25), transparent);
+}
+
+[data-theme="light"] .consultation-booking__glow-orb-2 {
+  background: radial-gradient(circle, rgba(165, 110, 255, 0.2), transparent);
+}
+
+@keyframes consultationBookingFloat {
+  0%,
+  100% {
+    transform: translateY(0px) translateX(0px);
+  }
+  25% {
+    transform: translateY(-30px) translateX(15px);
+  }
+  50% {
+    transform: translateY(-15px) translateX(-10px);
+  }
+  75% {
+    transform: translateY(-40px) translateX(20px);
+  }
+}
+
+.consultation-booking__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.consultation-booking__hero-content {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Enhanced Badge */
+.consultation-booking__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(138, 63, 252, 0.1);
+  border-radius: 2rem;
+  padding: 0.5rem 1.5rem;
+  margin-bottom: 2rem;
+  position: relative;
+  backdrop-filter: blur(10px);
+}
+
+/* Light mode badge */
+[data-theme="light"] .consultation-booking__badge {
+  background: rgba(138, 63, 252, 0.08);
+  border: 1px solid rgba(138, 63, 252, 0.15);
+}
+
+.consultation-booking__badge::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 2rem;
+  padding: 1px;
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--primary-light),
+    #3b82f6,
+    var(--primary-color)
+  );
+  background-size: 200% 200%;
+  animation: consultationBookingGradientBorder 3s ease infinite;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: exclude;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+}
+
+@keyframes consultationBookingGradientBorder {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.consultation-booking__badge span {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  position: relative;
+  z-index: 1;
+  transition: color 0.3s ease;
+}
+
+.consultation-booking__badge svg {
+  color: var(--primary-light);
+  position: relative;
+  z-index: 1;
+}
+
+.consultation-booking__hero-title {
+  font-size: clamp(2.5rem, 6vw, 3.5rem);
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  background: linear-gradient(
+    135deg,
+    var(--text-primary),
+    var(--primary-light)
+  );
+  padding: 15px 0;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: background 0.3s ease;
+}
+
+.consultation-booking__hero-description {
+  font-size: 1.3rem;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  transition: color 0.3s ease;
+}
+
+/* Form Section */
+.consultation-booking__form-section {
+  padding: 4rem 1rem 6rem;
+  position: relative;
+}
+
+.consultation-booking__floating-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(50px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.consultation-booking__floating-glow-1 {
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.2), transparent);
+  top: 20%;
+  left: 10%;
+  animation: consultationBookingGentleFloat 15s ease-in-out infinite;
+}
+
+.consultation-booking__floating-glow-2 {
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle, rgba(236, 72, 153, 0.15), transparent);
+  bottom: 20%;
+  right: 10%;
+  animation: consultationBookingGentleFloat 18s ease-in-out infinite reverse;
+}
+
+/* Light mode floating glows */
+[data-theme="light"] .consultation-booking__floating-glow-1 {
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.12), transparent);
+}
+
+[data-theme="light"] .consultation-booking__floating-glow-2 {
+  background: radial-gradient(circle, rgba(236, 72, 153, 0.1), transparent);
+}
+
+@keyframes consultationBookingGentleFloat {
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-30px) rotate(180deg);
+  }
+}
+
+.consultation-booking__form-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Progress Section */
+.consultation-booking__progress-section {
+  margin-bottom: 3rem;
+}
+
+.consultation-booking__progress-bar {
+  width: 100%;
+  height: 4px;
+  background: rgba(138, 63, 252, 0.1);
+  border-radius: 2px;
+  margin-bottom: 2rem;
+  overflow: hidden;
+}
+
+/* Light mode progress bar */
+[data-theme="light"] .consultation-booking__progress-bar {
+  background: rgba(138, 63, 252, 0.15);
+}
+
+.consultation-booking__progress-fill {
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    var(--primary-color),
+    var(--primary-light)
+  );
+  border-radius: 2px;
+  transition: width 0.5s ease;
+  animation: consultationBookingProgressGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes consultationBookingProgressGlow {
+  0% {
+    box-shadow: 0 0 5px rgba(138, 63, 252, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 20px rgba(138, 63, 252, 0.8);
+  }
+}
+
+.consultation-booking__steps {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.consultation-booking__step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  opacity: 0.5;
+  transition: all 0.3s ease;
+}
+
+.consultation-booking__step.active,
+.consultation-booking__step.completed {
+  opacity: 1;
+}
+
+.consultation-booking__step-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(138, 63, 252, 0.1);
+  color: var(--text-tertiary);
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.consultation-booking__step.active .consultation-booking__step-icon {
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--primary-light)
+  );
+  color: #ffffff;
+  border-color: rgba(138, 63, 252, 0.3);
+  box-shadow: 0 0 20px rgba(138, 63, 252, 0.4);
+}
+
+.consultation-booking__step.completed .consultation-booking__step-icon {
+  background: #10b981;
+  color: #ffffff;
+  border-color: rgba(16, 185, 129, 0.3);
+}
+
+.consultation-booking__step-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  transition: color 0.3s ease;
+  text-align: center;
+}
+
+.consultation-booking__step.active .consultation-booking__step-title {
+  color: var(--primary-light);
+}
+
+.consultation-booking__step.completed .consultation-booking__step-title {
+  color: #10b981;
+}
+
+/* Form Container */
+.consultation-booking__form-container {
+  position: relative;
+}
+
+.consultation-booking__form-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120%;
+  height: 120%;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(138, 63, 252, 0.08) 0%,
+    rgba(138, 63, 252, 0.03) 40%,
+    transparent 70%
+  );
+  filter: blur(60px);
+  z-index: -1;
+  animation: consultationBookingFormGlow 4s ease-in-out infinite alternate;
+}
+
+/* Light mode form glow */
+[data-theme="light"] .consultation-booking__form-glow {
+  background: radial-gradient(
+    ellipse at center,
+    rgba(138, 63, 252, 0.06) 0%,
+    rgba(138, 63, 252, 0.02) 40%,
+    transparent 70%
+  );
+}
+
+@keyframes consultationBookingFormGlow {
+  0% {
+    opacity: 0.5;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    opacity: 0.8;
+    transform: translate(-50%, -50%) scale(1.05);
+  }
+}
+
+.consultation-booking__form {
+  border-radius: 1.5rem;
+  padding: 3rem;
+  backdrop-filter: blur(20px);
+  position: relative;
+  transition: all 0.3s ease;
+  min-height: 500px;
+}
+
+/* Dark theme form styling */
+[data-theme="dark"] .consultation-booking__form {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.03) 0%,
+    rgba(255, 255, 255, 0.01) 100%
+  );
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Light theme form styling */
+[data-theme="light"] .consultation-booking__form {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.8) 0%,
+    rgba(255, 255, 255, 0.6) 100%
+  );
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Step Content */
+.consultation-booking__step-content {
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.consultation-booking__step-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.consultation-booking__step-header h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.consultation-booking__step-header p {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  transition: color 0.3s ease;
+}
+
+/* Form Elements */
+.consultation-booking__form-group {
+  margin-bottom: 1.5rem;
+}
+
+.consultation-booking__label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.consultation-booking__label svg {
+  color: var(--primary-light);
+}
+
+.consultation-booking__input,
+.consultation-booking__select,
+.consultation-booking__textarea {
+  width: 100%;
+  border-radius: 0.75rem;
+  padding: 1rem 1.25rem;
+  font-size: 1rem;
+  color: var(--text-primary);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  font-family: inherit;
+  border: 1px solid rgba(138, 63, 252, 0.1);
+}
+
+/* Dark theme inputs */
+[data-theme="dark"] .consultation-booking__input,
+[data-theme="dark"] .consultation-booking__select,
+[data-theme="dark"] .consultation-booking__textarea {
+  background: rgba(255, 255, 255, 0.02);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .consultation-booking__input:focus,
+[data-theme="dark"] .consultation-booking__select:focus,
+[data-theme="dark"] .consultation-booking__textarea:focus {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+/* Light theme inputs */
+[data-theme="light"] .consultation-booking__input,
+[data-theme="light"] .consultation-booking__select,
+[data-theme="light"] .consultation-booking__textarea {
+  background: rgba(255, 255, 255, 0.6);
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] .consultation-booking__input:focus,
+[data-theme="light"] .consultation-booking__select:focus,
+[data-theme="light"] .consultation-booking__textarea:focus {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.consultation-booking__input:focus,
+.consultation-booking__select:focus,
+.consultation-booking__textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(138, 63, 252, 0.1);
+}
+
+.consultation-booking__input::placeholder,
+.consultation-booking__textarea::placeholder {
+  color: var(--text-tertiary);
+  transition: color 0.3s ease;
+}
+
+.consultation-booking__textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.consultation-booking__char-count {
+  text-align: right;
+  font-size: 0.8rem;
+  color: var(--text-tertiary);
+  margin-top: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+/* Error States */
+.consultation-booking__input.error,
+.consultation-booking__select.error,
+.consultation-booking__textarea.error {
+  border-color: #ef4444;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+.consultation-booking__error {
+  display: block;
+  color: #ef4444;
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+  font-weight: 500;
+}
+
+/* Goal Examples */
+.consultation-booking__goal-examples {
+  background: rgba(138, 63, 252, 0.05);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin-top: 1rem;
+  backdrop-filter: blur(10px);
+}
+
+/* Light mode goal examples */
+[data-theme="light"] .consultation-booking__goal-examples {
+  background: rgba(138, 63, 252, 0.08);
+  border: 1px solid rgba(138, 63, 252, 0.15);
+}
+
+.consultation-booking__goal-examples h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--primary-light);
+  margin-bottom: 0.75rem;
+}
+
+.consultation-booking__goal-examples ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.consultation-booking__goal-examples li {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin-bottom: 0.25rem;
+  transition: color 0.3s ease;
+}
+
+/* Schedule Grid */
+.consultation-booking__schedule-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 992px) {
+  .consultation-booking__schedule-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+}
+
+/* Calendar Styling */
+.consultation-booking__calendar-wrapper {
+  margin-top: 1rem;
+}
+
+.consultation-booking__calendar {
+  width: 100% !important;
+  border: none !important;
+  background: transparent !important;
+  font-family: inherit !important;
+}
+
+.consultation-booking__calendar .react-datepicker__month-container {
+  background: rgba(138, 63, 252, 0.05) !important;
+  border-radius: 1rem !important;
+  padding: 1rem !important;
+  backdrop-filter: blur(10px) !important;
+}
+
+/* Light mode calendar */
+[data-theme="light"]
+  .consultation-booking__calendar
+  .react-datepicker__month-container {
+  background: rgba(138, 63, 252, 0.08) !important;
+  border: 1px solid rgba(138, 63, 252, 0.15) !important;
+}
+
+.consultation-booking__calendar .react-datepicker__header {
+  background: transparent !important;
+  border-bottom: 1px solid rgba(138, 63, 252, 0.2) !important;
+  padding-bottom: 1rem !important;
+}
+
+.consultation-booking__calendar .react-datepicker__current-month {
+  color: var(--text-primary) !important;
+  font-weight: 700 !important;
+  font-size: 1.1rem !important;
+}
+
+.consultation-booking__calendar .react-datepicker__day-name {
+  color: var(--primary-light) !important;
+  font-weight: 600 !important;
+  font-size: 0.9rem !important;
+}
+
+.consultation-booking__calendar .react-datepicker__day {
+  color: var(--text-primary) !important;
+  border-radius: 0.5rem !important;
+  margin: 0.1rem !important;
+  padding: 0.5rem !important;
+  transition: all 0.3s ease !important;
+}
+
+.consultation-booking__calendar .react-datepicker__day:hover {
+  background: rgba(138, 63, 252, 0.2) !important;
+  color: #ffffff !important;
+}
+
+.consultation-booking__calendar .react-datepicker__day--selected {
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--primary-light)
+  ) !important;
+  color: #ffffff !important;
+  font-weight: 600 !important;
+}
+
+.consultation-booking__calendar .react-datepicker__day--disabled {
+  color: var(--text-tertiary) !important;
+  opacity: 0.5 !important;
+}
+
+.consultation-booking__calendar .react-datepicker__navigation {
+  top: 1rem !important;
+}
+
+.consultation-booking__calendar .react-datepicker__navigation-icon::before {
+  border-color: var(--primary-light) !important;
+}
+
+/* Time Section */
+.consultation-booking__time-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.consultation-booking__time-slots {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.consultation-booking__time-slot {
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(138, 63, 252, 0.2);
+  background: rgba(138, 63, 252, 0.05);
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+/* Light mode time slots */
+[data-theme="light"] .consultation-booking__time-slot {
+  background: rgba(138, 63, 252, 0.08);
+  border: 1px solid rgba(138, 63, 252, 0.15);
+}
+
+.consultation-booking__time-slot:hover {
+  background: rgba(138, 63, 252, 0.15);
+  border-color: rgba(138, 63, 252, 0.4);
+  transform: translateY(-2px);
+}
+
+.consultation-booking__time-slot.selected {
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--primary-light)
+  );
+  color: #ffffff;
+  border-color: transparent;
+  box-shadow: 0 4px 15px rgba(138, 63, 252, 0.3);
+}
+
+/* Confirmation Page */
+.consultation-booking__confirmation {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.consultation-booking__success-icon {
+  color: #10b981;
+  margin-bottom: 1.5rem;
+  animation: consultationBookingSuccessPulse 2s ease-in-out infinite;
+}
+
+@keyframes consultationBookingSuccessPulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.consultation-booking__booking-summary {
+  background: rgba(16, 185, 129, 0.05);
+  border-radius: 1rem;
+  padding: 2rem;
+  margin: 2rem 0;
+  text-align: left;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+/* Light mode booking summary */
+[data-theme="light"] .consultation-booking__booking-summary {
+  background: rgba(16, 185, 129, 0.08);
+  border: 1px solid rgba(16, 185, 129, 0.15);
+}
+
+.consultation-booking__summary-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid rgba(16, 185, 129, 0.1);
+  font-size: 1rem;
+  color: var(--text-primary);
+  transition: color 0.3s ease;
+}
+
+.consultation-booking__summary-item:last-child {
+  border-bottom: none;
+}
+
+.consultation-booking__next-steps {
+  background: rgba(138, 63, 252, 0.05);
+  border-radius: 1rem;
+  padding: 2rem;
+  text-align: left;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(138, 63, 252, 0.2);
+}
+
+/* Light mode next steps */
+[data-theme="light"] .consultation-booking__next-steps {
+  background: rgba(138, 63, 252, 0.08);
+  border: 1px solid rgba(138, 63, 252, 0.15);
+}
+
+.consultation-booking__next-steps h3 {
+  color: var(--primary-light);
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.consultation-booking__next-steps ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.consultation-booking__next-steps li {
+  padding: 0.5rem 0;
+  color: var(--text-secondary);
+  position: relative;
+  padding-left: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.consultation-booking__next-steps li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #10b981;
+  font-weight: bold;
+}
+
+/* Navigation Buttons */
+.consultation-booking__form-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+  gap: 1rem;
+}
+
+.consultation-booking__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+}
+
+.consultation-booking__btn-primary {
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--primary-light),
+    #8b5cf6
+  );
+  background-size: 200% 200%;
+  color: #ffffff;
+  box-shadow: 0 8px 25px rgba(138, 63, 252, 0.3);
+  animation: consultationBookingButtonGradient 5s ease infinite;
+}
+
+@keyframes consultationBookingButtonGradient {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.consultation-booking__btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(138, 63, 252, 0.5);
+}
+
+.consultation-booking__btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.consultation-booking__btn-secondary {
+  background: var(--bg-card);
+  color: var(--text-primary);
+  border: 2px solid var(--border-primary);
+  backdrop-filter: blur(20px);
+}
+
+/* Dark theme secondary button */
+[data-theme="dark"] .consultation-booking__btn-secondary {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.08) 0%,
+    rgba(255, 255, 255, 0.04) 100%
+  );
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Light theme secondary button */
+[data-theme="light"] .consultation-booking__btn-secondary {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.8) 0%,
+    rgba(255, 255, 255, 0.6) 100%
+  );
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.consultation-booking__btn-secondary:hover {
+  transform: translateY(-3px);
+  border-color: rgba(138, 63, 252, 0.4);
+}
+
+/* Spinner */
+.consultation-booking__spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top: 2px solid #ffffff;
+  border-radius: 50%;
+  animation: consultationBookingSpin 1s linear infinite;
+}
+
+@keyframes consultationBookingSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .consultation-booking__hero {
+    padding: 6rem 1rem 3rem;
+    min-height: auto;
+  }
+
+  .consultation-booking__hero-title {
+    font-size: 2.5rem;
+  }
+
+  .consultation-booking__hero-description {
+    font-size: 1.1rem;
+  }
+
+  .consultation-booking__form-section {
+    padding: 3rem 1rem 4rem;
+  }
+
+  .consultation-booking__form {
+    padding: 2rem;
+    min-height: auto;
+  }
+
+  .consultation-booking__steps {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .consultation-booking__step {
+    flex: 0 0 auto;
+  }
+
+  .consultation-booking__step-title {
+    display: none;
+  }
+
+  .consultation-booking__schedule-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .consultation-booking__time-slots {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .consultation-booking__form-navigation {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .consultation-booking__btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .consultation-booking__hero {
+    padding: 5rem 1rem 2rem;
+  }
+
+  .consultation-booking__form {
+    padding: 1.5rem;
+  }
+
+  .consultation-booking__step-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .consultation-booking__time-slots {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .consultation-booking__step-icon {
+    width: 35px;
+    height: 35px;
+  }
+
+  .consultation-booking__booking-summary,
+  .consultation-booking__next-steps {
+    padding: 1.5rem;
+  }
+}
+
+/* Focus styles for accessibility */
+.consultation-booking__btn:focus,
+.consultation-booking__input:focus,
+.consultation-booking__select:focus,
+.consultation-booking__textarea:focus,
+.consultation-booking__time-slot:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+/* Smooth transitions for step changes */
+.consultation-booking__step-content {
+  animation: consultationBookingFadeIn 0.5s ease-in-out;
+}
+
+@keyframes consultationBookingFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -24,8 +24,8 @@ import {
   MessageSquare,
 } from "lucide-react";
 import "./style.css";
-import img1 from "../../../static/featured_services_images/softFood.png";
-import foodWebsiteImg from "../../../static/featured_services_images/foodWebsite.png";
+import img1 from "../../../../static/featured_services_images/softFood.png";
+import foodWebsiteImg from "../../../../static/featured_services_images/foodWebsite.png";
 
 
 const RestaurantServices = () => {

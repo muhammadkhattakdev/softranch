@@ -25,7 +25,9 @@ import {
   Search,
   Utensils,
   Building,
-  Laptop
+  Laptop,
+  Car,
+  HardHat
 } from 'lucide-react';
 import "./style.css";
 import ThemeToggle from '../../../../common/themeToggle/themeToggle';
@@ -50,7 +52,9 @@ const EnhancedNavbar = () => {
                pathname.includes('/ecommerce-website-development-services') ||
                pathname.includes('/restaurant-website-development-services') ||
                pathname.includes('/healthcare-website-development-services') ||
-               pathname.includes('/lawyer-accountant-consultant-website-development-services');
+               pathname.includes('/lawyer-accountant-consultant-website-development-services') ||
+               pathname.includes('/car-dealership-website-development-services') ||
+               pathname.includes('/construction-website-development-services');
       case 'portfolio':
         return pathname === '/portfolio' || 
                pathname === '/live-work-samples' ||
@@ -262,45 +266,39 @@ const EnhancedNavbar = () => {
               icon: <Heart size={20} />,
               color: "gradient-red"
             },
-            {
-              title: "Professional Services",
-              description: "Land premium clients",
-              href: "/lawyer-accountant-consultant-website-development-services",
-              icon: <Scale size={20} />,
-              color: "gradient-purple"
-            }
+
           ]
         },
         {
           title: "Core Services",
           links: [
             {
-              title: "Web Development",
+              title: "All Web Development Services",
               description: "Custom websites & applications",
               href: "/services",
               icon: <Code size={20} />,
               color: "gradient-indigo"
             },
             {
-              title: "UI/UX Design",
-              description: "Beautiful user experiences",
-              href: "/services",
-              icon: <Palette size={20} />,
-              color: "gradient-pink"
+              title: "Professional Services",
+              description: "Land premium clients",
+              href: "/lawyer-accountant-consultant-website-development-services",
+              icon: <Scale size={20} />,
+              color: "gradient-purple"
             },
             {
-              title: "Mobile Apps",
-              description: "iOS & Android development",
-              href: "/services",
-              icon: <Smartphone size={20} />,
-              color: "gradient-teal"
+              title: "Car Dealership Websites",
+              description: "Sell 250% more vehicles",
+              href: "/car-dealership-website-development-services",
+              icon: <Car size={20} />,
+              color: "gradient-red"
             },
             {
-              title: "SEO Optimization",
-              description: "Boost your search rankings",
-              href: "/services",
-              icon: <Search size={20} />,
-              color: "gradient-yellow"
+              title: "Construction Websites",
+              description: "Get 400% more project leads",
+              href: "/construction-website-development-services",
+              icon: <HardHat size={20} />,
+              color: "gradient-orange"
             }
           ]
         }

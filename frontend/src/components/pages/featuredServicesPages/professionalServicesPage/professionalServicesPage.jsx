@@ -31,8 +31,8 @@ import {
   BookOpen
 } from 'lucide-react';
 import './style.css';
-import img1 from "../../../static/featured_services_images/lawyer_dashboard.png";
-import img2 from "../../../static/featured_services_images/lawyer_website.png";
+import img1 from "../../../../static/featured_services_images/lawyer_dashboard.png";
+import img2 from "../../../../static/featured_services_images/lawyer_website.png";
 
 const ProfessionalServices = () => {
   const features = [

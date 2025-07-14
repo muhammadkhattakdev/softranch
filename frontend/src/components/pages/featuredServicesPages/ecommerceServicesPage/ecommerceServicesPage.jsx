@@ -23,8 +23,8 @@ import {
   Cpu
 } from 'lucide-react';
 import './style.css';
-import img1 from "../../../static/featured_services_images/softCommerce.png";
-import img2 from "../../../static/featured_services_images/commerce.png";
+import img1 from "../../../../static/featured_services_images/softCommerce.png";
+import img2 from "../../../../static/featured_services_images/commerce.png";
 
 const EcommerceServices = () => {
   const features = [
