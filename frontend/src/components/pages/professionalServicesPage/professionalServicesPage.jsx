@@ -31,6 +31,8 @@ import {
   BookOpen
 } from 'lucide-react';
 import './style.css';
+import img1 from "../../../static/featured_services_images/lawyer_dashboard.png";
+import img2 from "../../../static/featured_services_images/lawyer_website.png";
 
 const ProfessionalServices = () => {
   const features = [
@@ -234,7 +236,7 @@ const ProfessionalServices = () => {
             </div>
             
             <div className="professional-hero-image">
-              <img src="/api/placeholder/600/400" alt="Professional services website showcasing law firm case studies and client testimonials with appointment booking system" />
+              <img src={img1} alt="Professional services website showcasing law firm case studies and client testimonials with appointment booking system" />
               <div className="professional-image-overlay">
                 <div className="professional-overlay-stat">
                   <Briefcase size={24} />
@@ -303,7 +305,7 @@ const ProfessionalServices = () => {
               </div>
               
               <div className="professional-benefits-image">
-                <img src="/api/placeholder/500/400" alt="Professional consultant presenting to clients with tablet showing case studies and client portal" />
+                <img src={img2} alt="Professional consultant presenting to clients with tablet showing case studies and client portal" />
               </div>
             </div>
           </div>

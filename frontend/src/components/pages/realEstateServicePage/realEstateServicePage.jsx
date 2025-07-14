@@ -22,7 +22,7 @@ import {
 import './style.css';
 
 import img1 from "../../../static/featured_services_images/real_estate1.png";
-import img2 from "../../../static/featured_services_images/real_estate_agent.jpg";
+import img2 from "../../../static/featured_services_images/real_estate_agent.png";
 
 const RealEstateServices = () => {
   const features = [

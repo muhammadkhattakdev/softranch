@@ -25,7 +25,7 @@ import {
 } from "lucide-react";
 import "./style.css";
 import img1 from "../../../static/featured_services_images/softFood.png";
-import agent from "../../../static/featured_services_images/agent.jpg";
+import foodWebsiteImg from "../../../static/featured_services_images/foodWebsite.png";
 
 
 const RestaurantServices = () => {
@@ -352,7 +352,7 @@ const RestaurantServices = () => {
 
               <div className="restaurant-benefits-image">
                 <img
-                  src={agent}
+                  src={foodWebsiteImg}
                   alt="Restaurant owner managing online orders and reservations on tablet device"
                 />
               </div>

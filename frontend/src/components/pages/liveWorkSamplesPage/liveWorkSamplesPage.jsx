@@ -23,6 +23,9 @@ import nebulaImg from "../../../static/portfolio_thumbs/nebula.png";
 import innovateTechImg from "../../../static/innovateTech.png";
 import photographyImg from "../../../static/portfolio_thumbs/photography.png";
 import restaurantSaasImg from "../../../static/portfolio_thumbs/restaurantOS.png";
+import softCommerceImg from "../../../static/portfolio_thumbs/softCommerce.png";
+import softFoodImg from "../../../static/portfolio_thumbs/softFood.png";
+import medicalDashboardImg from "../../../static/portfolio_thumbs/medicalDashboard.png";
 
 // Sample project data with static image references
 const sampleProjects = [
@@ -121,6 +124,16 @@ const sampleProjects = [
     icon: <Smartphone size={24} />,
     slug: "restaurant-management-saas-website",
     image: restaurantSaasImg,
+    gradient: "from-yellow-500 to-orange-500",
+  },
+  {
+    id: 10,
+    title: "Medical Dashboard",
+    category: "SaaS | Dashboard",
+    description: "Complete medical/healthcare system with vital analytics tools",
+    icon: <Smartphone size={24} />,
+    slug: "medical-saas-website",
+    image: medicalDashboardImg,
     gradient: "from-yellow-500 to-orange-500",
   },
 ];
