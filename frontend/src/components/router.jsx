@@ -52,6 +52,7 @@ import SoftCommerceDashboard from "./pages/LiveWorkSampleWebsites/softCommerce/s
 import MedicalDashboard from "./pages/LiveWorkSampleWebsites/medicalDashboard/dashboard";
 import LawyerBookingPage from "./pages/LiveWorkSampleWebsites/lawyerBookingPage/booking";
 import CarDealershipLanding from "./pages/LiveWorkSampleWebsites/softMotors/dealership";
+import WebsiteBenefitsBlog from "./pages/ourBlogPages/firstBlog/firstBlog";
 
 export default function Router() {
   return (
@@ -66,8 +67,8 @@ export default function Router() {
             <Route element={<LiveWorkSamplesPage />} path="live-work-samples" />
             <Route element={<ContactPage />} path="contact" />
             <Route element={<ServicesPage />} path="services" />
-            <Route element={<BlogPage />} path="blog" />
-            <Route element={<BlogDetailPage />} path="blog/:id" />
+            {/* <Route element={<BlogPage />} path="blog" />
+            <Route element={<BlogDetailPage />} path="blog/:id" /> */}
             <Route element={<AboutPage />} path="about" />
             <Route element={<TermsPage />} path="terms-and-conditions" />
             <Route element={<RealEstateServices />} path="real-estate-services" />
@@ -76,6 +77,10 @@ export default function Router() {
             <Route element={<RestaurantServices />} path="restaurant-website-development-services" />
             <Route element={<HealthcareServices />} path="healthcare-website-development-services" />
             <Route element={<ProfessionalServices />} path="lawyer-accountant-consultant-website-development-services" />
+
+            <Route path="blog">
+              <Route path="See-How-a-Beautiful-Website-Can-Transform-Your-Business" element={<WebsiteBenefitsBlog />} />
+            </Route>
           </Route>
 
           {/* LIVE WORK SAMPLE WEBSITES DEMOS  */}
@@ -94,7 +99,12 @@ export default function Router() {
             <Route element={<MedicalDashboard />} path="medical-saas-website" />
             <Route element={<LawyerBookingPage />} path="lawyer-services-booking-website" />
             <Route element={<CarDealershipLanding />} path="car-dealership-website" />
+
           </Route>
+
+
+
+
 
           {/* Admin Auth Routes (Public) */}
           <Route path="admin/login" element={<Login />} />
