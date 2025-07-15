@@ -40,8 +40,6 @@ import {
   MoreHorizontal,
   Eye,
   Edit,
-  Menu,
-  X,
   Home,
   Settings,
   LogOut,
@@ -56,11 +54,7 @@ import {
   Archive
 } from 'lucide-react';
 
-import img1 from "../../../../static/featured_services_images/construction1.png";
-import img2 from "../../../../static/featured_services_images/construction2.png";
-
 const ConstructionDashboard = () => {
-  const [sidebarOpen, setSidebarOpen] = useState(false);
   const [activeTimeframe, setActiveTimeframe] = useState('This Month');
 
   // Sample data for charts
@@ -208,24 +202,12 @@ const ConstructionDashboard = () => {
       color: '#ffffff',
       minHeight: '100vh',
       display: 'flex',
-      marginTop: '-80px',
+      marginTop: "-80px",
       paddingTop: "80px"
     }}>
-      {/* Mobile Overlay */}
-      {window.innerWidth < 768 && sidebarOpen && (
-        <div 
-          style={{
-            position: 'fixed',
-            inset: 0,
-            background: 'rgba(0, 0, 0, 0.5)',
-            zIndex: 999
-          }}
-          onClick={() => setSidebarOpen(false)}
-        />
-      )}
       {/* Sidebar */}
       <div style={{
-        width: window.innerWidth < 768 ? (sidebarOpen ? '280px' : '0') : (sidebarOpen ? '280px' : '80px'),
+        width: '80px',
         background: 'linear-gradient(180deg, rgba(15, 23, 42, 0.95) 0%, rgba(30, 41, 59, 0.95) 100%)',
         backdropFilter: 'blur(20px)',
         border: '1px solid rgba(249, 115, 22, 0.1)',
@@ -234,7 +216,7 @@ const ConstructionDashboard = () => {
         height: '100vh',
         zIndex: 1000,
         overflow: 'hidden',
-        transform: window.innerWidth < 768 && !sidebarOpen ? 'translateX(-100%)' : 'translateX(0)'
+        marginTop: "-80px"
       }}>
         {/* Logo */}
         <div style={{
@@ -242,7 +224,7 @@ const ConstructionDashboard = () => {
           borderBottom: '1px solid rgba(249, 115, 22, 0.1)',
           display: 'flex',
           alignItems: 'center',
-          gap: '0.75rem'
+          justifyContent: 'center'
         }}>
           <div style={{
             width: '48px',
@@ -256,23 +238,6 @@ const ConstructionDashboard = () => {
           }}>
             <Building2 size={24} color="white" />
           </div>
-          {(sidebarOpen || window.innerWidth >= 768) && (
-            <div>
-              <div style={{
-                fontSize: '1.25rem',
-                fontWeight: '800',
-                color: '#ffffff'
-              }}>
-                BuildPro
-              </div>
-              <div style={{
-                fontSize: '0.75rem',
-                color: '#94a3b8'
-              }}>
-                Construction Management
-              </div>
-            </div>
-          )}
         </div>
 
         {/* Navigation */}
@@ -281,16 +246,17 @@ const ConstructionDashboard = () => {
             <div
               key={index}
               style={{
-                padding: '0.75rem 1.5rem',
-                margin: '0.25rem 1rem',
+                padding: '0.75rem',
+                margin: '0.5rem 1rem',
                 borderRadius: '12px',
                 display: 'flex',
                 alignItems: 'center',
-                gap: '0.75rem',
+                justifyContent: 'center',
                 cursor: 'pointer',
                 transition: 'all 0.3s ease',
                 background: item.active ? 'linear-gradient(135deg, rgba(249, 115, 22, 0.2), rgba(234, 88, 12, 0.1))' : 'transparent',
-                border: item.active ? '1px solid rgba(249, 115, 22, 0.3)' : '1px solid transparent'
+                border: item.active ? '1px solid rgba(249, 115, 22, 0.3)' : '1px solid transparent',
+                position: 'relative'
               }}
               onMouseEnter={(e) => {
                 if (!item.active) {
@@ -304,81 +270,96 @@ const ConstructionDashboard = () => {
                   e.target.style.borderColor = 'transparent';
                 }
               }}
+              title={item.label}
             >
               <item.icon size={20} color={item.active ? '#f97316' : '#94a3b8'} />
-              {(sidebarOpen || window.innerWidth >= 768) && (
-                <span style={{
-                  color: item.active ? '#f97316' : '#e2e8f0',
-                  fontWeight: item.active ? '600' : '500'
-                }}>
-                  {item.label}
-                </span>
+              {item.active && (
+                <div style={{
+                  position: 'absolute',
+                  right: '-3px',
+                  top: '50%',
+                  transform: 'translateY(-50%)',
+                  width: '3px',
+                  height: '20px',
+                  background: 'linear-gradient(135deg, #f97316, #ea580c)',
+                  borderRadius: '2px'
+                }}></div>
               )}
             </div>
           ))}
         </nav>
 
         {/* User Profile */}
-        {(sidebarOpen || window.innerWidth >= 768) && (
+        <div style={{
+          position: 'absolute',
+          bottom: '2rem',
+          left: '50%',
+          transform: 'translateX(-50%)',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          gap: '1rem'
+        }}>
           <div style={{
-            position: 'absolute',
-            bottom: '2rem',
-            left: '1rem',
-            right: '1rem',
-            padding: '1rem',
-            background: 'rgba(249, 115, 22, 0.1)',
-            borderRadius: '12px',
-            border: '1px solid rgba(249, 115, 22, 0.2)'
-          }}>
-            <div style={{
-              display: 'flex',
-              alignItems: 'center',
-              gap: '0.75rem',
-              marginBottom: '0.75rem'
-            }}>
-              <div style={{
-                width: '40px',
-                height: '40px',
-                background: 'linear-gradient(135deg, #f97316, #ea580c)',
-                borderRadius: '50%',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                color: 'white',
-                fontWeight: '700'
-              }}>
-                JD
-              </div>
-              <div>
-                <div style={{ fontWeight: '600', fontSize: '0.9rem' }}>John Doe</div>
-                <div style={{ fontSize: '0.75rem', color: '#94a3b8' }}>Project Manager</div>
-              </div>
-            </div>
-            <button style={{
-              width: '100%',
-              padding: '0.5rem',
-              background: 'transparent',
-              border: '1px solid rgba(249, 115, 22, 0.3)',
-              borderRadius: '8px',
-              color: '#f97316',
-              fontSize: '0.85rem',
-              cursor: 'pointer',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              gap: '0.5rem'
-            }}>
-              <LogOut size={14} />
-              Sign Out
-            </button>
+            width: '48px',
+            height: '48px',
+            background: 'linear-gradient(135deg, #f97316, #ea580c)',
+            borderRadius: '50%',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            color: 'white',
+            fontWeight: '700',
+            fontSize: '1.1rem',
+            border: '2px solid rgba(249, 115, 22, 0.3)',
+            boxShadow: '0 4px 15px rgba(249, 115, 22, 0.3)',
+            cursor: 'pointer',
+            transition: 'all 0.3s ease'
+          }}
+          onMouseEnter={(e) => {
+            e.target.style.transform = 'scale(1.1)';
+            e.target.style.boxShadow = '0 6px 20px rgba(249, 115, 22, 0.4)';
+          }}
+          onMouseLeave={(e) => {
+            e.target.style.transform = 'scale(1)';
+            e.target.style.boxShadow = '0 4px 15px rgba(249, 115, 22, 0.3)';
+          }}
+          title="John Doe - Project Manager"
+          >
+            JD
           </div>
-        )}
+          <button style={{
+            width: '40px',
+            height: '40px',
+            background: 'rgba(249, 115, 22, 0.1)',
+            border: '1px solid rgba(249, 115, 22, 0.3)',
+            borderRadius: '50%',
+            color: '#f97316',
+            cursor: 'pointer',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            transition: 'all 0.3s ease'
+          }}
+          onMouseEnter={(e) => {
+            e.target.style.background = 'rgba(249, 115, 22, 0.2)';
+            e.target.style.borderColor = 'rgba(249, 115, 22, 0.4)';
+          }}
+          onMouseLeave={(e) => {
+            e.target.style.background = 'rgba(249, 115, 22, 0.1)';
+            e.target.style.borderColor = 'rgba(249, 115, 22, 0.3)';
+          }}
+          title="Sign Out"
+          >
+            <LogOut size={16} />
+          </button>
+        </div>
       </div>
 
       {/* Main Content */}
       <div style={{
         flex: 1,
-        marginLeft: window.innerWidth < 768 ? '0' : (sidebarOpen ? '280px' : '80px'),
+        marginLeft: '80px',
         transition: 'margin-left 0.3s ease',
         background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 100%)',
         minHeight: '100vh'
@@ -397,22 +378,6 @@ const ConstructionDashboard = () => {
           zIndex: 100
         }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-            <button
-              onClick={() => setSidebarOpen(!sidebarOpen)}
-              style={{
-                background: 'rgba(249, 115, 22, 0.1)',
-                border: '1px solid rgba(249, 115, 22, 0.2)',
-                borderRadius: '8px',
-                padding: '0.5rem',
-                color: '#f97316',
-                cursor: 'pointer',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center'
-              }}
-            >
-              <Menu size={20} />
-            </button>
             <div>
               <h1 style={{
                 fontSize: '1.5rem',

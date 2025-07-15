@@ -27,7 +27,8 @@ import {
   Building,
   Laptop,
   Car,
-  HardHat
+  HardHat,
+  Calendar,
 } from 'lucide-react';
 import "./style.css";
 import ThemeToggle from '../../../../common/themeToggle/themeToggle';
@@ -159,6 +160,13 @@ const EnhancedNavbar = () => {
               href: "/contact",
               icon: <Phone size={20} />,
               color: "gradient-green"
+            },
+            {
+              title: "Book Free Consultation",
+              description: "Schedule a strategy session",
+              href: "/consultation-booking",
+              icon: <Calendar size={20} />,
+              color: "gradient-blue"
             },
             {
               title: "WhatsApp Chat",

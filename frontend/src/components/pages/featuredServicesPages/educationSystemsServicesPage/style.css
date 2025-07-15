@@ -319,7 +319,6 @@
 }
 
 .education-hero-image:hover img {
-  transform: scale(1.05);
 }
 
 .education-image-overlay {
@@ -656,9 +655,6 @@
   transition: transform 0.5s ease;
 }
 
-.education-benefits-image:hover img {
-  transform: scale(1.05);
-}
 
 /* Packages Section */
 .education-packages {

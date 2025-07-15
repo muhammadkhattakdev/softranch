@@ -26,7 +26,7 @@ const Portfolio = () => {
           </h2>
           
           <p className="portfolio-description">
-            Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.
+            Here are some of our projects we've deliverd. Check out our live work samples and more work by navigating to portfolio page
           </p>
         </div>
         

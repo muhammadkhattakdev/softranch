@@ -34,8 +34,8 @@ import {
   Database,
 } from "lucide-react";
 import "./style.css";
-// import img1 from "../../../../static/featured_services_images/education_dashboard.png";
-// import img2 from "../../../../static/featured_services_images/education_students.png";
+import img1 from "../../../../static/featured_services_images/education_dashboard.png";
+import img2 from "../../../../static/featured_services_images/university_landing_page.png";
 
 const EducationServices = () => {
   const features = [
@@ -262,7 +262,7 @@ const EducationServices = () => {
                   <span className="education-stat-label">More Engagement</span>
                 </div>
                 <div className="education-stat-item">
-                  <span className="education-stat-number">300+</span>
+                  <span className="education-stat-number">20+</span>
                   <span className="education-stat-label">Schools Served</span>
                 </div>
                 <div className="education-stat-item">
@@ -284,7 +284,7 @@ const EducationServices = () => {
 
             <div className="education-hero-image">
               <img
-                src={"img1"}
+                src={img1}
                 alt="Modern education dashboard showing student management system with LMS integration and analytics"
               />
               <div className="education-image-overlay">
@@ -369,7 +369,7 @@ const EducationServices = () => {
 
               <div className="education-benefits-image">
                 <img
-                  src={"img2"}
+                  src={img2}
                   alt="Students using tablets in modern classroom with digital learning tools and interactive displays"
                 />
               </div>
@@ -476,7 +476,7 @@ const EducationServices = () => {
                 Ready to Transform Your Educational Institution?
               </h2>
               <p className="education-cta-description">
-                Join 300+ successful schools, colleges, and universities who've
+                Join 20+ successful schools, colleges, and universities who've
                 dramatically improved student outcomes and streamlined
                 operations with our cutting-edge educational technology
                 solutions.

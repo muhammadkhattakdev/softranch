@@ -305,8 +305,8 @@ const ServicesPage = () => {
               </p>
 
               <div className="services-page-hero-cta">
-                <Link to="/contact" className="services-page-cta-primary">
-                  Get Started Today
+                <Link to="/consultation-booking" className="services-page-cta-primary">
+                  Book a Free Consultation
                   <ArrowRight size={20} />
                 </Link>
                 <Link to="/portfolio" className="services-page-cta-secondary">

@@ -61,6 +61,8 @@ import ConstructionServices from "./pages/featuredServicesPages/constructionServ
 import ConstructionLanding from "./pages/LiveWorkSampleWebsites/constructionsLandingPage/construction";
 import ConstructionDashboard from "./pages/LiveWorkSampleWebsites/constructionDashboard/dashboard";
 import EducationServices from "./pages/featuredServicesPages/educationSystemsServicesPage/educationService";
+import EducationDashboard from "./pages/LiveWorkSampleWebsites/educationDashboard/dashboard";
+import UniversityLanding from "./pages/LiveWorkSampleWebsites/universityLandingPage/landingPage";
 
 export default function Router() {
   return (
@@ -90,6 +92,7 @@ export default function Router() {
             <Route element={<ConstructionServices />} path="construction-website-development-services" />
             <Route element={<EducationServices />} path="education-systems-website-and-tools-development-services" />
 
+
           {/* STATIC BLOG PAGES  */}
 
             <Route path="blog">
@@ -117,7 +120,9 @@ export default function Router() {
             <Route element={<LawyerBookingPage />} path="lawyer-services-booking-website" />
             <Route element={<CarDealershipLanding />} path="car-dealership-website" />
             <Route element={<ConstructionLanding />} path="constructions-company-website" />
-            <Route element={<EducationServices />} path="constructions-company-management-saas-website" />
+            <Route element={<ConstructionDashboard />} path="constructions-company-saas-management-tool-website" />
+            <Route element={<EducationDashboard />} path="education-platform-saas-management-tool-website" />
+            <Route element={<UniversityLanding />} path="university-landing-page-website" />
           </Route>
 
           {/* Admin Auth Routes (Public) */}

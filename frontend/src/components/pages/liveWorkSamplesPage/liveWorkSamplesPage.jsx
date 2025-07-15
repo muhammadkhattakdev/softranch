@@ -29,6 +29,8 @@ import medicalDashboardImg from "../../../static/portfolio_thumbs/medicalDashboa
 import lawyerBookingImg from "../../../static/portfolio_thumbs/lawyer_website.png";
 import dealershipImg from "../../../static/portfolio_thumbs/dealership.png";
 import constructionLandingImg from "../../../static/portfolio_thumbs/construction_website.png";
+import constructionDashboardImg from "../../../static/portfolio_thumbs/construction_dashboard.png";
+import educationDashboardImg from "../../../static/portfolio_thumbs/education_dashboard.png";
 
 // Sample project data with static image references
 const sampleProjects = [
@@ -64,17 +66,38 @@ const sampleProjects = [
     image: commerceFlowImg,
     gradient: "from-teal-500 to-green-500",
   },
-  
   {
-    id: 4,
-    title: "Planto",
-    category: "Ecommerce | Gallery",
+    id: 11,
+    title: "Construction SaaS Dashboard",
+    category: "Landing Page | Website Development | Booking System",
+    description: "Landing page for Lawyer booking services with authority design and visuals",
+    icon: <Smartphone size={24} />,
+    slug: "constructions-company-saas-management-tool-website",
+    image: constructionDashboardImg,
+    gradient: "from-yellow-500 to-orange-500",
+  },
+  {
+    id: 8,
+    title: "Automotive Dealership",
+    category: "Automotive",
     description:
-      "Buy and sell plants marketplace with stunning gallery showcase",
-    icon: <TreePalm size={24} />,
-    slug: "plants-website",
-    image: plantoImg,
-    gradient: "from-indigo-500 to-blue-500",
+      "Car dealership website with inventory management and financing",
+    icon: <Car size={24} />,
+    slug: "car-dealership-website",
+    image: dealershipImg,
+    gradient: "from-gray-600 to-gray-800",
+  },
+
+  {
+    id: 3,
+    title: "EduFlow",
+    category: "Education | SaaS | Faculty | Management",
+    description:
+      "SaaS dashboard for educational institute i.e Colleges, Universities to manage almost everything.",
+    icon: <Home size={24} />,
+    slug: "education-platform-saas-management-tool-website",
+    image: educationDashboardImg,
+    gradient: "from-purple-500 to-violet-500",
   },
   {
     id: 3,
@@ -86,6 +109,17 @@ const sampleProjects = [
     slug: "estate-flow-website",
     image: estateFlowImg,
     gradient: "from-purple-500 to-violet-500",
+  },
+  {
+    id: 4,
+    title: "Planto",
+    category: "Ecommerce | Gallery",
+    description:
+      "Buy and sell plants marketplace with stunning gallery showcase",
+    icon: <TreePalm size={24} />,
+    slug: "plants-website",
+    image: plantoImg,
+    gradient: "from-indigo-500 to-blue-500",
   },
   {
     id: 2,
@@ -119,17 +153,7 @@ const sampleProjects = [
     image: photographyImg,
     gradient: "from-pink-500 to-rose-500",
   },
-  {
-    id: 8,
-    title: "Automotive Dealership",
-    category: "Automotive",
-    description:
-      "Car dealership website with inventory management and financing",
-    icon: <Car size={24} />,
-    slug: "car-dealership-website",
-    image: dealershipImg,
-    gradient: "from-gray-600 to-gray-800",
-  },
+
   {
     id: 9,
     title: "Restaurant Management",
@@ -160,16 +184,7 @@ const sampleProjects = [
     image: lawyerBookingImg,
     gradient: "from-yellow-500 to-orange-500",
   },
-  {
-    id: 11,
-    title: "Construction SaaS Dashboard",
-    category: "Landing Page | Website Development | Booking System",
-    description: "Landing page for Lawyer booking services with authority design and visuals",
-    icon: <Smartphone size={24} />,
-    slug: "constructions-company-management-saas-website",
-    image: lawyerBookingImg,
-    gradient: "from-yellow-500 to-orange-500",
-  },
+
 
 ];
 
