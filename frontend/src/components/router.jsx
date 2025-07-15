@@ -59,6 +59,8 @@ import ConsultationBooking from "./pages/consultationBookingPage/booking";
 import CarDealershipServices from "./pages/featuredServicesPages/carDealershipServicesPage/dealershipServicesPage";
 import ConstructionServices from "./pages/featuredServicesPages/constructionServicesPage/construction";
 import ConstructionLanding from "./pages/LiveWorkSampleWebsites/constructionsLandingPage/construction";
+import ConstructionDashboard from "./pages/LiveWorkSampleWebsites/constructionDashboard/dashboard";
+import EducationServices from "./pages/featuredServicesPages/educationSystemsServicesPage/educationService";
 
 export default function Router() {
   return (
@@ -86,6 +88,7 @@ export default function Router() {
             <Route element={<ProfessionalServices />} path="lawyer-accountant-consultant-website-development-services" />
             <Route element={<CarDealershipServices />} path="car-dealership-website-development-services" />
             <Route element={<ConstructionServices />} path="construction-website-development-services" />
+            <Route element={<EducationServices />} path="education-systems-website-and-tools-development-services" />
 
           {/* STATIC BLOG PAGES  */}
 
@@ -114,8 +117,8 @@ export default function Router() {
             <Route element={<LawyerBookingPage />} path="lawyer-services-booking-website" />
             <Route element={<CarDealershipLanding />} path="car-dealership-website" />
             <Route element={<ConstructionLanding />} path="constructions-company-website" />
+            <Route element={<EducationServices />} path="constructions-company-management-saas-website" />
           </Route>
-
 
           {/* Admin Auth Routes (Public) */}
           <Route path="admin/login" element={<Login />} />

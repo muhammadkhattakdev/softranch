@@ -160,6 +160,16 @@ const sampleProjects = [
     image: lawyerBookingImg,
     gradient: "from-yellow-500 to-orange-500",
   },
+  {
+    id: 11,
+    title: "Construction SaaS Dashboard",
+    category: "Landing Page | Website Development | Booking System",
+    description: "Landing page for Lawyer booking services with authority design and visuals",
+    icon: <Smartphone size={24} />,
+    slug: "constructions-company-management-saas-website",
+    image: lawyerBookingImg,
+    gradient: "from-yellow-500 to-orange-500",
+  },
 
 ];
 

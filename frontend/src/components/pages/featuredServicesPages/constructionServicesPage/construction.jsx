@@ -30,7 +30,7 @@ import {
   Home
 } from "lucide-react";
 import "./style.css";
-// import img1 from "../../../static/featured_services_images/construction_dashboard.png";
+import img1 from "../../../../static/featured_services_images/construction1.png";
 import img2 from "../../../../static/featured_services_images/construction2.png";
 
 const ConstructionServices = () => {
@@ -261,7 +261,7 @@ const ConstructionServices = () => {
 
             <div className="construction-hero-image">
               <img
-                src={"img1"}
+                src={img1}
                 alt="Modern construction company website dashboard showing project management and lead tracking system"
               />
               <div className="construction-image-overlay">

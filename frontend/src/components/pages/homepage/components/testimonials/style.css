@@ -328,11 +328,12 @@
   position: absolute;
   top: -20px;
   left: -15px;
-  font-size: 4rem;
+  font-size: 9rem;
   font-weight: 700;
   color: rgba(138, 63, 252, 0.2);
   font-family: serif;
   line-height: 1;
+  transform: translate(-20%, -20%);
 }
 
 .testimonial-text::after {
@@ -340,9 +341,9 @@
   position: absolute;
   bottom: -30px;
   right: -10px;
-  font-size: 4rem;
+  font-size: 8rem;
   font-weight: 700;
-  color: rgba(138, 63, 252, 0.2);
+  color: rgba(138, 63, 252, 0);
   font-family: serif;
   line-height: 1;
 }

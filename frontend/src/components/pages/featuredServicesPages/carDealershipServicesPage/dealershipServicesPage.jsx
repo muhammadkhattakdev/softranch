@@ -29,8 +29,9 @@ import {
   Wrench,
 } from "lucide-react";
 import "./style.css";
-// import img1 from "../../../static/featured_services_images/car_dealership_dashboard.png";
-// import img2 from "../../../static/featured_services_images/automotive_website.png";
+
+// import img1 from "../../../../static/featured_services_images/cars1.png";
+import img2 from "../../../../static/featured_services_images/cars2.png";
 
 const CarDealershipServices = () => {
   const features = [
@@ -101,14 +102,14 @@ const CarDealershipServices = () => {
 
   const testimonials = [
     {
-      name: "Mike Thompson",
+      name: "Mike ",
       title: "General Manager, Premier Auto Group",
       text: "Our website traffic increased 300% and lead quality improved dramatically. The inventory management system is intuitive, and customers love the financing tools. Best investment we've made.",
       rating: 5,
     },
     {
       name: "Sarah Johnson",
-      title: "Owner, Johnson Family Motors",
+      title: "Owner, from Estonia",
       text: "SoftRanch transformed our online presence completely. We now rank #1 for auto dealers in our city, and our online vehicle sales have tripled in just 8 months.",
       rating: 5,
     },
@@ -361,7 +362,7 @@ const CarDealershipServices = () => {
 
               <div className="automotive-benefits-image">
                 <img
-                  src={"img2"}
+                  src={img2}
                   alt="Car dealership manager using tablet to manage vehicle inventory and customer leads"
                 />
               </div>
@@ -445,9 +446,6 @@ const CarDealershipServices = () => {
                     "{testimonial.text}"
                   </p>
                   <div className="automotive-testimonial-author">
-                    <h4 className="automotive-author-name">
-                      {testimonial.name}
-                    </h4>
                     <p className="automotive-author-title">
                       {testimonial.title}
                     </p>

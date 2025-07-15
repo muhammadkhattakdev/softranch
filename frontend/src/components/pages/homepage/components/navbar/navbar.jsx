@@ -239,11 +239,11 @@ const EnhancedNavbar = () => {
           title: "Featured Services",
           links: [
             {
-              title: "Real Estate Websites",
-              description: "Generate 10x more leads",
-              href: "/real-estate-services",
-              icon: <Building2 size={20} />,
-              color: "gradient-blue"
+              title: "All Web Development Services",
+              description: "Custom websites & applications",
+              href: "/services",
+              icon: <Code size={20} />,
+              color: "gradient-indigo"
             },
             {
               title: "E-commerce Solutions",
@@ -273,11 +273,11 @@ const EnhancedNavbar = () => {
           title: "Core Services",
           links: [
             {
-              title: "All Web Development Services",
-              description: "Custom websites & applications",
-              href: "/services",
-              icon: <Code size={20} />,
-              color: "gradient-indigo"
+              title: "Real Estate Websites",
+              description: "Generate 10x more leads",
+              href: "/real-estate-services",
+              icon: <Building2 size={20} />,
+              color: "gradient-blue"
             },
             {
               title: "Professional Services",
