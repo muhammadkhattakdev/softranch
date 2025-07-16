@@ -11,33 +11,38 @@ import {
   Camera,
   Car,
   Smartphone,
+  Brain,
 } from "lucide-react";
 import "./style.css";
 
 // Static image imports
-import savoriaImg from "../../../static/portfolio_thumbs/saviora.png";
-import commerceFlowImg from "../../../static/portfolio_thumbs/commerceFlow.png";
-import plantoImg from "../../../static/portfolio_thumbs/planto.png";
-import estateFlowImg from "../../../static/portfolio_thumbs/estateFlow.png";
-import nebulaImg from "../../../static/portfolio_thumbs/nebula.png";
+import savoriaImg from "../../../static/portfolio_thumbs/saviora.PNG";
+import commerceFlowImg from "../../../static/portfolio_thumbs/commerceFlow.PNG";
+import plantoImg from "../../../static/portfolio_thumbs/planto.PNG";
+import estateFlowImg from "../../../static/portfolio_thumbs/estateFlow.PNG";
+import nebulaImg from "../../../static/portfolio_thumbs/nebula.PNG";
 import innovateTechImg from "../../../static/innovateTech.png";
-import photographyImg from "../../../static/portfolio_thumbs/photography.png";
-import restaurantSaasImg from "../../../static/portfolio_thumbs/restaurantOS.png";
-import softCommerceImg from "../../../static/portfolio_thumbs/softCommerce.png";
-import softFoodImg from "../../../static/portfolio_thumbs/softFood.png";
-import medicalDashboardImg from "../../../static/portfolio_thumbs/medicalDashboard.png";
+import photographyImg from "../../../static/portfolio_thumbs/photography.PNG";
+import restaurantSaasImg from "../../../static/portfolio_thumbs/restaurantOS.PNG";
+import softCommerceImg from "../../../static/portfolio_thumbs/softCommerce.PNG";
+import softFoodImg from "../../../static/portfolio_thumbs/softFood.PNG";
+import medicalDashboardImg from "../../../static/portfolio_thumbs/medicalDashboard.PNG";
 import lawyerBookingImg from "../../../static/portfolio_thumbs/lawyer_website.png";
-import dealershipImg from "../../../static/portfolio_thumbs/dealership.png";
+import dealershipImg from "../../../static/portfolio_thumbs/dealership.PNG";
 import constructionLandingImg from "../../../static/portfolio_thumbs/construction_website.png";
 import constructionDashboardImg from "../../../static/portfolio_thumbs/construction_dashboard.png";
 import educationDashboardImg from "../../../static/portfolio_thumbs/education_dashboard.png";
+import universityWebsiteImg from "../../../static/portfolio_thumbs/university_landing_page.png";
+import content_writerImg from "../../../static/portfolio_thumbs/content_writer.PNG";
+import aiDashboardImg from "../../../static/portfolio_thumbs/ai_dashboard.PNG";
+import aiLandingPageImg from "../../../static/portfolio_thumbs/ai_landing_page.PNG";
 
 // Sample project data with static image references
 const sampleProjects = [
   {
     id: 1,
     title: "Saviora Restaurant",
-    category: "Restaurant & Food",
+    category: "Restaurant | Food | Landing Page",
     description:
       "Elegant dining experience with online reservations and menu showcase",
     icon: <Coffee size={24} />,
@@ -46,19 +51,31 @@ const sampleProjects = [
     gradient: "from-orange-500 to-red-500",
   },
   {
-    id: 11,
+    id: 18,
+    title: "A.I Dashboard",
+    category: "AI | SAAS",
+    description:
+      "Landing page for Lawyer booking services with authority design and visuals",
+    icon: <Brain size={24} />,
+    slug: "ai-dashboard-tools-website",
+    image: aiDashboardImg,
+    gradient: "from-yellow-500 to-orange-500",
+  },
+  {
+    id: 2,
     title: "Construction Company Website",
-    category: "Landing Page | Website Development | Portfolio",
-    description: "Complete website and management and booking tools for construction company with portfolio and about for authority building and social proof",
+    category: "Construction | Portfolio | Landing Page",
+    description:
+      "Complete website and management and booking tools for construction company with portfolio and about for authority building and social proof",
     icon: <Smartphone size={24} />,
     slug: "constructions-company-website",
     image: constructionLandingImg,
     gradient: "from-yellow-500 to-orange-500",
   },
   {
-    id: 6,
+    id: 3,
     title: "CommerceFlow",
-    category: "Dashboard | SaaS",
+    category: "SaaS | Dashboard | E-commerce",
     description:
       "E-commerce management dashboard with analytics and inventory control",
     icon: <GraduationCap size={24} />,
@@ -67,19 +84,20 @@ const sampleProjects = [
     gradient: "from-teal-500 to-green-500",
   },
   {
-    id: 11,
+    id: 4,
     title: "Construction SaaS Dashboard",
-    category: "Landing Page | Website Development | Booking System",
-    description: "Landing page for Lawyer booking services with authority design and visuals",
+    category: "Construction | SaaS | Dashboard",
+    description:
+      "Management dashboard for construction services with tools for project and booking handling",
     icon: <Smartphone size={24} />,
     slug: "constructions-company-saas-management-tool-website",
     image: constructionDashboardImg,
     gradient: "from-yellow-500 to-orange-500",
   },
   {
-    id: 8,
+    id: 5,
     title: "Automotive Dealership",
-    category: "Automotive",
+    category: "Automotive | Dealership | Inventory",
     description:
       "Car dealership website with inventory management and financing",
     icon: <Car size={24} />,
@@ -87,11 +105,43 @@ const sampleProjects = [
     image: dealershipImg,
     gradient: "from-gray-600 to-gray-800",
   },
-
   {
-    id: 3,
+    id: 6,
+    title: "Ecommerce Dashboard",
+    category: "E-commerce | SaaS | Dashboard",
+    description:
+      "Highly functional and feature-rich SaaS",
+    icon: <Car size={24} />,
+    slug: "soft-commerce-saas-website",
+    image: softCommerceImg,
+    gradient: "from-gray-600 to-gray-800",
+  },
+  {
+    id: 7,
+    title: "University Website",
+    category: "Education | Landing Page | University",
+    description:
+      "Professional showcase of a University in a landing page with 5+ sections.",
+    icon: <Home size={24} />,
+    slug: "university-landing-page-website",
+    image: universityWebsiteImg,
+    gradient: "from-purple-500 to-violet-500",
+  },
+  {
+    id: 8,
+    title: "SoftFood Management",
+    category: "Restaurant | SaaS | Dashboard",
+    description:
+      "Complete management system for food businesses with dashboards and analytics.",
+    icon: <Home size={24} />,
+    slug: "softfood-restaurant-management-saas-website",
+    image: softFoodImg,
+    gradient: "from-purple-500 to-violet-500",
+  },
+  {
+    id: 9,
     title: "EduFlow",
-    category: "Education | SaaS | Faculty | Management",
+    category: "Education | SaaS | Management",
     description:
       "SaaS dashboard for educational institute i.e Colleges, Universities to manage almost everything.",
     icon: <Home size={24} />,
@@ -100,9 +150,9 @@ const sampleProjects = [
     gradient: "from-purple-500 to-violet-500",
   },
   {
-    id: 3,
+    id: 10,
     title: "EstateFlow",
-    category: "Real Estate",
+    category: "Real Estate | Property | Platform",
     description:
       "Property listing platform with virtual tours and mortgage calculator",
     icon: <Home size={24} />,
@@ -111,9 +161,9 @@ const sampleProjects = [
     gradient: "from-purple-500 to-violet-500",
   },
   {
-    id: 4,
+    id: 11,
     title: "Planto",
-    category: "Ecommerce | Gallery",
+    category: "E-commerce | Plants | Gallery",
     description:
       "Buy and sell plants marketplace with stunning gallery showcase",
     icon: <TreePalm size={24} />,
@@ -122,9 +172,9 @@ const sampleProjects = [
     gradient: "from-indigo-500 to-blue-500",
   },
   {
-    id: 2,
+    id: 12,
     title: "Nebula Studios",
-    category: "A.I | Technology",
+    category: "AI | Tech | Machine Learning",
     description: "Cutting-edge AI solutions and machine learning platform",
     icon: <Stethoscope size={24} />,
     slug: "nebula-studios-website",
@@ -132,9 +182,9 @@ const sampleProjects = [
     gradient: "from-blue-500 to-cyan-500",
   },
   {
-    id: 5,
+    id: 13,
     title: "InnovateTech",
-    category: "Corporate",
+    category: "Corporate | Business | Technology",
     description:
       "Professional corporate website with modern design and functionality",
     icon: <Globe size={24} />,
@@ -142,10 +192,22 @@ const sampleProjects = [
     image: innovateTechImg,
     gradient: "from-slate-600 to-slate-800",
   },
+
   {
-    id: 7,
+    id: 19,
+    title: "A.I Landing Page",
+    category: "AI | Website | Landing Page",
+    description:
+      "Landing page for Lawyer booking services with authority design and visuals",
+    icon: <Brain size={24} />,
+    slug: "ai-powered-website-landing-page",
+    image: aiLandingPageImg,
+    gradient: "from-yellow-500 to-orange-500",
+  },
+  {
+    id: 14,
     title: "Photography Portfolio",
-    category: "Portfolio",
+    category: "Photography | Portfolio | Booking",
     description:
       "Stunning visual portfolio with gallery management and client booking",
     icon: <Camera size={24} />,
@@ -153,11 +215,10 @@ const sampleProjects = [
     image: photographyImg,
     gradient: "from-pink-500 to-rose-500",
   },
-
   {
-    id: 9,
+    id: 15,
     title: "Restaurant Management",
-    category: "SaaS | Dashboard",
+    category: "Restaurant | SaaS | POS",
     description: "Complete restaurant management system with POS and analytics",
     icon: <Smartphone size={24} />,
     slug: "restaurant-management-saas-website",
@@ -165,28 +226,42 @@ const sampleProjects = [
     gradient: "from-yellow-500 to-orange-500",
   },
   {
-    id: 10,
+    id: 20,
+    title: "Content Writer Minimalist Portfolio",
+    category: "Portfolio | Brutalist | Minimalist",
+    description:
+      "Minimalist Brutalist design portfolio website for content writer",
+    icon: <Brain size={24} />,
+    slug: "content-writer-minimalist-portfolio-website",
+    image: content_writerImg,
+    gradient: "from-yellow-500 to-orange-500",
+  },
+  {
+    id: 16,
     title: "Medical Dashboard",
-    category: "SaaS | Dashboard",
-    description: "Complete medical/healthcare system with vital analytics tools",
+    category: "Healthcare | SaaS | Dashboard",
+    description:
+      "Complete medical/healthcare system with vital analytics tools",
     icon: <Smartphone size={24} />,
     slug: "medical-saas-website",
     image: medicalDashboardImg,
     gradient: "from-yellow-500 to-orange-500",
   },
+
   {
-    id: 11,
+    id: 17,
     title: "Lawyer Website",
-    category: "Landing Page | Website Development | Booking System",
-    description: "Landing page for Lawyer booking services with authority design and visuals",
+    category: "Law | Booking | Landing Page",
+    description:
+      "Landing page for Lawyer booking services with authority design and visuals",
     icon: <Smartphone size={24} />,
     slug: "lawyer-services-booking-website",
     image: lawyerBookingImg,
     gradient: "from-yellow-500 to-orange-500",
   },
 
-
 ];
+
 
 // Image placeholder component
 const ImagePlaceholder = ({ gradient, icon, title }) => (
@@ -216,8 +291,8 @@ const SampleCard = memo(({ project, index }) => {
 
       try {
         // Simulate loading delay for staggered effect
-        await new Promise(resolve => setTimeout(resolve, index * 100));
-        
+        await new Promise((resolve) => setTimeout(resolve, index * 100));
+
         if (isMounted) {
           setHasError(false);
           setIsLoading(false);
@@ -287,7 +362,7 @@ const StatsSection = memo(() => (
   <div className="live-samples-stats">
     <div className="live-samples-stats-glow"></div>
     <div className="live-samples-stat-item">
-      <span className="live-samples-stat-number">10+</span>
+      <span className="live-samples-stat-number">15+</span>
       <span className="live-samples-stat-label">Live Demos</span>
     </div>
     <div className="live-samples-stat-item">
@@ -363,7 +438,7 @@ const LiveWorkSamplesPage = () => {
     name: "Live Website Demos - SoftRanch Web Development Samples",
     description:
       "Explore our live website demonstrations across various industries including restaurants, real estate, e-commerce, healthcare, and more. See our web development expertise in action.",
-    url: "https://softranch.com/live-work-samples",
+    url: "https://softranch.agency/live-work-samples",
     mainEntity: {
       "@type": "ItemList",
       itemListElement: sampleProjects.map((project, index) => ({
@@ -371,19 +446,19 @@ const LiveWorkSamplesPage = () => {
         position: index + 1,
         name: project.title,
         description: project.description,
-        url: `https://softranch.com/live-work-samples/${project.slug}`,
+        url: `https://softranch.agency/live-work-samples/${project.slug}`,
         applicationCategory: project.category,
         creator: {
           "@type": "Organization",
           name: "SoftRanch",
-          url: "https://softranch.com",
+          url: "https://softranch.agency",
         },
       })),
     },
     provider: {
       "@type": "Organization",
       name: "SoftRanch",
-      url: "https://softranch.com",
+      url: "https://softranch.agency",
       description:
         "Professional web development agency specializing in custom websites and applications",
     },
@@ -417,7 +492,7 @@ const LiveWorkSamplesPage = () => {
         <meta property="og:type" content="website" />
         <meta
           property="og:url"
-          content="https://softranch.com/live-work-samples"
+          content="https://softranch.agency/live-work-samples"
         />
         <meta property="og:site_name" content="SoftRanch" />
         <meta property="og:locale" content="en_US" />
@@ -436,7 +511,7 @@ const LiveWorkSamplesPage = () => {
         {/* Additional SEO Tags */}
         <meta name="robots" content="index, follow, max-image-preview:large" />
         <meta name="googlebot" content="index, follow" />
-        <link rel="canonical" href="https://softranch.com/live-work-samples" />
+        <link rel="canonical" href="https://softranch.agency/live-work-samples" />
 
         {/* Performance & Loading */}
         <link rel="preload" as="style" href="/static/css/live-samples.css" />
@@ -458,7 +533,7 @@ const LiveWorkSamplesPage = () => {
             "@context": "https://schema.org",
             "@type": "Organization",
             name: "SoftRanch",
-            url: "https://softranch.com",
+            url: "https://softranch.agency",
             description:
               "Professional web development agency creating custom websites and applications for businesses worldwide",
             foundingDate: "2020",
@@ -543,15 +618,6 @@ const LiveWorkSamplesPage = () => {
         <section className="live-samples-grid-section">
           <GridGlowEffects />
           <div className="live-samples-container">
-            <div className="live-samples-section-header">
-              <h2 className="live-samples-section-title">
-                Live Website Demonstrations
-              </h2>
-              <p className="live-samples-section-subtitle">
-                Each demo represents real-world functionality and showcases our
-                expertise across various industries
-              </p>
-            </div>
 
             <div className="live-samples-portfolio-grid">
               {projectsWithDelay.map((project, index) => (

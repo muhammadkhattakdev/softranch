@@ -174,11 +174,11 @@ const ConstructionServices = () => {
         <meta property="og:type" content="website" />
         <meta
           property="og:url"
-          content="https://softranch.com/construction-website-development-services"
+          content="https://softranch.agency/construction-website-development-services"
         />
         <link
           rel="canonical"
-          href="https://softranch.com/construction-website-development-services"
+          href="https://softranch.agency/construction-website-development-services"
         />
 
         <script type="application/ld+json">
@@ -191,7 +191,7 @@ const ConstructionServices = () => {
             provider: {
               "@type": "Organization",
               name: "SoftRanch",
-              url: "https://softranch.com",
+              url: "https://softranch.agency",
             },
             serviceType: "Construction Web Development",
             offers: {
@@ -459,7 +459,7 @@ const ConstructionServices = () => {
                   <Phone size={20} />
                 </Link>
                 <a
-                  href="mailto:hello@softranch.com"
+                  href="mailto:hello@softranch.agency"
                   className="construction-cta-secondary"
                 >
                   <Mail size={20} />

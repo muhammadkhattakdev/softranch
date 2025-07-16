@@ -51,11 +51,11 @@ const Homepage = () => {
     "@type": "Organization",
     "name": "SoftRanch",
     "alternateName": "SoftRanch Web Development Agency",
-    "url": "https://softranch.com",
-    "logo": "https://softranch.com/logo.png",
+    "url": "https://softranch.agency",
+    "logo": "https://softranch.agency/logo.png",
     "description": "Professional web development agency specializing in custom websites, e-commerce platforms, mobile applications, and digital solutions for businesses worldwide.",
     "foundingDate": "2020",
-    "email": "hello@softranch.com",
+    "email": "hello@softranch.agency",
     "telephone": "+92-335-5398908",
     "address": {
       "@type": "PostalAddress",
@@ -107,7 +107,7 @@ const Homepage = () => {
       },
       {
         "@type": "ContactPoint",
-        "email": "hello@softranch.com",
+        "email": "hello@softranch.agency",
         "contactType": "customer service",
         "availableLanguage": ["English", "Urdu"]
       }
@@ -223,7 +223,7 @@ const Homepage = () => {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "SoftRanch - Professional Web Development Agency",
-    "url": "https://softranch.com",
+    "url": "https://softranch.agency",
     "description": "Leading web development agency creating custom websites, e-commerce platforms, and mobile applications for businesses worldwide.",
     "publisher": {
       "@type": "Organization",
@@ -231,7 +231,7 @@ const Homepage = () => {
     },
     "potentialAction": {
       "@type": "SearchAction",
-      "target": "https://softranch.com/search?q={search_term_string}",
+      "target": "https://softranch.agency/search?q={search_term_string}",
       "query-input": "required name=search_term_string"
     }
   };
@@ -244,7 +244,7 @@ const Homepage = () => {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://softranch.com"
+        "item": "https://softranch.agency"
       }
     ]
   };
@@ -281,13 +281,13 @@ const Homepage = () => {
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="SoftRanch" />
-        <meta property="og:url" content="https://softranch.com" />
+        <meta property="og:url" content="https://softranch.agency" />
         <meta property="og:title" content="SoftRanch - Professional Web Development Agency | Custom Websites & Apps" />
         <meta
           property="og:description"
           content="Leading web development agency creating stunning custom websites, e-commerce platforms, mobile apps & digital solutions. 500+ satisfied clients worldwide."
         />
-        <meta property="og:image" content="https://softranch.com/og-image.jpg" />
+        <meta property="og:image" content="https://softranch.agency/og-image.jpg" />
         <meta property="og:image:alt" content="SoftRanch Web Development Agency - Custom Websites and Apps" />
         <meta property="og:image:type" content="image/jpeg" />
         <meta property="og:image:width" content="1200" />
@@ -298,13 +298,13 @@ const Homepage = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@softranch" />
         <meta name="twitter:creator" content="@softranch" />
-        <meta name="twitter:url" content="https://softranch.com" />
+        <meta name="twitter:url" content="https://softranch.agency" />
         <meta name="twitter:title" content="SoftRanch - Professional Web Development Agency" />
         <meta
           name="twitter:description"
           content="Leading web development agency creating stunning custom websites, e-commerce platforms, and mobile apps. 500+ satisfied clients worldwide."
         />
-        <meta name="twitter:image" content="https://softranch.com/twitter-image.jpg" />
+        <meta name="twitter:image" content="https://softranch.agency/twitter-image.jpg" />
         <meta name="twitter:image:alt" content="SoftRanch Web Development Agency" />
         
         {/* Additional Meta Tags */}
@@ -316,7 +316,7 @@ const Homepage = () => {
         <meta name="apple-mobile-web-app-title" content="SoftRanch" />
         
         {/* Performance and Loading Hints */}
-        <link rel="canonical" href="https://softranch.com" />
+        <link rel="canonical" href="https://softranch.agency" />
         <link rel="preload" as="style" href="/static/css/homepage.css" />
         <link rel="preload" as="font" href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" crossOrigin="" />
         <link rel="dns-prefetch" href="//fonts.googleapis.com" />
@@ -331,7 +331,7 @@ const Homepage = () => {
         <link rel="manifest" href="/site.webmanifest" />
         
         {/* Business Information */}
-        <meta name="contact" content="hello@softranch.com" />
+        <meta name="contact" content="hello@softranch.agency" />
         <meta name="coverage" content="Worldwide" />
         <meta name="distribution" content="Global" />
         <meta name="rating" content="General" />
@@ -340,7 +340,7 @@ const Homepage = () => {
         {/* Rich Snippets Support */}
         <meta name="application-name" content="SoftRanch" />
         <meta name="msapplication-tooltip" content="Professional Web Development Agency" />
-        <meta name="msapplication-starturl" content="https://softranch.com" />
+        <meta name="msapplication-starturl" content="https://softranch.agency" />
         
         {/* Structured Data */}
         <script type="application/ld+json">
@@ -359,7 +359,7 @@ const Homepage = () => {
             "@context": "https://schema.org",
             "@type": "ProfessionalService",
             "name": "SoftRanch Web Development Agency",
-            "image": "https://softranch.com/logo.png",
+            "image": "https://softranch.agency/logo.png",
             "description": "Professional web development services including custom websites, e-commerce platforms, mobile applications, and digital solutions.",
             "address": {
               "@type": "PostalAddress",
@@ -374,9 +374,9 @@ const Homepage = () => {
               "latitude": 34.0151,
               "longitude": 71.9960
             },
-            "url": "https://softranch.com",
+            "url": "https://softranch.agency",
             "telephone": "+92-335-5398908",
-            "email": "hello@softranch.com",
+            "email": "hello@softranch.agency",
             "priceRange": "$$",
             "openingHoursSpecification": [
               {

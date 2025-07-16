@@ -66,13 +66,13 @@ const StaticBlog2 = () => {
         <meta property="og:title" content="10 Digital Marketing Secrets That Drive Real Estate Success" />
         <meta property="og:description" content="Learn insider strategies top real estate agents use to generate qualified leads and close more deals." />
         <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://softranch.com/blog/digital-marketing-real-estate-success" />
-        <meta property="og:image" content="https://softranch.com/static/blog2.jpg" />
+        <meta property="og:url" content="https://softranch.agency/blog/digital-marketing-real-estate-success" />
+        <meta property="og:image" content="https://softranch.agency/static/blog2.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="10 Digital Marketing Secrets for Real Estate Success" />
         <meta name="twitter:description" content="Proven strategies to generate leads and close more real estate deals." />
-        <meta name="twitter:image" content="https://softranch.com/static/blog2.jpg" />
-        <link rel="canonical" href="https://softranch.com/blog/digital-marketing-real-estate-success" />
+        <meta name="twitter:image" content="https://softranch.agency/static/blog2.jpg" />
+        <link rel="canonical" href="https://softranch.agency/blog/digital-marketing-real-estate-success" />
         
         {/* Structured Data */}
         <script type="application/ld+json">
@@ -81,7 +81,7 @@ const StaticBlog2 = () => {
             "@type": "BlogPosting",
             "headline": blogData.title,
             "description": blogData.subtitle,
-            "image": "https://softranch.com" + blogData.image,
+            "image": "https://softranch.agency" + blogData.image,
             "author": {
               "@type": "Organization",
               "name": "SoftRanch"
@@ -91,14 +91,14 @@ const StaticBlog2 = () => {
               "name": "SoftRanch",
               "logo": {
                 "@type": "ImageObject",
-                "url": "https://softranch.com/logo.png"
+                "url": "https://softranch.agency/logo.png"
               }
             },
             "datePublished": "2025-01-12",
             "dateModified": "2025-01-12",
             "mainEntityOfPage": {
               "@type": "WebPage",
-              "@id": "https://softranch.com/blog/digital-marketing-real-estate-success"
+              "@id": "https://softranch.agency/blog/digital-marketing-real-estate-success"
             }
           })}
         </script>

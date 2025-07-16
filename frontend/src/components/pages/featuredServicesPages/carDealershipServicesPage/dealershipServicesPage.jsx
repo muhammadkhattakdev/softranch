@@ -185,11 +185,11 @@ const CarDealershipServices = () => {
         <meta property="og:type" content="website" />
         <meta
           property="og:url"
-          content="https://softranch.com/car-dealership-website-development-services"
+          content="https://softranch.agency/car-dealership-website-development-services"
         />
         <link
           rel="canonical"
-          href="https://softranch.com/car-dealership-website-development-services"
+          href="https://softranch.agency/car-dealership-website-development-services"
         />
 
         <script type="application/ld+json">
@@ -202,7 +202,7 @@ const CarDealershipServices = () => {
             provider: {
               "@type": "Organization",
               name: "SoftRanch",
-              url: "https://softranch.com",
+              url: "https://softranch.agency",
             },
             serviceType: "Automotive Web Development",
             offers: {
@@ -263,15 +263,15 @@ const CarDealershipServices = () => {
               </div>
 
               <div className="automotive-hero-cta">
-                <Link to="/contact" className="automotive-cta-primary">
-                  Get Your Free Dealership Website Audit
+                <Link to="/consultation-booking/" className="automotive-cta-primary">
+                  Book Your Free Dealership Website Consultation
                   <ArrowRight size={20} />
                 </Link>
                 <Link
                   to="/live-work-samples"
                   className="automotive-cta-secondary"
                 >
-                  View Automotive Success Stories
+                  View Live Success Stories
                 </Link>
               </div>
             </div>
@@ -477,7 +477,7 @@ const CarDealershipServices = () => {
                   <Phone size={20} />
                 </Link>
                 <a
-                  href="mailto:hello@softranch.com"
+                  href="mailto:hello@softranch.agency"
                   className="automotive-cta-secondary"
                 >
                   <Mail size={20} />

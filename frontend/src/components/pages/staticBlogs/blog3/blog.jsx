@@ -86,13 +86,13 @@ const StaticBlog3 = () => {
         <meta property="og:title" content="E-commerce Conversion Optimization: From 2% to 8% in 90 Days" />
         <meta property="og:description" content="Step-by-step case study revealing exact techniques that quadrupled e-commerce sales in 90 days." />
         <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://softranch.com/blog/ecommerce-conversion-optimization-case-study" />
-        <meta property="og:image" content="https://softranch.com/static/blog3.jpg" />
+        <meta property="og:url" content="https://softranch.agency/blog/ecommerce-conversion-optimization-case-study" />
+        <meta property="og:image" content="https://softranch.agency/static/blog3.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="E-commerce CRO: 2% to 8% Conversion Rate in 90 Days" />
         <meta name="twitter:description" content="Complete case study with exact optimization techniques and results." />
-        <meta name="twitter:image" content="https://softranch.com/static/blog3.jpg" />
-        <link rel="canonical" href="https://softranch.com/blog/ecommerce-conversion-optimization-case-study" />
+        <meta name="twitter:image" content="https://softranch.agency/static/blog3.jpg" />
+        <link rel="canonical" href="https://softranch.agency/blog/ecommerce-conversion-optimization-case-study" />
         
         {/* Structured Data */}
         <script type="application/ld+json">
@@ -101,7 +101,7 @@ const StaticBlog3 = () => {
             "@type": "BlogPosting",
             "headline": blogData.title,
             "description": blogData.subtitle,
-            "image": "https://softranch.com" + blogData.image,
+            "image": "https://softranch.agency" + blogData.image,
             "author": {
               "@type": "Organization",
               "name": "SoftRanch"
@@ -111,14 +111,14 @@ const StaticBlog3 = () => {
               "name": "SoftRanch",
               "logo": {
                 "@type": "ImageObject",
-                "url": "https://softranch.com/logo.png"
+                "url": "https://softranch.agency/logo.png"
               }
             },
             "datePublished": "2025-01-10",
             "dateModified": "2025-01-10",
             "mainEntityOfPage": {
               "@type": "WebPage",
-              "@id": "https://softranch.com/blog/ecommerce-conversion-optimization-case-study"
+              "@id": "https://softranch.agency/blog/ecommerce-conversion-optimization-case-study"
             }
           })}
         </script>

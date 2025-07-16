@@ -89,11 +89,11 @@ const StaticBlog1 = () => {
         <meta property="og:type" content="article" />
         <meta
           property="og:url"
-          content="https://softranch.com/blog/beautiful-website-transform-business-2025"
+          content="https://softranch.agency/blog/beautiful-website-transform-business-2025"
         />
         <meta
           property="og:image"
-          content="https://softranch.com/static/blog1.jpg"
+          content="https://softranch.agency/static/blog1.jpg"
         />
         <meta name="twitter:card" content="summary_large_image" />
         <meta
@@ -106,11 +106,11 @@ const StaticBlog1 = () => {
         />
         <meta
           name="twitter:image"
-          content="https://softranch.com/static/blog1.jpg"
+          content="https://softranch.agency/static/blog1.jpg"
         />
         <link
           rel="canonical"
-          href="https://softranch.com/blog/beautiful-website-transform-business-2025"
+          href="https://softranch.agency/blog/beautiful-website-transform-business-2025"
         />
 
         {/* Structured Data */}
@@ -120,7 +120,7 @@ const StaticBlog1 = () => {
             "@type": "BlogPosting",
             headline: blogData.title,
             description: blogData.subtitle,
-            image: "https://softranch.com" + blogData.image,
+            image: "https://softranch.agency" + blogData.image,
             author: {
               "@type": "Organization",
               name: "SoftRanch",
@@ -130,7 +130,7 @@ const StaticBlog1 = () => {
               name: "SoftRanch",
               logo: {
                 "@type": "ImageObject",
-                url: "https://softranch.com/logo.png",
+                url: "https://softranch.agency/logo.png",
               },
             },
             datePublished: "2025-01-15",
@@ -138,7 +138,7 @@ const StaticBlog1 = () => {
             mainEntityOfPage: {
               "@type": "WebPage",
               "@id":
-                "https://softranch.com/blog/beautiful-website-transform-business-2025",
+                "https://softranch.agency/blog/beautiful-website-transform-business-2025",
             },
           })}
         </script>

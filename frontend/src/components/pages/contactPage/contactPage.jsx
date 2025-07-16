@@ -140,7 +140,7 @@ const ContactPage = () => {
                   </div>
                   <div className="contact-method-content">
                     <h3>Email Us</h3>
-                    <p>hello@softranch.com</p>
+                    <p>hello@softranch.agency</p>
                   </div>
                 </div>
 

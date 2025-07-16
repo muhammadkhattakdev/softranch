@@ -159,8 +159,8 @@ const ProfessionalServices = () => {
         <meta property="og:title" content="Lawyer, Accountant & Consultant Website Development | SoftRanch" />
         <meta property="og:description" content="Attract premium clients with professional websites for lawyers, accountants, and consultants. Authority-building design and specialized SEO." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://softranch.com/lawyer-accountant-consultant-website-development-services" />
-        <link rel="canonical" href="https://softranch.com/lawyer-accountant-consultant-website-development-services" />
+        <meta property="og:url" content="https://softranch.agency/lawyer-accountant-consultant-website-development-services" />
+        <link rel="canonical" href="https://softranch.agency/lawyer-accountant-consultant-website-development-services" />
         
         <script type="application/ld+json">
           {JSON.stringify({
@@ -171,7 +171,7 @@ const ProfessionalServices = () => {
             "provider": {
               "@type": "Organization", 
               "name": "SoftRanch",
-              "url": "https://softranch.com"
+              "url": "https://softranch.agency"
             },
             "serviceType": "Professional Services Web Development",
             "offers": {
@@ -403,7 +403,7 @@ const ProfessionalServices = () => {
                   Get Free Professional Practice Consultation
                   <Phone size={20} />
                 </Link>
-                <a href="mailto:hello@softranch.com" className="professional-cta-secondary">
+                <a href="mailto:hello@softranch.agency" className="professional-cta-secondary">
                   <Mail size={20} />
                   Email Us Directly
                 </a>

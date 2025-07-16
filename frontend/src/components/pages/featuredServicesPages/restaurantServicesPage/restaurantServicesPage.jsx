@@ -24,7 +24,7 @@ import {
   MessageSquare,
 } from "lucide-react";
 import "./style.css";
-import img1 from "../../../../static/featured_services_images/softFood.png";
+import img1 from "../../../../static/featured_services_images/softFood.PNG";
 import foodWebsiteImg from "../../../../static/featured_services_images/foodWebsite.png";
 
 
@@ -180,11 +180,11 @@ const RestaurantServices = () => {
         <meta property="og:type" content="website" />
         <meta
           property="og:url"
-          content="https://softranch.com/restaurant-website-development-services"
+          content="https://softranch.agency/restaurant-website-development-services"
         />
         <link
           rel="canonical"
-          href="https://softranch.com/restaurant-website-development-services"
+          href="https://softranch.agency/restaurant-website-development-services"
         />
 
         <script type="application/ld+json">
@@ -197,7 +197,7 @@ const RestaurantServices = () => {
             provider: {
               "@type": "Organization",
               name: "SoftRanch",
-              url: "https://softranch.com",
+              url: "https://softranch.agency",
             },
             serviceType: "Restaurant Web Development",
             offers: {
@@ -470,7 +470,7 @@ const RestaurantServices = () => {
                   <Phone size={20} />
                 </Link>
                 <a
-                  href="mailto:hello@softranch.com"
+                  href="mailto:hello@softranch.agency"
                   className="restaurant-cta-secondary"
                 >
                   <Mail size={20} />

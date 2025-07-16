@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.css';
 import realEstate from "../../../../../static/Landing.png";
-import landing2 from "../../../../../static/landing2.png";
+import landing2 from "../../../../../static/landing2.PNG";
 import landing3 from "../../../../../static/landing3.png";
 import landing4 from "../../../../../static/landing4.png";
 import landing5 from "../../../../../static/landing5.png";

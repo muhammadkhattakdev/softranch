@@ -23,7 +23,7 @@ import {
   Cpu
 } from 'lucide-react';
 import './style.css';
-import img1 from "../../../../static/featured_services_images/softCommerce.png";
+import img1 from "../../../../static/featured_services_images/softCommerce.PNG";
 import img2 from "../../../../static/featured_services_images/commerce.png";
 
 const EcommerceServices = () => {
@@ -151,8 +151,8 @@ const EcommerceServices = () => {
         <meta property="og:title" content="E-commerce Website Development & Online Store Solutions | SoftRanch" />
         <meta property="og:description" content="Increase online sales by 300% with professional e-commerce websites. AI-powered features and conversion optimization." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://softranch.com/ecommerce-services" />
-        <link rel="canonical" href="https://softranch.com/ecommerce-services" />
+        <meta property="og:url" content="https://softranch.agency/ecommerce-services" />
+        <link rel="canonical" href="https://softranch.agency/ecommerce-services" />
         
         <script type="application/ld+json">
           {JSON.stringify({
@@ -163,7 +163,7 @@ const EcommerceServices = () => {
             "provider": {
               "@type": "Organization", 
               "name": "SoftRanch",
-              "url": "https://softranch.com"
+              "url": "https://softranch.agency"
             },
             "serviceType": "E-commerce Web Development",
             "offers": {
@@ -394,7 +394,7 @@ const EcommerceServices = () => {
                   Get Free E-commerce Consultation
                   <Phone size={20} />
                 </Link>
-                <a href="mailto:hello@softranch.com" className="ecommerce-cta-secondary">
+                <a href="mailto:hello@softranch.agency" className="ecommerce-cta-secondary">
                   <Mail size={20} />
                   Email Us Directly
                 </a>

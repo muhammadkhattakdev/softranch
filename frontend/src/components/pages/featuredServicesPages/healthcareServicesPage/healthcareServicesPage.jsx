@@ -28,7 +28,7 @@ import {
   FileText,
 } from "lucide-react";
 import "./style.css";
-import img1 from "../../../../static/featured_services_images/medicalDashboard.png";
+import img1 from "../../../../static/featured_services_images/medicalDashboard.PNG";
 import img2 from "../../../../static/featured_services_images/medical2.png";
 
 const HealthcareServices = () => {
@@ -183,11 +183,11 @@ const HealthcareServices = () => {
         <meta property="og:type" content="website" />
         <meta
           property="og:url"
-          content="https://softranch.com/medical-website-development-services"
+          content="https://softranch.agency/medical-website-development-services"
         />
         <link
           rel="canonical"
-          href="https://softranch.com/medical-website-development-services"
+          href="https://softranch.agency/medical-website-development-services"
         />
 
         <script type="application/ld+json">
@@ -200,7 +200,7 @@ const HealthcareServices = () => {
             provider: {
               "@type": "Organization",
               name: "SoftRanch",
-              url: "https://softranch.com",
+              url: "https://softranch.agency",
             },
             serviceType: "Medical Web Development",
             offers: {
@@ -473,7 +473,7 @@ const HealthcareServices = () => {
                   <Phone size={20} />
                 </Link>
                 <a
-                  href="mailto:hello@softranch.com"
+                  href="mailto:hello@softranch.agency"
                   className="healthcare-cta-secondary"
                 >
                   <Mail size={20} />

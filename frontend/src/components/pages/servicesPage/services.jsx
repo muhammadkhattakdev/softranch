@@ -18,11 +18,94 @@ import {
   Shield,
   Rocket,
   Target,
+  Building2,
+  UtensilsCrossed,
+  Heart,
+  Scale,
+  Car,
+  HardHat,
+  GraduationCap,
+  Brain,
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import "./style.css";
 
 const ServicesPage = () => {
+  const featuredServices = [
+    {
+      icon: <Building2 size={32} />,
+      title: "Real Estate Websites",
+      description: "Generate 10x more leads with stunning property showcase websites",
+      href: "/real-estate-services",
+      color: "from-blue-500 to-cyan-500",
+      stats: "10x More Leads"
+    },
+    {
+      icon: <ShoppingCart size={32} />,
+      title: "E-commerce Solutions", 
+      description: "Double your online sales with conversion-optimized stores",
+      href: "/ecommerce-website-development-services",
+      color: "from-green-500 to-emerald-500",
+      stats: "2x More Sales"
+    },
+    {
+      icon: <UtensilsCrossed size={32} />,
+      title: "Restaurant Websites",
+      description: "Fill every table with customers using our restaurant platforms",
+      href: "/restaurant-website-development-services", 
+      color: "from-orange-500 to-red-500",
+      stats: "100% Table Fill"
+    },
+    {
+      icon: <Heart size={32} />,
+      title: "Healthcare Platforms",
+      description: "Attract 5x more patients with professional medical websites",
+      href: "/healthcare-website-development-services",
+      color: "from-red-500 to-pink-500", 
+      stats: "5x More Patients"
+    },
+    {
+      icon: <Scale size={32} />,
+      title: "Professional Services",
+      description: "Land premium clients with lawyer, consultant & accountant sites",
+      href: "/lawyer-accountant-consultant-website-development-services",
+      color: "from-purple-500 to-violet-500",
+      stats: "Premium Clients"
+    },
+    {
+      icon: <Car size={32} />,
+      title: "Car Dealership Sites",
+      description: "Sell 250% more vehicles with automotive showcase platforms",
+      href: "/car-dealership-website-development-services",
+      color: "from-indigo-500 to-blue-500",
+      stats: "250% More Sales"
+    },
+    {
+      icon: <HardHat size={32} />,
+      title: "Construction Websites", 
+      description: "Get 400% more project leads with construction company sites",
+      href: "/construction-website-development-services",
+      color: "from-yellow-500 to-orange-500",
+      stats: "400% More Leads"
+    },
+    {
+      icon: <GraduationCap size={32} />,
+      title: "Education Systems",
+      description: "Build advanced learning platforms and management systems",
+      href: "/education-systems-website-and-tools-development-services",
+      color: "from-teal-500 to-green-500", 
+      stats: "Advanced Learning"
+    },
+    {
+      icon: <Brain size={32} />,
+      title: "AI Websites ",
+      description: "Revolutionary AI-powered sites for 500% more conversions",
+      href: "/ai-webistes-and-tools-development-services",
+      color: "from-cyan-500 to-blue-500", 
+      stats: "500% More Conversions"
+    }
+  ];
+
   const services = [
     {
       icon: <Search size={40} />,
@@ -244,7 +327,7 @@ const ServicesPage = () => {
           content="Expert web development services including React, Node.js, SEO, and e-commerce solutions. Transform your business with our award-winning team."
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://softranch.com/services" />
+        <meta property="og:url" content="https://softranch.agency/services" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
@@ -254,7 +337,7 @@ const ServicesPage = () => {
           name="twitter:description"
           content="Expert web development services including React, Node.js, SEO, and e-commerce solutions."
         />
-        <link rel="canonical" href="https://softranch.com/services" />
+        <link rel="canonical" href="https://softranch.agency/services" />
 
         {/* Structured Data */}
         <script type="application/ld+json">
@@ -262,7 +345,7 @@ const ServicesPage = () => {
             "@context": "https://schema.org",
             "@type": "Organization",
             name: "SoftRanch",
-            url: "https://softranch.com",
+            url: "https://softranch.agency",
             description:
               "Professional web development services company specializing in React, Node.js, SEO optimization, and e-commerce solutions.",
             services: services.map((service) => ({
@@ -313,6 +396,63 @@ const ServicesPage = () => {
                   View Our Work
                 </Link>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Featured Services Section */}
+        <section className="services-page-featured-section">
+          <div className="services-page-featured-floating-glow services-page-featured-floating-glow-1"></div>
+          <div className="services-page-featured-floating-glow services-page-featured-floating-glow-2"></div>
+
+          <div className="services-page-container">
+            <div className="services-page-section-header">
+              <h2 className="services-page-section-title">
+                Industry-Specific Solutions
+              </h2>
+              <p className="services-page-section-subtitle">
+                Specialized websites designed to dominate your industry and drive exceptional results
+              </p>
+            </div>
+
+            <div className="services-page-featured-grid">
+              {featuredServices.map((service, index) => (
+                <Link
+                  key={index}
+                  to={service.href}
+                  className="services-page-featured-card"
+                  data-index={index}
+                >
+                  <div className="services-page-featured-card-inner">
+                    <div className={`services-page-featured-icon-wrapper services-page-featured-gradient-${index}`}>
+                      <div className="services-page-featured-icon">
+                        {service.icon}
+                      </div>
+                    </div>
+
+                    <div className="services-page-featured-content">
+                      <h3 className="services-page-featured-title">
+                        {service.title}
+                      </h3>
+                      <p className="services-page-featured-description">
+                        {service.description}
+                      </p>
+                      
+                      <div className="services-page-featured-stats">
+                        <span className="services-page-featured-stats-text">
+                          {service.stats}
+                        </span>
+                      </div>
+                    </div>
+
+                    <div className="services-page-featured-arrow">
+                      <ArrowRight size={20} />
+                    </div>
+
+                    <div className="services-page-featured-hover-effect"></div>
+                  </div>
+                </Link>
+              ))}
             </div>
           </div>
         </section>

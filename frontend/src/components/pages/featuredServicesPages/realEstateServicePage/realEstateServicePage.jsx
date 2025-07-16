@@ -149,8 +149,8 @@ const RealEstateServices = () => {
         <meta property="og:title" content="Real Estate Website Development & Lead Generation | SoftRanch" />
         <meta property="og:description" content="Generate 10x more qualified leads with professional real estate websites. IDX integration, local SEO, and conversion-optimized design." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://softranch.com/real-estate-services" />
-        <link rel="canonical" href="https://softranch.com/real-estate-services" />
+        <meta property="og:url" content="https://softranch.agency/real-estate-services" />
+        <link rel="canonical" href="https://softranch.agency/real-estate-services" />
         
         <script type="application/ld+json">
           {JSON.stringify({
@@ -161,7 +161,7 @@ const RealEstateServices = () => {
             "provider": {
               "@type": "Organization", 
               "name": "SoftRanch",
-              "url": "https://softranch.com"
+              "url": "https://softranch.agency"
             },
             "serviceType": "Real Estate Web Development",
             "offers": {
@@ -393,7 +393,7 @@ const RealEstateServices = () => {
                   Schedule Free Consultation
                   <Phone size={20} />
                 </Link>
-                <a href="mailto:hello@softranch.com" className="real-estate-cta-secondary">
+                <a href="mailto:hello@softranch.agency" className="real-estate-cta-secondary">
                   <Mail size={20} />
                   Email Us Directly
                 </a>

@@ -189,11 +189,11 @@ const EducationServices = () => {
         <meta property="og:type" content="website" />
         <meta
           property="og:url"
-          content="https://softranch.com/education-website-development-services"
+          content="https://softranch.agency/education-website-development-services"
         />
         <link
           rel="canonical"
-          href="https://softranch.com/education-website-development-services"
+          href="https://softranch.agency/education-website-development-services"
         />
 
         <script type="application/ld+json">
@@ -206,7 +206,7 @@ const EducationServices = () => {
             provider: {
               "@type": "Organization",
               name: "SoftRanch",
-              url: "https://softranch.com",
+              url: "https://softranch.agency",
             },
             serviceType: "Education Technology Solutions",
             offers: {
@@ -488,7 +488,7 @@ const EducationServices = () => {
                   <Phone size={20} />
                 </Link>
                 <a
-                  href="mailto:hello@softranch.com"
+                  href="mailto:hello@softranch.agency"
                   className="education-cta-secondary"
                 >
                   <Mail size={20} />

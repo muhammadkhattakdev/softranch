@@ -414,9 +414,9 @@ const ConsultationBooking = () => {
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Free Website Development Consultation | Real Estate & Business Web Design | SoftRanch" />
         <meta property="og:description" content="Book your FREE consultation with website development experts. Specializing in real estate websites, e-commerce, and business growth solutions. Get personalized strategy today!" />
-        <meta property="og:url" content="https://softranch.com/consultation" />
+        <meta property="og:url" content="https://softranch.agency/consultation-booking" />
         <meta property="og:site_name" content="SoftRanch - Website Development Experts" />
-        <meta property="og:image" content="https://softranch.com/static/consultation-booking-og.jpg" />
+        <meta property="og:image" content="https://softranch.agency/static/consultation-booking-og.jpg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:image:alt" content="Free Website Development Consultation - SoftRanch" />
@@ -428,7 +428,7 @@ const ConsultationBooking = () => {
         <meta name="twitter:creator" content="@SoftRanch" />
         <meta name="twitter:title" content="Free Website Development Consultation | SoftRanch" />
         <meta name="twitter:description" content="Book your FREE consultation with website development experts. Get personalized strategy for real estate, e-commerce & business websites." />
-        <meta name="twitter:image" content="https://softranch.com/static/consultation-booking-twitter.jpg" />
+        <meta name="twitter:image" content="https://softranch.agency/static/consultation-booking-twitter.jpg" />
         <meta name="twitter:image:alt" content="Free Website Development Consultation - SoftRanch" />
         
         {/* Additional SEO Meta Tags */}
@@ -450,9 +450,9 @@ const ConsultationBooking = () => {
         <meta name="apple-mobile-web-app-title" content="SoftRanch Consultation" />
         
         {/* Canonical and Alternate URLs */}
-        <link rel="canonical" href="https://softranch.com/consultation" />
-        <link rel="alternate" hreflang="en-us" href="https://softranch.com/consultation" />
-        <link rel="alternate" hreflang="x-default" href="https://softranch.com/consultation" />
+        <link rel="canonical" href="https://softranch.agency/consultation-booking" />
+        <link rel="alternate" hreflang="en-us" href="https://softranch.agency/consultation-booking" />
+        <link rel="alternate" hreflang="x-default" href="https://softranch.agency/consultation-booking" />
         
         {/* Preconnect for Performance */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -468,10 +468,10 @@ const ConsultationBooking = () => {
             "description": "Comprehensive free consultation for website development, real estate web design, e-commerce solutions, and business growth strategies.",
             "provider": {
               "@type": "Organization",
-              "@id": "https://softranch.com/#organization",
+              "@id": "https://softranch.agency/#organization",
               "name": "SoftRanch",
-              "url": "https://softranch.com",
-              "logo": "https://softranch.com/logo.png",
+              "url": "https://softranch.agency",
+              "logo": "https://softranch.agency/logo.png",
               "sameAs": [
                 "https://www.linkedin.com/company/softranch",
                 "https://twitter.com/softranch",
@@ -594,19 +594,19 @@ const ConsultationBooking = () => {
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Home",
-                "item": "https://softranch.com"
+                "item": "https://softranch.agency"
               },
               {
                 "@type": "ListItem",
                 "position": 2,
                 "name": "Services",
-                "item": "https://softranch.com/services"
+                "item": "https://softranch.agency/services"
               },
               {
                 "@type": "ListItem",
                 "position": 3,
                 "name": "Free Consultation",
-                "item": "https://softranch.com/consultation"
+                "item": "https://softranch.agency/consultation"
               }
             ]
           })}
