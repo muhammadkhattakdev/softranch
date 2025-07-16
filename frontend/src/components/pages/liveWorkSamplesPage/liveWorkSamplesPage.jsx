@@ -28,7 +28,7 @@ import softCommerceImg from "../../../static/portfolio_thumbs/softCommerce.PNG";
 import softFoodImg from "../../../static/portfolio_thumbs/softFood.PNG";
 import medicalDashboardImg from "../../../static/portfolio_thumbs/medicalDashboard.PNG";
 import lawyerBookingImg from "../../../static/portfolio_thumbs/lawyer_website.png";
-import dealershipImg from "../../../static/portfolio_thumbs/dealership.PNG";
+import dealershipImg from "../../../static/portfolio_thumbs/cars.png";
 import constructionLandingImg from "../../../static/portfolio_thumbs/construction_website.png";
 import constructionDashboardImg from "../../../static/portfolio_thumbs/construction_dashboard.png";
 import educationDashboardImg from "../../../static/portfolio_thumbs/education_dashboard.png";
